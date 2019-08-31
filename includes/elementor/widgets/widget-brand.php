@@ -35,8 +35,8 @@ class saasbeyond_Widget_Brand extends Widget_Base {
       $feature = new \Elementor\Repeater();
 
       $feature->add_control(
-         'brand_logo', [
-            'label' => __( 'Logo', 'saasbeyond' ),
+         'feature_icon', [
+            'label' => __( 'Feature Icon', 'saasbeyond' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
               'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -44,6 +44,15 @@ class saasbeyond_Widget_Brand extends Widget_Base {
          ]
       );
 
+      $this->add_control(
+         'feature',
+         [
+            'label' => __( 'Features', 'saasbeyond' ),
+            'type' => \Elementor\Controls_Manager::REPEATER,
+            'fields' => $feature->get_controls(),
+            'title_field' => '{{{ feature_title }}}',
+         ]
+      );
       
       $this->end_controls_section();
 
@@ -60,10 +69,10 @@ class saasbeyond_Widget_Brand extends Widget_Base {
         <div class="box-wrap">
             <div class="container">
                 <div class="row brand-active">
-                    <?php foreach (  $settings['screenshot'] as $index => $screenimage ) { ?>
+                    <?php foreach (  $settings['feature'] as $index => $logo ) { ?>
                       <div class="col-12">
                         <div class="single-brand">
-                            <img src="<?php echo $screenimage['brand_logo']['url'] ?>" alt="img">
+                            <img src="<?php echo $logo['brand_logo']['url'] ?>" alt="img">
                         </div>
                     </div>
                     <?php } ?>

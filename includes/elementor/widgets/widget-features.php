@@ -107,8 +107,6 @@ class saasbeyond_Widget_Features extends Widget_Base {
          ]
       );
       
-
-      
       $this->end_controls_section();
 
    }
