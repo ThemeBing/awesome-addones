@@ -73,6 +73,18 @@ class megaaddons_Widget_Features extends Widget_Base {
             'default' => '#',
          ]
       );
+
+      $this->add_control(
+         'active',
+         [
+            'label' => __( 'Active', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::SWITCHER,
+            'label_on' => __( 'On', 'megaaddons' ),
+            'label_off' => __( 'Off', 'megaaddons' ),
+            'return_value' => 'active',
+            'default' => 'off',
+         ]
+      );
       
       $this->end_controls_section();
 
@@ -84,7 +96,7 @@ class megaaddons_Widget_Features extends Widget_Base {
        
       $settings = $this->get_settings_for_display(); ?>
 
-      <div class="single-features mb-30">
+      <div class="single-features <?php echo esc_html($settings['active']) ?>">
           <div class="features-icon mb-25">
               <i class="flaticon-settings"></i>
           </div>
@@ -92,6 +104,17 @@ class megaaddons_Widget_Features extends Widget_Base {
               <h3><?php echo esc_html($settings['feature_title']) ?></h3>
               <p><?php echo esc_html($settings['feature_text']) ?></p>
               <a href="<?php echo esc_url($settings['feature_btn_url']) ?>"><?php echo esc_html($settings['feature_btn_text']) ?></a>
+          </div>
+      </div>
+
+
+      <div class="single-services">
+          <div class="services-icon">
+              <i class="flaticon-settings"></i>
+          </div>
+          <div class="services-content">
+              <h4><?php echo esc_html($settings['feature_title']) ?></h4>
+              <p><?php echo esc_html($settings['feature_text']) ?></p>
           </div>
       </div>
 

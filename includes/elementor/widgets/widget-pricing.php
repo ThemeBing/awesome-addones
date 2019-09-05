@@ -120,7 +120,7 @@ class megaaddons_Widget_Pricing extends Widget_Base {
          [
             'label' => __( 'button text', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => 'Get started',
+            'default' => 'subscribe',
          ]
       );
 
@@ -154,22 +154,23 @@ class megaaddons_Widget_Pricing extends Widget_Base {
        
       $settings = $this->get_settings_for_display(); ?>
 
-      <div class="pricing-box <?php if ( 'on' == $settings['recommended'] ){ echo"active"; }?>">
-         <div class="pricing-head mb-40 text-center">
-            <h4><?php echo esc_html( $settings['title'] ); ?></h4>
-            <div class="price-count">
-                <h2><?php echo esc_html( $settings['price'] ); ?><span>$/<?php echo esc_html( $settings['package'] ); ?></span></h2>
-            </div>
+      <div class="single-pricing <?php if ( 'on' == $settings['recommended'] ){ echo"active"; }?> text-center">
+         <div class="pricing-head mb-30">
+             <span><?php echo esc_html( $settings['title'] ); ?></span>
+             <h2><?php echo esc_html( $settings['price'] ); ?><span>$/<?php echo esc_html( $settings['package'] ); ?></span></h2>
          </div>
-         <div class="pricing-list mb-50">
-            <ul>
-               <?php 
+         <div class="pricing-icon mb-45">
+             <img src="img/icon/pricing_icon02.png" alt="icon">
+         </div>
+         <div class="pricing-list mb-35">
+             <ul>
+                 <?php 
                   foreach (  $settings['feature_list'] as $index => $feature ) { ?>
                   <li><?php echo $feature['feature'] ?></li>
                <?php } ?>
-            </ul>
+             </ul>
          </div>
-         <div class="pricing-btn text-center">
+         <div class="pricing-btn">
             <a href="<?php echo esc_attr( $settings['btn_url'] ) ?>" class="btn"><?php echo esc_html( $settings['btn_text'] ) ?></a>
          </div>
       </div>
