@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Features
-class saasbeyond_Widget_Brand extends Widget_Base {
+class megaaddons_Widget_Brand extends Widget_Base {
  
    public function get_name() {
       return 'brand';
    }
  
    public function get_title() {
-      return esc_html__( 'Brand', 'saasbeyond' );
+      return esc_html__( 'Brand', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class saasbeyond_Widget_Brand extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class saasbeyond_Widget_Brand extends Widget_Base {
       $this->start_controls_section(
          'brand',
          [
-            'label' => esc_html__( 'Brand', 'saasbeyond' ),
+            'label' => esc_html__( 'Brand', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -36,7 +36,7 @@ class saasbeyond_Widget_Brand extends Widget_Base {
 
       $feature->add_control(
          'feature_icon', [
-            'label' => __( 'Feature Icon', 'saasbeyond' ),
+            'label' => __( 'Feature Icon', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
               'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -47,7 +47,7 @@ class saasbeyond_Widget_Brand extends Widget_Base {
       $this->add_control(
          'feature',
          [
-            'label' => __( 'Features', 'saasbeyond' ),
+            'label' => __( 'Features', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $feature->get_controls(),
             'title_field' => '{{{ feature_title }}}',
@@ -87,4 +87,4 @@ class saasbeyond_Widget_Brand extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_Brand );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Brand );

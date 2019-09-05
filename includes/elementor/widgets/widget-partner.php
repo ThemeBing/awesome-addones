@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
-class saasbeyond_Widget_Partner extends Widget_Base {
+class megaaddons_Widget_Partner extends Widget_Base {
  
    public function get_name() {
       return 'partner';
    }
  
    public function get_title() {
-      return esc_html__( 'Partner', 'saasbeyond' );
+      return esc_html__( 'Partner', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class saasbeyond_Widget_Partner extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,17 +27,18 @@ class saasbeyond_Widget_Partner extends Widget_Base {
       $this->start_controls_section(
          'partner_section',
          [
-            'label' => esc_html__( 'Partner', 'saasbeyond' ),
+            'label' => esc_html__( 'partner', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
 
+
       $repeater = new \Elementor\Repeater();
 
       $repeater->add_control(
-         'logo',
+         'image',
          [
-            'label' => __( 'Logo', 'saasbeyond' ),
+            'label' => __( 'Choose Photo', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src()
@@ -45,10 +46,11 @@ class saasbeyond_Widget_Partner extends Widget_Base {
          ]
       );
 
+
       $this->add_control(
          'partner_list',
          [
-            'label' => __( 'Partner List', 'saasbeyond' ),
+            'label' => __( 'Partner List', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $repeater->get_controls()
 
@@ -64,26 +66,26 @@ class saasbeyond_Widget_Partner extends Widget_Base {
       // get our input from the widget settings.
        
       $settings = $this->get_settings_for_display(); ?>
-    <!-- brand-area -->
-    <div class="brand-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="brand-active">
-                      <?php foreach (  $settings['partner_list'] as $partner_single ): ?>
-                        <div class="single-brand text-center">
-                            <img src="<?php echo esc_url($partner_single['logo']['url']); ?>" alt="img">
-                        </div>
-                      <?php endforeach; ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- brand-area-end -->
 
+      <!-- brand-area -->
+      <div class="brand-area brand-mb">
+          <div class="box-wrap">
+              <div class="container">
+                  <div class="row brand-active">
+                  <?php foreach (  $settings['partner_list'] as $partner_single ): ?>
+                      <div class="col-12">
+                          <div class="single-brand">
+                              <img src="<?php echo esc_url($partner_single['image']['url']); ?>" alt="img">
+                          </div>
+                      </div>
+                  <?php endforeach; ?>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- brand-area-end -->
    <?php } 
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_Partner );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Partner );

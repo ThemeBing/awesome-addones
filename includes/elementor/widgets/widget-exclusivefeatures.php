@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Features
-class saasbeyond_Widget_ExFeatures extends Widget_Base {
+class megaaddons_Widget_ExFeatures extends Widget_Base {
  
    public function get_name() {
       return 'exfeatures';
    }
  
    public function get_title() {
-      return esc_html__( 'Exclusive Features', 'saasbeyond' );
+      return esc_html__( 'Exclusive Features', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
       $this->start_controls_section(
          'features',
          [
-            'label' => esc_html__( 'Exclusive Features', 'saasbeyond' ),
+            'label' => esc_html__( 'Exclusive Features', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,7 +35,7 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
       $this->add_control(
       'bg_color_1',
         [
-          'label' => __( 'Gradient Color 1', 'saasbeyond' ),
+          'label' => __( 'Gradient Color 1', 'megaaddons' ),
           'type' => \Elementor\Controls_Manager::COLOR,
           'scheme' => [
             'type' => \Elementor\Scheme_Color::get_type(),
@@ -47,7 +47,7 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
       $this->add_control(
       'bg_color_2',
         [
-          'label' => __( 'Gradient Color 2', 'saasbeyond' ),
+          'label' => __( 'Gradient Color 2', 'megaaddons' ),
           'type' => \Elementor\Controls_Manager::COLOR,
           'scheme' => [
             'type' => \Elementor\Scheme_Color::get_type(),
@@ -59,7 +59,7 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
       $this->add_control(
       'mockup_image',
         [
-          'label' => __( 'Mockup image', 'saasbeyond' ),
+          'label' => __( 'Mockup image', 'megaaddons' ),
           'type' => \Elementor\Controls_Manager::MEDIA,
           'default' => [
             'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -70,9 +70,9 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'saasbeyond' ),
+            'label' => __( 'Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Exclusive Features','saasbeyond')
+            'default' => __('Exclusive Features','megaaddons')
          ]
       );
 
@@ -80,9 +80,9 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
       $this->add_control(
          'sub_title',
          [
-            'label' => __( 'Sub Title', 'saasbeyond' ),
+            'label' => __( 'Sub Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Lorem ipsum dummy text are used here so replace your app data','saasbeyond')
+            'default' => __('Lorem ipsum dummy text are used here so replace your app data','megaaddons')
          ]
       );
 
@@ -90,7 +90,7 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
 
       $feature->add_control(
          'feature_icon', [
-            'label' => __( 'Feature Icon', 'saasbeyond' ),
+            'label' => __( 'Feature Icon', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
               'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -100,7 +100,7 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
       
       $feature->add_control(
          'feature_title', [
-            'label' => __( 'Feature Title', 'saasbeyond' ),
+            'label' => __( 'Feature Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Clean Designs',
          ]
@@ -108,7 +108,7 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
 
       $feature->add_control(
          'feature_text', [
-            'label' => __( 'Feature Text', 'saasbeyond' ),
+            'label' => __( 'Feature Text', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
             'default' => 'Lorem ipsum dummy text are used here so replace your app data, Lorem ipsum dummy text are used here',
          ]
@@ -117,7 +117,7 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
       $this->add_control(
          'feature',
          [
-            'label' => __( 'Features', 'saasbeyond' ),
+            'label' => __( 'Features', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $feature->get_controls(),
             'title_field' => '{{{ feature_title }}}',
@@ -128,7 +128,7 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
 
       $screenshot->add_control(
          'shot', [
-            'label' => __( 'Screenshot', 'saasbeyond' ),
+            'label' => __( 'Screenshot', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
               'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -139,7 +139,7 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
       $this->add_control(
          'screenshot',
          [
-            'label' => __( 'Screenshot', 'saasbeyond' ),
+            'label' => __( 'Screenshot', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $screenshot->get_controls()
          ]
@@ -202,4 +202,4 @@ class saasbeyond_Widget_ExFeatures extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_ExFeatures );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_ExFeatures );

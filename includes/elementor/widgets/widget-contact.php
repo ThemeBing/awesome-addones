@@ -3,14 +3,14 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // contact item
-class saasbeyond_Widget_Contact extends Widget_Base {
+class megaaddons_Widget_Contact extends Widget_Base {
  
    public function get_name() {
       return 'Contact item';
    }
  
    public function get_title() {
-      return esc_html__( 'Contact Item', 'saasbeyond' );
+      return esc_html__( 'Contact Item', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -18,20 +18,20 @@ class saasbeyond_Widget_Contact extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
          'contact_section',
          [
-            'label' => esc_html__( 'Contact Item', 'saasbeyond' ),
+            'label' => esc_html__( 'Contact Item', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
       $this->add_control(
          'icon',
          [
-            'label' => __( 'Icon', 'saasbeyond' ),
+            'label' => __( 'Icon', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA
          ]     
       );
@@ -39,15 +39,15 @@ class saasbeyond_Widget_Contact extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'saasbeyond' ),
+            'label' => __( 'Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Call us','saasbeyond'),
+            'default' => __('Call us','megaaddons'),
          ]
       );
       $this->add_control(
          'text',
          [
-            'label' => __( 'Text', 'saasbeyond' ),
+            'label' => __( 'Text', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::WYSIWYG
          ]
       );
@@ -80,4 +80,4 @@ class saasbeyond_Widget_Contact extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_Contact );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Contact );

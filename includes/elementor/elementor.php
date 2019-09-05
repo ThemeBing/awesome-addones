@@ -3,7 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // get posts dropdown
-function saasbeyond_get_portfolio_dropdown_array($args = [], $key = 'ID', $value = 'post_title') {
+function megaaddons_get_portfolio_dropdown_array($args = [], $key = 'ID', $value = 'post_title') {
   $options = [];
   $posts = get_posts($args);
   foreach ((array) $posts as $term) {
@@ -12,22 +12,22 @@ function saasbeyond_get_portfolio_dropdown_array($args = [], $key = 'ID', $value
   return $options;
 }
 
-function saasbeyond_add_elementor_widget_categories( $elements_manager ) {
+function megaaddons_add_elementor_widget_categories( $elements_manager ) {
 
 	$elements_manager->add_category(
-		'saasbeyond-elements',
+		'megaaddons-elements',
 		[
-			'title' => esc_html__( 'saasbeyond Elements', 'saasbeyond' ),
+			'title' => esc_html__( 'megaaddons Elements', 'megaaddons' ),
 			'icon' => 'fa fa-plug',
 		]
 	);
 
 }
-add_action( 'elementor/elements/categories_registered', 'saasbeyond_add_elementor_widget_categories' );
+add_action( 'elementor/elements/categories_registered', 'megaaddons_add_elementor_widget_categories' );
 
 //Elementor init
 
-class saasbeyond_ElementorCustomElement {
+class megaaddons_ElementorCustomElement {
  
    private static $instance = null;
  
@@ -67,4 +67,4 @@ class saasbeyond_ElementorCustomElement {
 
 }
 
-saasbeyond_ElementorCustomElement::get_instance()->init();
+megaaddons_ElementorCustomElement::get_instance()->init();

@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
-class saasbeyond_Widget_Testimonials extends Widget_Base {
+class megaaddons_Widget_Testimonials extends Widget_Base {
  
    public function get_name() {
       return 'testimonials';
    }
  
    public function get_title() {
-      return esc_html__( 'Testimonials', 'saasbeyond' );
+      return esc_html__( 'Testimonials', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -19,15 +19,15 @@ class saasbeyond_Widget_Testimonials extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
 
    protected function _register_controls() {
 
       $this->start_controls_section(
-         'title_section',
+         'testimonial_section',
          [
-            'label' => esc_html__( 'Testimonials', 'saasbeyond' ),
+            'label' => esc_html__( 'Testimonials', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -36,12 +36,12 @@ class saasbeyond_Widget_Testimonials extends Widget_Base {
       $this->add_control(
          'style',
          [
-            'label' => __( 'Style', 'saasbeyond' ),
+            'label' => __( 'Style', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'style1',
             'options' => [
-               'style1' => __( 'Style 1', 'saasbeyond' ),
-               'style2' => __( 'Style 2', 'saasbeyond' ),
+               'style1' => __( 'Style 1', 'megaaddons' ),
+               'style2' => __( 'Style 2', 'megaaddons' ),
             ],
          ]
       );
@@ -49,9 +49,9 @@ class saasbeyond_Widget_Testimonials extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'saasbeyond' ),
+            'label' => __( 'Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( 'Users love us', 'saasbeyond' )
+            'default' => __( 'Users love us', 'megaaddons' )
             
          ]
       );
@@ -59,9 +59,9 @@ class saasbeyond_Widget_Testimonials extends Widget_Base {
       $this->add_control(
          'sub_title',
          [
-            'label' => __( 'Sub Title', 'saasbeyond' ),
+            'label' => __( 'Sub Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( 'Lorem ipsum dummy text are used here so replace your app data', 'saasbeyond' ),
+            'default' => __( 'Lorem ipsum dummy text are used here so replace your app data', 'megaaddons' ),
             'condition' => ['style' => 'style1']
             
          ]
@@ -70,7 +70,7 @@ class saasbeyond_Widget_Testimonials extends Widget_Base {
       $this->add_control(
          'testi_image',
          [
-            'label' => __( 'Image', 'saasbeyond' ),
+            'label' => __( 'Image', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'condition' => ['style' => 'style1']
             
@@ -82,7 +82,7 @@ class saasbeyond_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'image',
          [
-            'label' => __( 'Choose Photo', 'saasbeyond' ),
+            'label' => __( 'Choose Photo', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src()
@@ -93,7 +93,7 @@ class saasbeyond_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'name',
          [
-            'label' => __( 'Name', 'saasbeyond' ),
+            'label' => __( 'Name', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             
          ]
@@ -102,7 +102,7 @@ class saasbeyond_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'designation',
          [
-            'label' => __( 'Designation', 'saasbeyond' ),
+            'label' => __( 'Designation', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT
          ]
       );
@@ -110,7 +110,7 @@ class saasbeyond_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'testimonial',
          [
-            'label' => __( 'Testimonial', 'saasbeyond' ),
+            'label' => __( 'Testimonial', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA
          ]
       );
@@ -118,7 +118,7 @@ class saasbeyond_Widget_Testimonials extends Widget_Base {
       $this->add_control(
          'testimonial_list',
          [
-            'label' => __( 'Testimonial List', 'saasbeyond' ),
+            'label' => __( 'Testimonial List', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $repeater->get_controls(),
             'title_field' => '{{name}}',
@@ -214,4 +214,4 @@ class saasbeyond_Widget_Testimonials extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_Testimonials );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Testimonials );

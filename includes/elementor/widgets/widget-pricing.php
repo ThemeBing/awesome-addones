@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Pricing
-class saasbeyond_Widget_Pricing extends Widget_Base {
+class megaaddons_Widget_Pricing extends Widget_Base {
  
    public function get_name() {
       return 'pricing';
    }
  
    public function get_title() {
-      return esc_html__( 'Pricing', 'saasbeyond' );
+      return esc_html__( 'Pricing', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class saasbeyond_Widget_Pricing extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class saasbeyond_Widget_Pricing extends Widget_Base {
       $this->start_controls_section(
          'pricing_section',
          [
-            'label' => esc_html__( 'Pricing', 'saasbeyond' ),
+            'label' => esc_html__( 'Pricing', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,7 +35,7 @@ class saasbeyond_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'title', 'saasbeyond' ),
+            'label' => __( 'title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Standard Plan'
          ]
@@ -44,7 +44,7 @@ class saasbeyond_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'icon',
          [
-            'label' => __( 'icon', 'saasbeyond' ),
+            'label' => __( 'icon', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'label_block' => true,
             'default' => 'fa fa-shield'
@@ -54,7 +54,7 @@ class saasbeyond_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'price',
          [
-            'label' => __( 'Price', 'saasbeyond' ),
+            'label' => __( 'Price', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '70'
          ]
@@ -64,15 +64,15 @@ class saasbeyond_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'package',
          [
-            'label' => __( 'Package', 'saasbeyond' ),
+            'label' => __( 'Package', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'Yealry',
             'options' => [
-               'Daily'  => __( 'Daily', 'saasbeyond' ),
-               'Weekly'  => __( 'Weekly', 'saasbeyond' ),
-               'Monthly' => __( 'Monthly', 'saasbeyond' ),
-               'Yealry' => __( 'Yealry', 'saasbeyond' ),
-               'none' => __( 'None', 'saasbeyond' )
+               'Daily'  => __( 'Daily', 'megaaddons' ),
+               'Weekly'  => __( 'Weekly', 'megaaddons' ),
+               'Monthly' => __( 'Monthly', 'megaaddons' ),
+               'Yealry' => __( 'Yealry', 'megaaddons' ),
+               'none' => __( 'None', 'megaaddons' )
             ],
          ]
       );
@@ -82,33 +82,33 @@ class saasbeyond_Widget_Pricing extends Widget_Base {
       $feature->add_control(
          'feature',
          [
-            'label' => __( 'Feature', 'saasbeyond' ),
+            'label' => __( 'Feature', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __( '10 Free Domain Names', 'saasbeyond' )
+            'default' => __( '10 Free Domain Names', 'megaaddons' )
          ]
       );
 
       $this->add_control(
          'feature_list',
          [
-            'label' => __( 'Feature List', 'saasbeyond' ),
+            'label' => __( 'Feature List', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $feature->get_controls(),
             'default' => [
                [
-                  'feature' => __( '5GB Storage Space', 'saasbeyond' )
+                  'feature' => __( '5GB Storage Space', 'megaaddons' )
                ],
                [
-                  'feature' => __( '20GB Monthly Bandwidth', 'saasbeyond' )
+                  'feature' => __( '20GB Monthly Bandwidth', 'megaaddons' )
                ],
                [
-                  'feature' => __( 'My SQL Databases', 'saasbeyond' )
+                  'feature' => __( 'My SQL Databases', 'megaaddons' )
                ],
                [
-                  'feature' => __( '100 Email Account', 'saasbeyond' )
+                  'feature' => __( '100 Email Account', 'megaaddons' )
                ],
                [
-                  'feature' => __( '10 Free Domain Names', 'saasbeyond' )
+                  'feature' => __( '10 Free Domain Names', 'megaaddons' )
                ]
             ],
             'title_field' => '{{{ feature }}}',
@@ -118,7 +118,7 @@ class saasbeyond_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'btn_text',
          [
-            'label' => __( 'button text', 'saasbeyond' ),
+            'label' => __( 'button text', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Get started',
          ]
@@ -127,7 +127,7 @@ class saasbeyond_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'btn_url',
          [
-            'label' => __( 'button URL', 'saasbeyond' ),
+            'label' => __( 'button URL', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '#',
          ]
@@ -138,8 +138,8 @@ class saasbeyond_Widget_Pricing extends Widget_Base {
          [
             'label' => __( 'Recommended', 'plugin-domain' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'saasbeyond' ),
-            'label_off' => __( 'Off', 'saasbeyond' ),
+            'label_on' => __( 'On', 'megaaddons' ),
+            'label_off' => __( 'Off', 'megaaddons' ),
             'return_value' => 'on',
             'default' => 'off',
          ]
@@ -178,4 +178,4 @@ class saasbeyond_Widget_Pricing extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_Pricing );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Pricing );

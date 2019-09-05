@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Button
-class saasbeyond_Widget_Button extends Widget_Base {
+class megaaddons_Widget_Button extends Widget_Base {
  
    public function get_name() {
       return 'button';
    }
  
    public function get_title() {
-      return esc_html__( 'Button', 'saasbeyond' );
+      return esc_html__( 'Button', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class saasbeyond_Widget_Button extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,22 +27,22 @@ class saasbeyond_Widget_Button extends Widget_Base {
       $this->start_controls_section(
          'button_section',
          [
-            'label' => esc_html__( 'Button', 'saasbeyond' ),
+            'label' => esc_html__( 'Button', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
          'button_text', [
-            'label' => __( 'Button Text', 'saasbeyond' ),
+            'label' => __( 'Button Text', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Learn More','saasbeyond')
+            'default' => __('Learn More','megaaddons')
          ]
       );
 
       $this->add_control(
          'button_url', [
-            'label' => __( 'Button URL', 'saasbeyond' ),
+            'label' => __( 'Button URL', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '#'
          ]
@@ -51,13 +51,13 @@ class saasbeyond_Widget_Button extends Widget_Base {
       $this->add_control(
          'align',
          [
-            'label' => __( 'Align', 'saasbeyond' ),
+            'label' => __( 'Align', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'left',
             'options' => [
-               'center'  => __( 'Center', 'saasbeyond' ),
-               'left' => __( 'Left', 'saasbeyond' ),
-               'right' => __( 'Right', 'saasbeyond' )
+               'center'  => __( 'Center', 'megaaddons' ),
+               'left' => __( 'Left', 'megaaddons' ),
+               'right' => __( 'Right', 'megaaddons' )
             ],
          ]
       );
@@ -80,7 +80,7 @@ class saasbeyond_Widget_Button extends Widget_Base {
       $this->add_inline_editing_attributes( 'color', 'basic' );
       ?>
 
-      <div class="saasbeyond-btn <?php if( $settings['color'] == 'yes' ){ echo 'alt-color';} ?>" style="text-align: <?php echo esc_attr($settings['align']) ?>">
+      <div class="megaaddons-btn <?php if( $settings['color'] == 'yes' ){ echo 'alt-color';} ?>" style="text-align: <?php echo esc_attr($settings['align']) ?>">
          <a class="btn" href="<?php echo esc_url( $settings['button_url'] ); ?>">
             <?php echo esc_html( $settings['button_text'] ); ?></a>
       </div>
@@ -89,4 +89,4 @@ class saasbeyond_Widget_Button extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_Button );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Button );

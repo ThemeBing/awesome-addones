@@ -1,21 +1,21 @@
 <?php
 /**
  * Add Recent Post Widget.
- * @package saasbeyond
+ * @package megaaddons
  */
-if( !class_exists('saasbeyond_Recent_Post') ){
-	class saasbeyond_Recent_Post extends WP_Widget{
+if( !class_exists('megaaddons_Recent_Post') ){
+	class megaaddons_Recent_Post extends WP_Widget{
 		/**
 		 * Register widget with WordPress.
 		 */
 		function __construct(){
 
 			$widget_options = array(
-				'description' 					=> esc_html__('saasbeyond recent post here', 'saasbeyond'), 
+				'description' 					=> esc_html__('megaaddons recent post here', 'megaaddons'), 
 				'customize_selective_refresh' 	=> true,
 			);
 
-			parent:: __construct('saasbeyond_Recent_Post', esc_html__( 'Recent Post : saasbeyond', 'saasbeyond'), $widget_options );
+			parent:: __construct('megaaddons_Recent_Post', esc_html__( 'Recent Post : megaaddons', 'megaaddons'), $widget_options );
 
 		}
 		
@@ -35,7 +35,7 @@ if( !class_exists('saasbeyond_Recent_Post') ){
 
 		}
 		
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Posts','saasbeyond' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Posts','megaaddons' );
 		
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
@@ -61,7 +61,7 @@ if( !class_exists('saasbeyond_Recent_Post') ){
                <?php while($posts->have_posts()) : $posts->the_post();  ?>
 	               	<li>
 	               		<div class="widget__post-thumb">
-	               			<?php the_post_thumbnail( 'saasbeyond-80-60' ); ?>
+	               			<?php the_post_thumbnail( 'megaaddons-80-60' ); ?>
 	               		</div>
 	               		<div class="widget__post-content">
                             <h6><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h6>
@@ -105,12 +105,12 @@ if( !class_exists('saasbeyond_Recent_Post') ){
 		$title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 		$show_item    = isset( $instance['show_item'] ) ? absint( $instance['show_item'] ) : 4;
 	?>
-		<p><label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>"><?php echo esc_html__( 'Title:','saasbeyond' ); ?></label>
+		<p><label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>"><?php echo esc_html__( 'Title:','megaaddons' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title' )); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 		
 		
 		<p>
-			<label for="<?php echo esc_attr($this->get_field_id( 'show_item' )); ?>"><?php echo esc_html__( 'No. of Item of posts to show:','saasbeyond' ); ?></label>
+			<label for="<?php echo esc_attr($this->get_field_id( 'show_item' )); ?>"><?php echo esc_html__( 'No. of Item of posts to show:','megaaddons' ); ?></label>
 			<input class="tiny-text" id="<?php echo esc_attr(esc_attr($this->get_field_id( 'show_item' ))); ?>" name="<?php echo esc_attr($this->get_field_name( 'show_item' )); ?>" type="number" step="1" min="1" value="<?php echo esc_attr($show_item); ?>" size="3" />
 		</p>
 
@@ -122,7 +122,7 @@ if( !class_exists('saasbeyond_Recent_Post') ){
 
 
 // register Contact  Widget widget
-function saasbeyond_Recent_Post(){
-	register_widget('saasbeyond_Recent_Post');
+function megaaddons_Recent_Post(){
+	register_widget('megaaddons_Recent_Post');
 }
-add_action('widgets_init','saasbeyond_Recent_Post');
+add_action('widgets_init','megaaddons_Recent_Post');

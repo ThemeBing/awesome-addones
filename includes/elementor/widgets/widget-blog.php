@@ -3,14 +3,14 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // blog
-class saasbeyond_Widget_Blog extends Widget_Base {
+class megaaddons_Widget_Blog extends Widget_Base {
  
    public function get_name() {
       return 'blog';
    }
  
    public function get_title() {
-      return esc_html__( 'Latest Blog', 'saasbeyond' );
+      return esc_html__( 'Latest Blog', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -18,25 +18,25 @@ class saasbeyond_Widget_Blog extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
          'blog_section',
          [
-            'label' => esc_html__( 'Blog', 'saasbeyond' ),
+            'label' => esc_html__( 'Blog', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
       $this->add_control(
          'order',
          [
-            'label' => __( 'Order', 'saasbeyond' ),
+            'label' => __( 'Order', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'ASC',
             'options' => [
-               'ASC'  => __( 'Ascending', 'saasbeyond' ),
-               'DESC' => __( 'Descending', 'saasbeyond' )
+               'ASC'  => __( 'Ascending', 'megaaddons' ),
+               'DESC' => __( 'Descending', 'megaaddons' )
             ],
          ]
       );
@@ -69,7 +69,7 @@ class saasbeyond_Widget_Blog extends Widget_Base {
                <div class="col-lg-4 col-md-6">
                    <div class="single-blog mb-50">
                        <div class="s-blog-thumb p-relative">
-                           <a href="<?php the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'saasbeyond-360-200'); ?>" alt="<?php the_title() ?>"></a>
+                           <a href="<?php the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'megaaddons-360-200'); ?>" alt="<?php the_title() ?>"></a>
 
                            <?php
 
@@ -84,7 +84,7 @@ class saasbeyond_Widget_Blog extends Widget_Base {
                        <div class="s-blog-content">
                            <span><?php echo get_the_time() ?></span>
                            <h4><a href="#"><?php the_title() ?></a></h4>
-                           <a href="<?php the_permalink() ?>"><?php echo esc_html__( 'Read more', 'saasbeyond' ) ?> <i class="arrow_right"></i></a>
+                           <a href="<?php the_permalink() ?>"><?php echo esc_html__( 'Read more', 'megaaddons' ) ?> <i class="arrow_right"></i></a>
                        </div>
                    </div>
                </div>
@@ -99,4 +99,4 @@ class saasbeyond_Widget_Blog extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_Blog );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Blog );

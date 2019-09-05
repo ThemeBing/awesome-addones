@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Features
-class saasbeyond_Widget_Features extends Widget_Base {
+class megaaddons_Widget_Features extends Widget_Base {
  
    public function get_name() {
       return 'features';
    }
  
    public function get_title() {
-      return esc_html__( 'Features', 'saasbeyond' );
+      return esc_html__( 'Features', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class saasbeyond_Widget_Features extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,37 +27,14 @@ class saasbeyond_Widget_Features extends Widget_Base {
       $this->start_controls_section(
          'features',
          [
-            'label' => esc_html__( 'Features', 'saasbeyond' ),
+            'label' => esc_html__( 'Features', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
-      'mockup_image',
-        [
-          'label' => __( 'Mockup image', 'saasbeyond' ),
-          'type' => \Elementor\Controls_Manager::MEDIA,
-          'default' => [
-            'url' => \Elementor\Utils::get_placeholder_image_src(),
-          ],
-        ]
-      );
-
-
-      $this->add_control(
-         'title',
-         [
-            'label' => __( 'Title', 'saasbeyond' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('We offer All kind service features','saasbeyond')
-         ]
-      );
-
-      $feature = new \Elementor\Repeater();
-
-      $feature->add_control(
          'feature_icon', [
-            'label' => __( 'Feature Icon', 'saasbeyond' ),
+            'label' => __( 'Feature Icon', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
               'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -65,45 +42,35 @@ class saasbeyond_Widget_Features extends Widget_Base {
          ]
       );
       
-      $feature->add_control(
+      $this->add_control(
          'feature_title', [
-            'label' => __( 'Feature Title', 'saasbeyond' ),
+            'label' => __( 'Feature Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => 'Easily customizable',
+            'default' => 'Market Analysis',
          ]
       );
 
-      $feature->add_control(
+      $this->add_control(
          'feature_text', [
-            'label' => __( 'Feature Text', 'saasbeyond' ),
+            'label' => __( 'Feature Text', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => 'Lorem ipsum dummy text are use in this section. so you should replace orginal content.lLorem dummy',
+            'default' => 'Orem Ipsum is simply dummy text the printing and typesetting industry sum has been the industrys',
          ]
       );
 
       $this->add_control(
-         'feature',
-         [
-            'label' => __( 'Features', 'saasbeyond' ),
-            'type' => \Elementor\Controls_Manager::REPEATER,
-            'fields' => $feature->get_controls(),
-            'title_field' => '{{{ feature_title }}}',
-         ]
-      );
-
-      $this->add_control(
-         'button_text', [
-            'label' => __( 'Button Text', 'saasbeyond' ),
+         'feature_btn_text', [
+            'label' => __( 'Button Text', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('View all features','saasbeyond')
+            'default' => 'More About',
          ]
       );
 
       $this->add_control(
-         'button_url', [
-            'label' => __( 'Button URL', 'saasbeyond' ),
+         'feature_btn_url', [
+            'label' => __( 'Button URL', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => '#'
+            'default' => '#',
          ]
       );
       
@@ -117,45 +84,20 @@ class saasbeyond_Widget_Features extends Widget_Base {
        
       $settings = $this->get_settings_for_display(); ?>
 
-      <!-- features-area -->
-      <section class="features-area p-relative">
-          <div class="container">
-              <div class="row justify-content-center">
-                  <div class="col-lg-10">
-                      <div class="section-title text-center mb-100">
-                          <h2><?php echo esc_html($settings['title']); ?></h2>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-              <?php foreach (  $settings['feature'] as $index => $feature ) { ?>
-                  <div class="col-lg-6">
-                      <div class="single-features fix mb-30">
-                          <div class="features-icon">
-                              <img src="<?php echo $feature['feature_icon']['url'] ?>" alt="icon">
-                          </div>
-                          <div class="features-content">
-                              <h3><?php echo esc_html($feature['feature_title']) ?></h3>
-                              <p><?php echo esc_html($feature['feature_text']) ?></p>
-                          </div>
-                      </div>
-                  </div>
-              <?php } ?>
-              </div>
-              <div class="row">
-                  <div class="col-12">
-                      <div class="features-btn text-center mt-70">
-                          <a href="<?php echo esc_url( $settings['button_url'] ); ?>" class="btn"><?php echo esc_html( $settings['button_text'] ); ?></a>
-                      </div>
-                  </div>
-              </div>
+      <div class="single-features mb-30">
+          <div class="features-icon mb-25">
+              <i class="flaticon-settings"></i>
           </div>
-          <div class="features-apps"><img src="<?php echo $settings['mockup_image']['url'] ?>" alt="img" class="alltuchtopdown"></div>
-      </section>
-      <!-- features-area-end -->
+          <div class="features-content">
+              <h3><?php echo esc_html($settings['feature_title']) ?></h3>
+              <p><?php echo esc_html($settings['feature_text']) ?></p>
+              <a href="<?php echo esc_url($settings['feature_btn_url']) ?>"><?php echo esc_html($settings['feature_btn_text']) ?></a>
+          </div>
+      </div>
+
       <?php
    }
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_Features );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Features );

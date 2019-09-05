@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
-class saasbeyond_Widget_Counter extends Widget_Base {
+class megaaddons_Widget_Counter extends Widget_Base {
  
    public function get_name() {
       return 'counter';
    }
  
    public function get_title() {
-      return esc_html__( 'Counter', 'saasbeyond' );
+      return esc_html__( 'Counter', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class saasbeyond_Widget_Counter extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class saasbeyond_Widget_Counter extends Widget_Base {
       $this->start_controls_section(
          'title_section',
          [
-            'label' => esc_html__( 'Counter', 'saasbeyond' ),
+            'label' => esc_html__( 'Counter', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,7 +35,7 @@ class saasbeyond_Widget_Counter extends Widget_Base {
       $this->add_control(
          'icon',
          [
-            'label' => __( 'Choose Icon', 'saasbeyond' ),
+            'label' => __( 'Choose Icon', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -46,7 +46,7 @@ class saasbeyond_Widget_Counter extends Widget_Base {
       $this->add_control(
          'counter',
          [
-            'label' => __( 'Counter Value', 'saasbeyond' ),
+            'label' => __( 'Counter Value', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '123'
          ]
@@ -55,18 +55,18 @@ class saasbeyond_Widget_Counter extends Widget_Base {
       $this->add_control(
          'in_word',
          [
-            'label' => __( 'In Word', 'saasbeyond' ),
+            'label' => __( 'In Word', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('M','saasbeyond' )
+            'default' => __('M','megaaddons' )
          ]
       );
 
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'saasbeyond' ),
+            'label' => __( 'Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Download','saasbeyond' )
+            'default' => __('Download','megaaddons' )
          ]
       );
       
@@ -101,4 +101,4 @@ class saasbeyond_Widget_Counter extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_Counter );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Counter );

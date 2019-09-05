@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Banner Parallax
-class saasbeyond_Widget_Banner extends Widget_Base {
+class megaaddons_Widget_Banner extends Widget_Base {
  
    public function get_name() {
       return 'banner_pop';
    }
  
    public function get_title() {
-      return esc_html__( 'Banner', 'saasbeyond' );
+      return esc_html__( 'Banner', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class saasbeyond_Widget_Banner extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class saasbeyond_Widget_Banner extends Widget_Base {
       $this->start_controls_section(
          'banner_section',
          [
-            'label' => esc_html__( 'Banner', 'saasbeyond' ),
+            'label' => esc_html__( 'Banner', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -36,12 +36,12 @@ class saasbeyond_Widget_Banner extends Widget_Base {
       $this->add_control(
          'style',
          [
-            'label' => __( 'Banner Style', 'saasbeyond' ),
+            'label' => __( 'Banner Style', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'style1',
             'options' => [
-               'style1' => __( 'Style 1', 'saasbeyond' ),
-               'style2' => __( 'Style 2', 'saasbeyond' ),
+               'style1' => __( 'Style 1', 'megaaddons' ),
+               'style2' => __( 'Style 2', 'megaaddons' ),
             ],
          ]
       );
@@ -50,7 +50,7 @@ class saasbeyond_Widget_Banner extends Widget_Base {
       $this->add_control(
       'banner_image',
         [
-          'label' => __( 'Banner image', 'saasbeyond' ),
+          'label' => __( 'Banner image', 'megaaddons' ),
           'type' => \Elementor\Controls_Manager::MEDIA,
           'default' => [
             'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -61,33 +61,33 @@ class saasbeyond_Widget_Banner extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'saasbeyond' ),
+            'label' => __( 'Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Get the Apps & Enjoy!','saasbeyond')
+            'default' => __('Get the Apps & Enjoy!','megaaddons')
          ]
       );
 
       $this->add_control(
          'description',
          [
-            'label' => __( 'Description', 'saasbeyond' ),
+            'label' => __( 'Description', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __('Lorem ipxumd dummy text are used in this industry. So replace your orginal text. Lorem dummy','saasbeyond')
+            'default' => __('Lorem ipxumd dummy text are used in this industry. So replace your orginal text. Lorem dummy','megaaddons')
          ]
       );
 
       $this->add_control(
          'btn_text', [
-            'label' => __( 'Text', 'saasbeyond' ),
+            'label' => __( 'Text', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('DOWNLOAD','saasbeyond'),
+            'default' => __('DOWNLOAD','megaaddons'),
             'condition' => ['style' => 'style1']
          ]
       );
 
       $this->add_control(
          'btn_url', [
-            'label' => __( 'URL', 'saasbeyond' ),
+            'label' => __( 'URL', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '#',
             'condition' => ['style' => 'style1']
@@ -177,4 +177,4 @@ class saasbeyond_Widget_Banner extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_Banner );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Banner );

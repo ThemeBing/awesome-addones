@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // video
-class saasbeyond_Widget_video extends Widget_Base {
+class megaaddons_Widget_video extends Widget_Base {
  
    public function get_name() {
       return 'video';
    }
  
    public function get_title() {
-      return esc_html__( 'Video', 'saasbeyond' );
+      return esc_html__( 'Video', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class saasbeyond_Widget_video extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,14 +27,14 @@ class saasbeyond_Widget_video extends Widget_Base {
       $this->start_controls_section(
          'video_section',
          [
-            'label' => esc_html__( 'Video', 'saasbeyond' ),
+            'label' => esc_html__( 'Video', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
          'background', [
-            'label' => __( 'Background', 'saasbeyond' ),
+            'label' => __( 'Background', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
               'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -45,7 +45,7 @@ class saasbeyond_Widget_video extends Widget_Base {
       $this->add_control(
          'url',
          [
-            'label' => __( 'URL', 'saasbeyond' ),
+            'label' => __( 'URL', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '#',
          ]
@@ -78,4 +78,4 @@ class saasbeyond_Widget_video extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_video );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_video );

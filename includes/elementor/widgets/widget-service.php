@@ -3,14 +3,14 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // service item
-class saasbeyond_Widget_Service extends Widget_Base {
+class megaaddons_Widget_Service extends Widget_Base {
  
    public function get_name() {
       return 'service item';
    }
  
    public function get_title() {
-      return esc_html__( 'Service Item', 'saasbeyond' );
+      return esc_html__( 'Service Item', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -18,13 +18,13 @@ class saasbeyond_Widget_Service extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
          'service_section',
          [
-            'label' => esc_html__( 'Service Item', 'saasbeyond' ),
+            'label' => esc_html__( 'Service Item', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -32,7 +32,7 @@ class saasbeyond_Widget_Service extends Widget_Base {
       $this->add_control(
          'icon',
          [
-            'label' => __( 'Icon', 'saasbeyond' ),
+            'label' => __( 'Icon', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -43,29 +43,29 @@ class saasbeyond_Widget_Service extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'saasbeyond' ),
+            'label' => __( 'Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Awesome Design','saasbeyond'),
+            'default' => __('Awesome Design','megaaddons'),
          ]
       );
       $this->add_control(
          'text',
          [
-            'label' => __( 'Text', 'saasbeyond' ),
+            'label' => __( 'Text', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __('Lorem ipsum dummy text are used here so replace your app data, ipsum dummy text are used here so','saasbeyond'),
+            'default' => __('Lorem ipsum dummy text are used here so replace your app data, ipsum dummy text are used here so','megaaddons'),
          ]
       );
 
       $this->add_control(
          'style',
          [
-            'label' => __( 'Service Style', 'saasbeyond' ),
+            'label' => __( 'Service Style', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'center',
             'options' => [
-               'center'  => __( 'Center Icon', 'saasbeyond' ),
-               'left' => __( 'Left Icon', 'saasbeyond' ),
+               'center'  => __( 'Center Icon', 'megaaddons' ),
+               'left' => __( 'Left Icon', 'megaaddons' ),
             ],
          ]
       );
@@ -117,4 +117,4 @@ class saasbeyond_Widget_Service extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_Service );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Service );

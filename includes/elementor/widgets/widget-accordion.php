@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Accordion
-class saasbeyond_Widget_Accordion extends Widget_Base {
+class megaaddons_Widget_Accordion extends Widget_Base {
  
    public function get_name() {
       return 'accordion';
    }
  
    public function get_title() {
-      return esc_html__( 'Accordion', 'saasbeyond' );
+      return esc_html__( 'Accordion', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class saasbeyond_Widget_Accordion extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class saasbeyond_Widget_Accordion extends Widget_Base {
       $this->start_controls_section(
          'accordion_section',
          [
-            'label' => esc_html__( 'Accordion', 'saasbeyond' ),
+            'label' => esc_html__( 'Accordion', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -37,13 +37,13 @@ class saasbeyond_Widget_Accordion extends Widget_Base {
 
       $accordion->add_control(
          'title', [
-            'label' => __( 'Title', 'saasbeyond' ),
+            'label' => __( 'Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT
          ]
       );
       $accordion->add_control(
          'text', [
-            'label' => __( 'Text', 'saasbeyond' ),
+            'label' => __( 'Text', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA
          ]
       );
@@ -51,21 +51,21 @@ class saasbeyond_Widget_Accordion extends Widget_Base {
       $this->add_control(
          'accordion_list',
          [
-            'label' => __( 'Accordion list', 'saasbeyond' ),
+            'label' => __( 'Accordion list', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $accordion->get_controls(),
             'default' => [
                [
-                  'title' => __( 'Lorem ipsum dummy text used here?', 'saasbeyond' ),
-                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'saasbeyond' )
+                  'title' => __( 'Lorem ipsum dummy text used here?', 'megaaddons' ),
+                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'megaaddons' )
                ],
                [
-                  'title' => __( 'Why i should buy this Theme?', 'saasbeyond' ),
-                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'saasbeyond' )
+                  'title' => __( 'Why i should buy this Theme?', 'megaaddons' ),
+                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'megaaddons' )
                ],
                [
-                  'title' => __( 'Can i change any elements easilly?', 'saasbeyond' ),
-                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'saasbeyond' )
+                  'title' => __( 'Can i change any elements easilly?', 'megaaddons' ),
+                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'megaaddons' )
                ]
             ],
             'title_field' => '{{{ title }}}',
@@ -119,4 +119,4 @@ class saasbeyond_Widget_Accordion extends Widget_Base {
 
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_Accordion );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Accordion );

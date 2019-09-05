@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Newsletter
-class saasbeyond_Widget_newsletter extends Widget_Base {
+class megaaddons_Widget_newsletter extends Widget_Base {
  
    public function get_name() {
       return 'newsletter';
    }
  
    public function get_title() {
-      return esc_html__( 'Newsletter', 'saasbeyond' );
+      return esc_html__( 'Newsletter', 'megaaddons' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class saasbeyond_Widget_newsletter extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'saasbeyond-elements' ];
+      return [ 'megaaddons-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class saasbeyond_Widget_newsletter extends Widget_Base {
       $this->start_controls_section(
          'newsletter_section',
          [
-            'label' => esc_html__( 'Newsletter', 'saasbeyond' ),
+            'label' => esc_html__( 'Newsletter', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,43 +35,43 @@ class saasbeyond_Widget_newsletter extends Widget_Base {
       $this->add_control(
          'style',
          [
-            'label' => __( 'Layout Style', 'saasbeyond' ),
+            'label' => __( 'Layout Style', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'style1',
             'options' => [
-               'style1' => __( 'Style 1', 'saasbeyond' ),
-               'style2' => __( 'Style 2', 'saasbeyond' ),
+               'style1' => __( 'Style 1', 'megaaddons' ),
+               'style2' => __( 'Style 2', 'megaaddons' ),
             ],
          ]
       );
 
       $this->add_control(
          'title', [
-            'label' => __( 'Title', 'saasbeyond' ),
+            'label' => __( 'Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( 'Get reguler updates', 'saasbeyond' ),
+            'default' => __( 'Get reguler updates', 'megaaddons' ),
          ]
       );
 
       $this->add_control(
          'desc', [
-            'label' => __( 'Description', 'saasbeyond' ),
+            'label' => __( 'Description', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __( 'Lorem ipsum dummy text are used here so replace your app data, Lorem ipsm', 'saasbeyond' ),
+            'default' => __( 'Lorem ipsum dummy text are used here so replace your app data, Lorem ipsm', 'megaaddons' ),
          ]
       );
 
       $this->add_control(
          'shortcode', [
-            'label' => __( 'Mailchimp Shortcode', 'saasbeyond' ),
+            'label' => __( 'Mailchimp Shortcode', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'placeholder' => __( '[mc4wp_form id="123"]', 'saasbeyond' ),
+            'placeholder' => __( '[mc4wp_form id="123"]', 'megaaddons' ),
          ]
       );
 
       $this->add_control(
          'background', [
-            'label' => __( 'Floating Image', 'saasbeyond' ),
+            'label' => __( 'Floating Image', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
               'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -151,4 +151,4 @@ class saasbeyond_Widget_newsletter extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new saasbeyond_Widget_newsletter );
+Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_newsletter );
