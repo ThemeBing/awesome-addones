@@ -45,7 +45,7 @@ class megaaddons_Widget_Pricing extends Widget_Base {
          'icon',
          [
             'label' => __( 'icon', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::ICON,
+            'type' => \Elementor\Controls_Manager::MEDIA,
             'label_block' => true,
             'default' => 'fa fa-shield'
          ]
@@ -59,7 +59,6 @@ class megaaddons_Widget_Pricing extends Widget_Base {
             'default' => '70'
          ]
       );
-
       
       $this->add_control(
          'package',
@@ -160,7 +159,7 @@ class megaaddons_Widget_Pricing extends Widget_Base {
              <h2><?php echo esc_html( $settings['price'] ); ?><span>$/<?php echo esc_html( $settings['package'] ); ?></span></h2>
          </div>
          <div class="pricing-icon mb-45">
-             <img src="img/icon/pricing_icon02.png" alt="icon">
+             <img src="<?php echo esc_url( $settings['icon']['url'] ); ?>" alt="<?php echo esc_attr( $settings['title'] ); ?>">
          </div>
          <div class="pricing-list mb-35">
              <ul>
