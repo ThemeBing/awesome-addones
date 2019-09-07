@@ -48,7 +48,7 @@ class megaaddons_Widget_Features extends Widget_Base {
       $this->add_control(
          'feature_icon', [
             'label' => __( 'Feature Icon', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::MEDIA,
+            'type' => \Elementor\Controls_Manager::ICON,
             'default' => [
               'url' => \Elementor\Utils::get_placeholder_image_src(),
             ],
@@ -115,7 +115,7 @@ class megaaddons_Widget_Features extends Widget_Base {
           <div class="features-icon mb-25">
               <i class="flaticon-settings"></i>
           </div>
-          <div class="features-content">
+          <div class="<?php echo esc_attr($settings['feature_icon']) ?>">
               <h3><?php echo esc_html($settings['feature_title']) ?></h3>
               <p><?php echo esc_html($settings['feature_text']) ?></p>
               <a href="<?php echo esc_url($settings['feature_btn_url']) ?>"><?php echo esc_html($settings['feature_btn_text']) ?></a>
