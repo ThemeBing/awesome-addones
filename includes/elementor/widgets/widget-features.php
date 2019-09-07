@@ -33,6 +33,19 @@ class megaaddons_Widget_Features extends Widget_Base {
       );
 
       $this->add_control(
+         'style',
+         [
+            'label' => __( 'Layout Style', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::SELECT,
+            'default' => 'style1',
+            'options' => [
+               'style1' => __( 'Style 1', 'megaaddons' ),
+               'style2' => __( 'Style 2', 'megaaddons' ),
+            ],
+         ]
+      );
+
+      $this->add_control(
          'feature_icon', [
             'label' => __( 'Feature Icon', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
@@ -96,6 +109,8 @@ class megaaddons_Widget_Features extends Widget_Base {
        
       $settings = $this->get_settings_for_display(); ?>
 
+      <?php if ( $settings['style'] == 'style1' ){ ?>
+
       <div class="single-features <?php echo esc_html($settings['active']) ?>">
           <div class="features-icon mb-25">
               <i class="flaticon-settings"></i>
@@ -108,6 +123,9 @@ class megaaddons_Widget_Features extends Widget_Base {
       </div>
 
 
+    <?php } elseif( $settings['style'] == 'style2' ){ ?>
+
+
       <div class="single-services">
           <div class="services-icon">
               <i class="flaticon-settings"></i>
@@ -117,6 +135,8 @@ class megaaddons_Widget_Features extends Widget_Base {
               <p><?php echo esc_html($settings['feature_text']) ?></p>
           </div>
       </div>
+
+    <?php } ?>
 
       <?php
    }
