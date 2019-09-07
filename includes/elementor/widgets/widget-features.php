@@ -113,9 +113,9 @@ class megaaddons_Widget_Features extends Widget_Base {
 
       <div class="single-features <?php echo esc_html($settings['active']) ?>">
           <div class="features-icon mb-25">
-              <i class="flaticon-settings"></i>
+              <i class="<?php echo esc_attr($settings['feature_icon']) ?>"></i>
           </div>
-          <div class="<?php echo esc_attr($settings['feature_icon']) ?>">
+          <div class="features-content">
               <h3><?php echo esc_html($settings['feature_title']) ?></h3>
               <p><?php echo esc_html($settings['feature_text']) ?></p>
               <a href="<?php echo esc_url($settings['feature_btn_url']) ?>"><?php echo esc_html($settings['feature_btn_text']) ?></a>
@@ -128,7 +128,7 @@ class megaaddons_Widget_Features extends Widget_Base {
 
       <div class="single-services">
           <div class="services-icon">
-              <i class="flaticon-settings"></i>
+              <i class="<?php echo esc_attr($settings['feature_icon']) ?>"></i>
           </div>
           <div class="services-content">
               <h4><?php echo esc_html($settings['feature_title']) ?></h4>
