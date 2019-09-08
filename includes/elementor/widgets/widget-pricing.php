@@ -45,9 +45,7 @@ class megaaddons_Widget_Pricing extends Widget_Base {
          'icon',
          [
             'label' => __( 'icon', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::MEDIA,
-            'label_block' => true,
-            'default' => 'fa fa-shield'
+            'type' => \Elementor\Controls_Manager::MEDIA
          ]
       );
 
@@ -135,7 +133,7 @@ class megaaddons_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'recommended',
          [
-            'label' => __( 'Recommended', 'plugin-domain' ),
+            'label' => __( 'Recommended', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __( 'On', 'megaaddons' ),
             'label_off' => __( 'Off', 'megaaddons' ),

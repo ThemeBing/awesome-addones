@@ -51,13 +51,37 @@ class megaaddons_Widget_Title extends Widget_Base {
       );
 
       $this->add_control(
-         'border',
+         'align',
          [
-            'label' => __( 'Border Bottom', 'megaaddons' ),
+            'label' => __( 'Alignment', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::CHOOSE,
+            'options' => [
+               'text-left' => [
+                  'title' => __( 'Left', 'megaaddons' ),
+                  'icon' => 'fa fa-align-left',
+               ],
+               'text-center' => [
+                  'title' => __( 'Center', 'megaaddons' ),
+                  'icon' => 'fa fa-align-center',
+               ],
+               'text-right' => [
+                  'title' => __( 'Right', 'megaaddons' ),
+                  'icon' => 'fa fa-align-right',
+               ],
+            ],
+            'default' => 'text-left',
+            'toggle' => true
+         ]
+      );
+
+      $this->add_control(
+         'white',
+         [
+            'label' => __( 'White title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
             'label_on' => __( 'On', 'megaaddons' ),
             'label_off' => __( 'Off', 'megaaddons' ),
-            'return_value' => 'yes',
+            'return_value' => 'white',
             'default' => 'no',   
          ]
       );
@@ -78,7 +102,7 @@ class megaaddons_Widget_Title extends Widget_Base {
       $this->add_inline_editing_attributes( 'border', 'basic' );
       
       ?>
-      <div class="section-title text-center mb-70">
+      <div class="section-title mb-70 <?php echo esc_attr($settings['align']).' '.esc_attr($settings['white']); ?>">
            <span <?php echo $this->get_render_attribute_string( 'sub-title' ); ?>><?php echo esc_html($settings['sub-title']); ?></span>
            <h2 <?php echo $this->get_render_attribute_string( 'title' ); ?>><?php echo esc_html($settings['title']); ?></h2>
       </div>

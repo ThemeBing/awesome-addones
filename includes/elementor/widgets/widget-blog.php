@@ -65,29 +65,20 @@ class megaaddons_Widget_Blog extends Widget_Base {
                /* Start the Loop */
                while ( $blog->have_posts() ) : $blog->the_post();
                ?>
+              <div class="col-lg-4 col-md-6">
+                <div class="single-blog-post mb-30">
+                    <div class="b-post-thumb">
+                      <a href="<?php the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'saascloud-404x302'); ?>" alt="<?php the_title() ?>"></a>
+                    </div>
+                    <div class="blog-content">
+                        <span><?php the_date(); ?></span>
+                        <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                        <p><?php echo wp_trim_words( get_the_content(), 7, '.' ); ?></p>
+                        <a href="<?php the_permalink(); ?>"><?php echo esc_html__( 'Read More', 'megaaddons' ); ?> <i class="fa fa-plus"></i></a>
+                    </div>
+                </div>
+              </div>
 
-               <div class="col-lg-4 col-md-6">
-                   <div class="single-blog mb-50">
-                       <div class="s-blog-thumb p-relative">
-                           <a href="<?php the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'megaaddons-360-200'); ?>" alt="<?php the_title() ?>"></a>
-
-                           <?php
-
-                           $posttags = get_the_tags();
-                           if ($posttags) {
-                             foreach($posttags as $tag) {
-                               echo '<a href="' . get_tag_link($tag->term_id) . '" class="b-tag">' .$tag->name. '</a>'; 
-                             }
-                           }
-                           ?>
-                       </div>
-                       <div class="s-blog-content">
-                           <span><?php echo get_the_time() ?></span>
-                           <h4><a href="#"><?php the_title() ?></a></h4>
-                           <a href="<?php the_permalink() ?>"><?php echo esc_html__( 'Read more', 'megaaddons' ) ?> <i class="arrow_right"></i></a>
-                       </div>
-                   </div>
-               </div>
                <?php 
                endwhile; 
             wp_reset_postdata();
