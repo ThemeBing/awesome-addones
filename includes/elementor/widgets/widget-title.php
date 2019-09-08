@@ -69,7 +69,7 @@ class megaaddons_Widget_Title extends Widget_Base {
                   'icon' => 'fa fa-align-right',
                ],
             ],
-            'default' => 'text-left',
+            'default' => 'text-center',
             'toggle' => true
          ]
       );
