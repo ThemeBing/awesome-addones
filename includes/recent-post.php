@@ -11,7 +11,7 @@ if( !class_exists('megaaddons_Recent_Post') ){
 		function __construct(){
 
 			$widget_options = array(
-				'description' 					=> esc_html__('megaaddons recent post here', 'megaaddons'), 
+				'description'					=> esc_html__('megaaddons recent post here', 'megaaddons'), 
 				'customize_selective_refresh' 	=> true,
 			);
 
