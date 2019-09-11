@@ -1,3 +1,8 @@
 .widget_recent_post {
 	
 }
+
+.widget-recent-post li:before {
+	display: none;
+	padding-left: 0;
+}

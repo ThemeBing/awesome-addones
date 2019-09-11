@@ -36,6 +36,11 @@ class MegaAddons {
 		$this->load_plugin_textdomain();
 		$this->load_dependencies();
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_action( 'after_setup_theme', 'megaaddons_setup' );
+	}
+
+	public function megaaddons_setup() {
+		add_image_size( 'saascloud-77x64', 77,64, true );
 	}
 
 	public function load_plugin_textdomain() {
