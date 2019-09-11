@@ -45,15 +45,15 @@ class megaaddons_Widget_Portfolio extends Widget_Base {
          [
             'label' => __( 'Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Awesome Design','megaaddons'),
+            'default' => __('Blanding Pro','megaaddons'),
          ]
       );
       $this->add_control(
          'text',
          [
             'label' => __( 'Sub title', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __('Lorem ipsum dummy text are used here so replace your app data, ipsum dummy text are used here so','megaaddons'),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'default' => __('Creative Market','megaaddons'),
          ]
       );
 
@@ -72,7 +72,7 @@ class megaaddons_Widget_Portfolio extends Widget_Base {
       $this->add_inline_editing_attributes( 'text', 'basic' );
       ?>
 
-      <div class="inner-single-project text-center mb-30">
+      <div class="inner-single-project text-center">
           <?php echo wp_get_attachment_image( $settings['image']['id'],'full'); ?>
           <div class="project-overlay">
               <h5><a href="#"><?php echo esc_html($settings['title']); ?></a></h5>
