@@ -11,7 +11,7 @@ if( !class_exists('megaaddons_Recent_Post') ){
 		function __construct(){
 
 			$widget_options = array(
-				'description'					=> esc_html__('megaaddons recent post here', 'megaaddons'), 
+				'description'					=> esc_html__('MegaAddons recent post here', 'megaaddons'), 
 				'customize_selective_refresh' 	=> true,
 			);
 
@@ -57,15 +57,15 @@ if( !class_exists('megaaddons_Recent_Post') ){
 
 				?>
 
-                <ul class="widget__post">
+                <ul class="widget-recent-post">
                <?php while($posts->have_posts()) : $posts->the_post();  ?>
 	               	<li>
-	               		<div class="widget__post-thumb">
+	               		<div class="widget-recent-post-thumb">
 	               			<?php the_post_thumbnail( 'megaaddons-80-60' ); ?>
 	               		</div>
-	               		<div class="widget__post-content">
+	               		<div class="widget-recent-content">	               			
+                            <span><i class="far fa-clock"></i><?php echo get_the_date() ?></span>
                             <h6><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h6>
-                            <span><i class="far fa-clock"></i><?php echo get_the_date( 'd M Y' ) ?></span>
                         </div>
 	                </li>
 				<?php endwhile; ?>
