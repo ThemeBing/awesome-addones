@@ -102,7 +102,7 @@ class megaaddons_Widget_Title extends Widget_Base {
       $this->add_inline_editing_attributes( 'border', 'basic' );
       
       ?>
-      <div class="section-title mb-70 <?php echo esc_attr($settings['align']).' '.esc_attr($settings['white']); ?>">
+      <div class="section-title <?php echo esc_attr($settings['align']).' '.esc_attr($settings['white']); ?>">
            <span <?php echo $this->get_render_attribute_string( 'sub-title' ); ?>><?php echo esc_html($settings['sub-title']); ?></span>
            <h2 <?php echo $this->get_render_attribute_string( 'title' ); ?>><?php echo esc_html($settings['title']); ?></h2>
       </div>
