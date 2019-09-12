@@ -1,4 +1,4 @@
-.widget_recent_post li {
+.widget-recent-post li {
 	padding-left: 0;
 	display: flex;
     align-items: center;
@@ -8,7 +8,7 @@
     margin-bottom: 20px;
 }
 
-.widget_recent_post ul li:last-child {
+.widget-recent-post ul li:last-child {
     padding-bottom: 0px;
     border-bottom: none;
     margin-bottom: 0px;
@@ -17,17 +17,18 @@
 .widget-recent-post li:before {
 	display: none;
 }
-.widget_recent_post ul li img {
+.widget-recent-post ul li img {
 	float: left;
 	margin-right: 20px;
+	border-radius: 3px;
 }
-.widget_recent_post ul li span {
+.widget-recent-post ul li span {
 	font-size: 14px;
     color: #838383;
     display: block;
     margin-bottom: 3px;
 }
-.widget_recent_post ul li h6 {
+.widget-recent-post ul li h6 {
 	font-size: 14px;
     font-weight: 500;
     color: #aeaeae;
