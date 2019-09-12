@@ -50,10 +50,8 @@ class megaaddons_Widget_Soft_Integration extends Widget_Base {
          'url',
          [
             'label' => __( 'Software URL', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::MEDIA,
-            'default' => [
-               'url' => \Elementor\Utils::get_placeholder_image_src()
-            ],
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'default' => '#'
          ]
       );
 
