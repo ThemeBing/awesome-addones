@@ -35,8 +35,8 @@ class MegaAddons {
 	function __construct() {
 		$this->load_plugin_textdomain();
 		$this->load_dependencies();
+		$this->megaaddons_setup();
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-		add_action( 'after_setup_theme', 'megaaddons_setup' );
 	}
 
 	public function megaaddons_setup() {

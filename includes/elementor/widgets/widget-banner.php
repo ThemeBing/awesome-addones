@@ -38,10 +38,12 @@ class megaaddons_Widget_Banner extends Widget_Base {
          [
             'label' => __( 'Banner Style', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::SELECT,
-            'default' => 'style1',
+            'default' => 'saas',
             'options' => [
-               'style1' => __( 'Style 1', 'megaaddons' ),
-               'style2' => __( 'Style 2', 'megaaddons' ),
+               'saas' => __( 'SaaS', 'megaaddons' ),
+               'hrmanagement' => __( 'HR Management', 'megaaddons' ),
+               'digitalmarketing' => __( 'Digital Marketing', 'megaaddons' ),
+               'accountsbilling' => __( 'Accounts Billing', 'megaaddons' ),
             ],
          ]
       );
@@ -63,7 +65,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
          [
             'label' => __( 'Title', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Get the Apps & Enjoy!','megaaddons')
+            'default' => __('Thinking Software High Quality','megaaddons')
          ]
       );
 
@@ -72,7 +74,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
          [
             'label' => __( 'Description', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __('Lorem ipxumd dummy text are used in this industry. So replace your orginal text. Lorem dummy','megaaddons')
+            'default' => __('Lorem ipsum dolor sit amet, consectetur adipiscing seddo eiumod tempor incididunt labore dolore','megaaddons')
          ]
       );
 
@@ -104,7 +106,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
        
       $settings = $this->get_settings_for_display(); ?>
 
-      <?php if ( $settings['style'] == 'style1' ){ ?>
+      <?php if ( $settings['style'] == 'saas' ){ ?>
         <!-- slider-area -->
         <section class="slider-area slider-bg" data-background="<?php echo esc_url( $settings['banner_image']['url'] ) ?>">
             <div class="container">
@@ -112,8 +114,8 @@ class megaaddons_Widget_Banner extends Widget_Base {
                     <div class="row">
                         <div class="col-xl-5 col-lg-6">
                             <div class="slider-content mt-15">
-                                <h2 class="wow slideInLeft" data-wow-delay="0.2s">Thinking <span>Software</span> High Quality</h2>
-                                <p class="wow slideInLeft" data-wow-delay="0.4s">Lorem ipsum dolor sit amet, con sectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna eiusmod aliqua.</p>
+                                <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo esc_html( $settings['title'] ) ?></h2>
+                                <p class="wow slideInLeft" data-wow-delay="0.4s"><?php echo esc_html( $settings['description'] ) ?></p>
                                 <a href="#" class="btn wow slideInLeft" data-wow-delay="0.6s">Start now</a>
                             </div>
                         </div>
@@ -139,36 +141,80 @@ class megaaddons_Widget_Banner extends Widget_Base {
             <div class="slider-shape s-shape-six"><img src="<?php echo get_template_directory_uri() ?>/images/slider_shape06.png" alt="img"></div>
         </section>
         <!-- slider-area-end -->
-      <?php } elseif( $settings['style'] == 'style2' ){ ?>
-        <!-- banner-area -->
-        <section class="banner-area s-banner-bg d-flex align-items-center p-relative" data-background="<?php echo $settings['banner_image']['url'] ?>">
-            <div id="particles-js"></div>
-            <div class="container">
-                <div class="row align-items-center justify-content-between">
+      <?php } elseif( $settings['style'] == 'hrmanagement' ){ ?>
+        
+      <section class="slider-area s-slider-bg fix" data-background="<?php echo esc_url( $settings['banner_image']['url'] ) ?>">
+        <div class="container">
+            <div class="s-slider-overflow">
+                <div class="row">
                     <div class="col-xl-7 col-lg-6">
-                        <div class="banner-content s-banner-content">
-                            <h2 class="wow fadeInUp" data-wow-delay="0.2s"><?php echo $settings['title']; ?></h2>
-                            <p class="wow fadeInUp" data-wow-delay="0.4s"><?php echo $settings['description']; ?></p>
-                            <a href="#" class="btn wow fadeInLeft" data-wow-delay="0.6s">Buy Now</a>
-                            <a href="#" class="btn wow fadeInRight" data-wow-delay="0.6s">Learn More</a>
+                        <div class="slider-content s-slider-content mt-60">
+                            <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo esc_html( $settings['title'] ) ?></h2>
+                            <p class="wow slideInLeft" data-wow-delay="0.4s"><?php echo esc_html( $settings['description'] ) ?></p>
+                            <a href="#" class="btn wow fadeInLeft" data-wow-delay="0.6s">get started</a>
+                            <a href="#" class="btn wow fadeInRight" data-wow-delay="0.6s">contact us</a>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-6 d-none d-lg-block">
-                        <div class="s-banner-app p-relative">
-                            <img src="<?php echo $settings['app_mockup']['url'] ?>" alt="img">
-                            <img src="<?php echo get_template_directory_uri() ?>/img/banner_app_shape.png" class="b-app-shape wow zoomIn" data-wow-delay="1s" alt="img">
-                            <div class="circle-animation">
-                                <div class="slider-pulse"></div>
-                                <div class="circle" style="animation-delay: -2s"></div>
-                                <div class="circle" style="animation-delay: -1s"></div>
-                                <div class="circle" style="animation-delay: 0s"></div>
-                            </div>
+                        <div class="s-slider-img position-relative wow slideInRightS" data-wow-delay="0.6s">
+                            <img src="img/slider/s_slider_img01.png" alt="img">
+                            <img src="img/slider/s_slider_img02.png" alt="img" data-0="transform:rotate(0deg);left: -160px;" data-50="transform:rotate(0deg);left: -160px;" data-150="transform:rotate(14deg);left: -160px;" data-300="transform:rotate(28deg);left: -160px;" data-450="transform:rotate(28deg);left: -130px;" data-800="transform:rotate(28deg);left: -100px;">
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- banner-area-end -->
+        </div>
+        <div class="s-slider-shape s-slider-shape-one wow fadeIn" data-wow-delay="1s"><img src="img/shape/s_slider_shape01.png" alt="img" data-parallax='{"x": 150}'></div>
+        <div class="s-slider-shape s-slider-shape-two wow fadeIn" data-wow-delay="1s"><img src="img/shape/s_slider_shape02.png" alt="img" data-parallax='{"y": -150}'></div>
+      </section>
+
+      <?php } elseif( $settings['style'] == 'digitalmarketing' ){ ?>
+
+      <section class="slider-area slider-bg fix digital-slider-bg" data-background="<?php echo esc_url( $settings['banner_image']['url'] ) ?>">
+          <div class="container">
+              <div class="digital-slider-overflow">
+                  <div class="row">
+                      <div class="col-xl-6 col-lg-7 col-md-11">
+                          <div class="slider-content digital-slider-content mt-95">
+                              <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo esc_html( $settings['title'] ) ?></h2>
+                              <p class="wow slideInLeft" data-wow-delay="0.4s"><?php echo esc_html( $settings['description'] ) ?></p>
+                              <a href="#" class="btn wow fadeInUp" data-wow-delay="0.6s">Start now</a>
+                          </div>
+                      </div>
+                      <div class="col-xl-6 col-lg-5 d-none d-lg-block">
+                          <div class="slider-img digital-animate-slider-img position-relative">
+                              <img src="img/slider/digital_slider_img.png" alt="img" class="digital-slider-main-img">
+                              <img src="img/slider/digi_phone.png" alt="img" class="digital-slider-phone wow slideInDown" data-wow-delay="0.6s">
+                              <div class="wow slideInLeftDigi digital-slider-man" data-wow-delay="0.8s"><img src="img/slider/digi_man.png" alt="img" class="alltuchtopdown wow" data-wow-delay="1.2s"></div>
+                              <div class="wow slideInRightDigi digital-slider-cog" data-wow-delay="1s"><img src="img/slider/digi_cog.png" alt="img" class="rotateme"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+      <?php } elseif( $settings['style'] == 'accountsbilling' ){ ?>
+        
+      <section class="slider-area t-slider-bg fix" data-background="<?php echo esc_url( $settings['banner_image']['url'] ) ?>">
+              <div class="container">
+                  <div class="s-slider-overflow t-slider-overflow">
+                      <div class="row justify-content-center text-center">
+                          <div class="col-lg-10">
+                              <div class="slider-content s-slider-content">
+                                 <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo esc_html( $settings['title'] ) ?></h2>
+                                  <a href="#" class="btn wow fadeInLeft" data-wow-delay="0.4s">get started</a>
+                                  <a href="#" class="btn wow fadeInRight" data-wow-delay="0.4s">contact us</a>
+                              </div>
+                              <div class="t-slider-img wow fadeInUp" data-wow-delay="0.6s">
+                                  <img src="img/slider/slider_img03.png" class="alltuchtopdown" alt="img">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
       <?php } ?>
 
       
