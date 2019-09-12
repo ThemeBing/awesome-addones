@@ -25,6 +25,7 @@
 .widget-recent-post li img {
     float: left;
     border-radius: 3px;
+    max-width: unset;
 }
 
 .widget-recent-post li span {
