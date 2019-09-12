@@ -8,7 +8,7 @@
     margin-bottom: 20px;
 }
 
-.widget-recent-post ul li:last-child {
+.widget-recent-post li:last-child {
     padding-bottom: 0px;
     border-bottom: none;
     margin-bottom: 0px;
@@ -17,18 +17,18 @@
 .widget-recent-post li:before {
 	display: none;
 }
-.widget-recent-post ul li img {
+.widget-recent-post li img {
 	float: left;
 	margin-right: 20px;
 	border-radius: 3px;
 }
-.widget-recent-post ul li span {
+.widget-recent-post li span {
 	font-size: 14px;
     color: #838383;
     display: block;
     margin-bottom: 3px;
 }
-.widget-recent-post ul li h6 {
+.widget-recent-post li h6 {
 	font-size: 14px;
     font-weight: 500;
     color: #aeaeae;
