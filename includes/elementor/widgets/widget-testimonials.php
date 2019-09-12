@@ -49,16 +49,16 @@ class megaaddons_Widget_Testimonials extends Widget_Base {
 
       $repeater = new \Elementor\Repeater();
 
-      // $repeater->add_control(
-      //    'image',
-      //    [
-      //       'label' => __( 'Choose Photo', 'megaaddons' ),
-      //       'type' => \Elementor\Controls_Manager::MEDIA,
-      //       'default' => [
-      //          'url' => \Elementor\Utils::get_placeholder_image_src()
-      //       ],
-      //    ]
-      // );
+      $repeater->add_control(
+         'image',
+         [
+            'label' => __( 'Choose Photo', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::MEDIA,
+            'default' => [
+               'url' => \Elementor\Utils::get_placeholder_image_src()
+            ],
+         ]
+      );
       
       $repeater->add_control(
          'name',
@@ -107,22 +107,26 @@ class megaaddons_Widget_Testimonials extends Widget_Base {
       $settings = $this->get_settings_for_display(); ?>
 
       <?php if ( $settings['style'] == 'style1' ){ ?>
-
-      <div class="testimonial-active">
-        <?php foreach (  $settings['testimonial_list'] as $testimonial_single ): ?>
-          <div class="single-testimonial text-center">
-              <div class="testimonial-icon mb-25">
-                  <img src="<?php echo get_template_directory_uri() ?>/images/quote_icon.png" alt="quote">
-              </div>
-              <div class="testimonial-content">
-                  <h5><?php echo esc_html($testimonial_single['testimonial']); ?></h5>
-                  <div class="testi-avatar">
-                      <h6><?php echo esc_html($testimonial_single['name']); ?></h6>
-                      <span><?php echo esc_html($testimonial_single['designation']); ?></span>
+        
+      <div class="row justify-content-center">
+        <div class="col-xl-8 col-lg-10">
+          <div class="testimonial-active">
+            <?php foreach (  $settings['testimonial_list'] as $testimonial_single ): ?>
+              <div class="single-testimonial text-center">
+                  <div class="testimonial-icon mb-25">
+                      <img src="<?php echo get_template_directory_uri() ?>/images/quote_icon.png" alt="quote">
+                  </div>
+                  <div class="testimonial-content">
+                      <h5><?php echo esc_html($testimonial_single['testimonial']); ?></h5>
+                      <div class="testi-avatar">
+                          <h6><?php echo esc_html($testimonial_single['name']); ?></h6>
+                          <span><?php echo esc_html($testimonial_single['designation']); ?></span>
+                      </div>
                   </div>
               </div>
+            <?php endforeach; ?>
           </div>
-        <?php endforeach; ?>
+        </div>
       </div>
       
       <?php } elseif( $settings['style'] == 'style2' ){ ?>
@@ -145,7 +149,7 @@ class megaaddons_Widget_Testimonials extends Widget_Base {
           </div>
         <?php endforeach; ?>
       </div>
-      
+
       <?php } elseif( $settings['style'] == 'style3' ){ ?>
 
       <div class="s-testimonial-active">
