@@ -17,3 +17,21 @@
 .widget-recent-post li:before {
 	display: none;
 }
+.widget_recent_post ul li img {
+	float: left;
+	margin-right: 20px;
+}
+.widget_recent_post ul li span {
+	font-size: 14px;
+    color: #838383;
+    display: block;
+    margin-bottom: 3px;
+}
+.widget_recent_post ul li h6 {
+	font-size: 14px;
+    font-weight: 500;
+    color: #aeaeae;
+    margin-bottom: 0;
+    padding-right: 50px;
+    line-height: 1.4;
+}
