@@ -42,6 +42,7 @@ class megaaddons_Widget_Testimonials extends Widget_Base {
             'options' => [
                'style1' => __( 'Style 1', 'megaaddons' ),
                'style2' => __( 'Style 2', 'megaaddons' ),
+               'style3' => __( 'Style 3', 'megaaddons' ),
             ],
          ]
       );
@@ -57,6 +58,7 @@ class megaaddons_Widget_Testimonials extends Widget_Base {
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src()
             ],
+            'condition' => ['style' => [ 'style2', 'style3']]
          ]
       );
       
@@ -107,7 +109,7 @@ class megaaddons_Widget_Testimonials extends Widget_Base {
       $settings = $this->get_settings_for_display(); ?>
 
       <?php if ( $settings['style'] == 'style1' ){ ?>
-        
+
       <div class="row justify-content-center">
         <div class="col-xl-8 col-lg-10">
           <div class="testimonial-active">
