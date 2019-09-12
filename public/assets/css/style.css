@@ -1,6 +1,6 @@
 .widget-recent-post li {
-	padding-left: 0;
-	display: flex;
+    padding-left: 0;
+    display: flex;
     align-items: center;
     overflow: hidden;
     padding-bottom: 20px;
@@ -15,21 +15,27 @@
 }
 
 .widget-recent-post li:before {
-	display: none;
+    display: none;
 }
+
+.widget-recent-post .widget-recent-post-thumb {
+    margin-right: 20px;
+}
+
 .widget-recent-post li img {
-	float: left;
-	margin-right: 20px;
-	border-radius: 3px;
+    float: left;
+    border-radius: 3px;
 }
+
 .widget-recent-post li span {
-	font-size: 14px;
+    font-size: 14px;
     color: #838383;
     display: block;
     margin-bottom: 3px;
 }
+
 .widget-recent-post li h6 {
-	font-size: 14px;
+    font-size: 14px;
     font-weight: 500;
     color: #aeaeae;
     margin-bottom: 0;
