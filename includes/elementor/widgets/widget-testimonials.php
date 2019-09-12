@@ -116,7 +116,7 @@ class megaaddons_Widget_Testimonials extends Widget_Base {
             <?php foreach (  $settings['testimonial_list'] as $testimonial_single ): ?>
               <div class="single-testimonial text-center">
                   <div class="testimonial-icon mb-25">
-                      <img src="<?php echo get_template_directory_uri() ?>/images/quote_icon.png" alt="quote">
+                      <img src="<?php echo get_template_directory_uri() ?>/images/quote.png" alt="quote">
                   </div>
                   <div class="testimonial-content">
                       <h5><?php echo esc_html($testimonial_single['testimonial']); ?></h5>
