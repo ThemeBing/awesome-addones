@@ -114,7 +114,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
                     <div class="row">
                         <div class="col-xl-5 col-lg-6">
                             <div class="slider-content mt-15">
-                                <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo esc_html( $settings['title'] ) ?></h2>
+                                <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo $settings['title'] ?></h2>
                                 <p class="wow slideInLeft" data-wow-delay="0.4s"><?php echo esc_html( $settings['description'] ) ?></p>
                                 <a href="#" class="btn wow slideInLeft" data-wow-delay="0.6s">Start now</a>
                             </div>
@@ -176,7 +176,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
                   <div class="row">
                       <div class="col-xl-6 col-lg-7 col-md-11">
                           <div class="slider-content digital-slider-content mt-95">
-                              <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo esc_html( $settings['title'] ) ?></h2>
+                              <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo $settings['title'] ?></h2>
                               <p class="wow slideInLeft" data-wow-delay="0.4s"><?php echo esc_html( $settings['description'] ) ?></p>
                               <a href="#" class="btn wow fadeInUp" data-wow-delay="0.6s">Start now</a>
                           </div>
@@ -195,7 +195,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
       </section>
 
       <?php } elseif( $settings['style'] == 'accountsbilling' ){ ?>
-        
+
       <section class="slider-area t-slider-bg fix" data-background="<?php echo esc_url( $settings['banner_image']['url'] ) ?>">
               <div class="container">
                   <div class="s-slider-overflow t-slider-overflow">
