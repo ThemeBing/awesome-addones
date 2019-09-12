@@ -157,15 +157,15 @@ class megaaddons_Widget_Banner extends Widget_Base {
                     </div>
                     <div class="col-xl-5 col-lg-6 d-none d-lg-block">
                         <div class="s-slider-img position-relative wow slideInRightS" data-wow-delay="0.6s">
-                            <img src="img/slider/s_slider_img01.png" alt="img">
-                            <img src="img/slider/s_slider_img02.png" alt="img" data-0="transform:rotate(0deg);left: -160px;" data-50="transform:rotate(0deg);left: -160px;" data-150="transform:rotate(14deg);left: -160px;" data-300="transform:rotate(28deg);left: -160px;" data-450="transform:rotate(28deg);left: -130px;" data-800="transform:rotate(28deg);left: -100px;">
+                            <img src="<?php echo get_template_directory_uri() ?>/images/s_slider_img01.png" alt="img">
+                            <img src="<?php echo get_template_directory_uri() ?>/images/s_slider_img02.png" alt="img" data-0="transform:rotate(0deg);left: -160px;" data-50="transform:rotate(0deg);left: -160px;" data-150="transform:rotate(14deg);left: -160px;" data-300="transform:rotate(28deg);left: -160px;" data-450="transform:rotate(28deg);left: -130px;" data-800="transform:rotate(28deg);left: -100px;">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="s-slider-shape s-slider-shape-one wow fadeIn" data-wow-delay="1s"><img src="img/shape/s_slider_shape01.png" alt="img" data-parallax='{"x": 150}'></div>
-        <div class="s-slider-shape s-slider-shape-two wow fadeIn" data-wow-delay="1s"><img src="img/shape/s_slider_shape02.png" alt="img" data-parallax='{"y": -150}'></div>
+        <div class="s-slider-shape s-slider-shape-one wow fadeIn" data-wow-delay="1s"><img src="<?php echo get_template_directory_uri() ?>/images/s_slider_shape01.png" alt="img" data-parallax='{"x": 150}'></div>
+        <div class="s-slider-shape s-slider-shape-two wow fadeIn" data-wow-delay="1s"><img src="<?php echo get_template_directory_uri() ?>/images/s_slider_shape02.png" alt="img" data-parallax='{"y": -150}'></div>
       </section>
 
       <?php } elseif( $settings['style'] == 'digitalmarketing' ){ ?>
@@ -183,10 +183,10 @@ class megaaddons_Widget_Banner extends Widget_Base {
                       </div>
                       <div class="col-xl-6 col-lg-5 d-none d-lg-block">
                           <div class="slider-img digital-animate-slider-img position-relative">
-                              <img src="img/slider/digital_slider_img.png" alt="img" class="digital-slider-main-img">
-                              <img src="img/slider/digi_phone.png" alt="img" class="digital-slider-phone wow slideInDown" data-wow-delay="0.6s">
-                              <div class="wow slideInLeftDigi digital-slider-man" data-wow-delay="0.8s"><img src="img/slider/digi_man.png" alt="img" class="alltuchtopdown wow" data-wow-delay="1.2s"></div>
-                              <div class="wow slideInRightDigi digital-slider-cog" data-wow-delay="1s"><img src="img/slider/digi_cog.png" alt="img" class="rotateme"></div>
+                              <img src="<?php echo get_template_directory_uri() ?>/images/digital_slider_img.png" alt="img" class="digital-slider-main-img">
+                              <img src="<?php echo get_template_directory_uri() ?>/images/digi_phone.png" alt="img" class="digital-slider-phone wow slideInDown" data-wow-delay="0.6s">
+                              <div class="wow slideInLeftDigi digital-slider-man" data-wow-delay="0.8s"><img src="<?php echo get_template_directory_uri() ?>/images/digi_man.png" alt="img" class="alltuchtopdown wow" data-wow-delay="1.2s"></div>
+                              <div class="wow slideInRightDigi digital-slider-cog" data-wow-delay="1s"><img src="<?php echo get_template_directory_uri() ?>/images/digi_cog.png" alt="img" class="rotateme"></div>
                           </div>
                       </div>
                   </div>
@@ -207,7 +207,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
                                   <a href="#" class="btn wow fadeInRight" data-wow-delay="0.4s">contact us</a>
                               </div>
                               <div class="t-slider-img wow fadeInUp" data-wow-delay="0.6s">
-                                  <img src="img/slider/slider_img03.png" class="alltuchtopdown" alt="img">
+                                  <img src="<?php echo get_template_directory_uri() ?>/images/slider_img03.png" class="alltuchtopdown" alt="img">
                               </div>
                           </div>
                       </div>
