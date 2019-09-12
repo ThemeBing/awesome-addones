@@ -69,17 +69,15 @@ class megaaddons_Widget_Partner extends Widget_Base {
 
       <!-- brand-area -->
       <div class="brand-area brand-mb">
-          <div class="box-wrap">
-              <div class="container">
-                  <div class="row brand-active">
-                  <?php foreach (  $settings['partner_list'] as $partner_single ): ?>
-                      <div class="col-12">
-                          <div class="single-brand">
-                              <img src="<?php echo esc_url($partner_single['image']['url']); ?>" alt="img">
-                          </div>
+          <div class="container">
+              <div class="row brand-active">
+              <?php foreach (  $settings['partner_list'] as $partner_single ): ?>
+                  <div class="col-12">
+                      <div class="single-brand">
+                          <img src="<?php echo esc_url($partner_single['image']['url']); ?>" alt="img">
                       </div>
-                  <?php endforeach; ?>
                   </div>
+              <?php endforeach; ?>
               </div>
           </div>
       </div>

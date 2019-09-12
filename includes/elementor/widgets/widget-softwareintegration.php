@@ -47,7 +47,7 @@ class megaaddons_Widget_Soft_Integration extends Widget_Base {
       );
 
       $repeater->add_control(
-         'url',
+         'logo_url',
          [
             'label' => __( 'Software URL', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
@@ -81,7 +81,7 @@ class megaaddons_Widget_Soft_Integration extends Widget_Base {
                   <div class="row text-center justify-content-center">
                     <?php foreach (  $settings['software_list'] as $software_single ): ?>
                       <div class="single-software-thumb">
-                          <a href="<?php echo esc_url( $software_single['url'] ); ?>"><img src="<?php echo esc_url( $software_single['image']['url'] ); ?>" alt="img"></a>
+                          <a href="<?php echo esc_url( $software_single['logo_url'] ); ?>"><img src="<?php echo esc_url( $software_single['image']['url'] ); ?>" alt="img"></a>
                       </div>
                     <?php endforeach; ?>
                   </div>
