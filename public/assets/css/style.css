@@ -1,8 +1,19 @@
-.widget_recent_post {
-	
+.widget_recent_post li {
+	padding-left: 0;
+	display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #464547;
+    margin-bottom: 20px;
+}
+
+.widget_recent_post ul li:last-child {
+    padding-bottom: 0px;
+    border-bottom: none;
+    margin-bottom: 0px;
 }
 
 .widget-recent-post li:before {
 	display: none;
-	padding-left: 0;
 }
