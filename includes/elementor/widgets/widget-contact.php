@@ -66,15 +66,15 @@ class megaaddons_Widget_Contact extends Widget_Base {
       $this->add_inline_editing_attributes( 'text', 'basic' );
       ?>
 
-      <div class="single-contact-info mb-30 text-center">
-           <div class="contact-icon mb-30">
-               <img src="<?php echo esc_attr($settings['icon']['url']); ?>" alt="img">
-           </div>
-           <div class="contact-info-content">
-               <h4><?php echo esc_html($settings['title']); ?></h4>
-               <p><?php echo $settings['text'] ?></p>
-           </div>
-       </div>
+      <div class="single-contact-box text-center mb-30">
+         <div class="contact-box-icon">
+             <img src="<?php echo esc_attr($settings['icon']['url']); ?>" alt="img">
+         </div>
+         <div class="contact-content">
+             <h5><?php echo esc_html($settings['title']); ?></h5>
+             <span><?php echo $settings['text'] ?></span>
+         </div>
+      </div>
 
       <?php
    }
