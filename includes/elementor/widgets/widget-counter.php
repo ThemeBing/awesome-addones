@@ -25,50 +25,50 @@ class megaaddons_Widget_Counter extends Widget_Base {
    protected function _register_controls() {
 
       $this->start_controls_section(
-         'title_section',
+         'counter_section',
          [
             'label' => esc_html__( 'Counter', 'megaaddons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
 
-      $this->add_control(
+      $counter = new \Elementor\Repeater();
+
+      $counter->add_control(
          'icon',
          [
-            'label' => __( 'Choose Icon', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::MEDIA,
-            'default' => [
-               'url' => \Elementor\Utils::get_placeholder_image_src(),
-            ],
+            'label' => __( 'Icon', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::MEDIA
+         ]
+      );
+
+      $counter->add_control(
+         'count',
+         [
+            'label' => __( 'Count', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::TEXT
+         ]
+      );
+
+      $counter->add_control(
+         'title',
+         [
+            'label' => __( 'Title', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::TEXT
          ]
       );
 
       $this->add_control(
          'counter',
          [
-            'label' => __( 'Counter Value', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => '123'
+            'label' => __( 'Counter', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::REPEATER,
+            'fields' => $counter->get_controls(),
+            'title_field' => '{{title}}',
+
          ]
       );
 
-      $this->add_control(
-         'in_word',
-         [
-            'label' => __( 'In Word', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('M','megaaddons' )
-         ]
-      );
-
-      $this->add_control(
-         'title',
-         [
-            'label' => __( 'Title', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Download','megaaddons' )
-         ]
-      );
       
       $this->end_controls_section();
 
@@ -78,23 +78,27 @@ class megaaddons_Widget_Counter extends Widget_Base {
  
       // get our input from the widget settings.
        
-      $settings = $this->get_settings_for_display();
-      
-      //Inline Editing
-      $this->add_inline_editing_attributes( 'title', 'basic' );
-      $this->add_inline_editing_attributes( 'counter', 'basic' );
-      
-      ?>
+      $settings = $this->get_settings_for_display(); ?>
 
-      <div class="single-count text-center mb-40">
-        <div class="counter">
-         <span class="count"><?php echo esc_html( $settings['counter'] ); ?></span>
-         <?php if ($settings['in_word']): ?>
-           <span><?php echo esc_html( $settings['in_word'] ); ?></span>
-         <?php endif ?></div>
-        <p><?php echo esc_html( $settings['title'] ); ?></p>
-                
-      </div>
+      <section class="counter-area inner-counter-bg pt-150 pb-100">
+         <div class="container">
+           <div class="row">
+            <?php foreach (  $settings['counter'] as $counter_single ): ?>
+               <div class="col-lg-3 col-sm-6">
+                   <div class="single-counter text-center mb-50">
+                       <div class="counter-icon">
+                           <img src="<?php echo $counter_single['icon']['url'] ?>" alt="img">
+                       </div>
+                       <div class="counter-content">
+                           <h2 class="count"><?php echo $counter_single['count'] ?></h2>
+                           <span><?php echo $counter_single['title'] ?></span>
+                       </div>
+                   </div>
+               </div>
+            <?php endforeach; ?>
+           </div>
+         </div>
+      </section>
 
       <?php
    }
