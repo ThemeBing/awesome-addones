@@ -47,8 +47,8 @@ class megaaddons_Widget_Gallery extends Widget_Base {
       $gallery->add_control(
          'title',
          [
-            'label' => __( 'Feature', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXTAREA,
+            'label' => __( 'Title', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
             'default' => __( 'Sequrity Management', 'megaaddons' )
          ]
       );
@@ -56,8 +56,8 @@ class megaaddons_Widget_Gallery extends Widget_Base {
       $gallery->add_control(
          'text',
          [
-            'label' => __( 'Feature', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXTAREA,
+            'label' => __( 'Subtitle', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
             'default' => __( 'Blending Image', 'megaaddons' )
          ]
       );
@@ -83,7 +83,7 @@ class megaaddons_Widget_Gallery extends Widget_Base {
 
       <div class="project-active">
 
-         <?php foreach ( $gallery as $gallery_item ): ?>
+         <?php foreach ( $gallery as $index => $gallery_item ): ?>
             <div class="single-project text-center">
                <?php echo wp_get_attachment_image( $gallery_item['image']['id'],'full'); ?>
                <div class="project-overlay">
