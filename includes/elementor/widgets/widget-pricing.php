@@ -161,8 +161,7 @@ class megaaddons_Widget_Pricing extends Widget_Base {
          </div>
          <div class="pricing-list mb-35">
              <ul>
-                 <?php 
-                  foreach (  $settings['feature_list'] as $index => $feature ) { ?>
+               <?php foreach( $settings['feature_list'] as $index => $feature ) { ?>
                   <li><?php echo $feature['feature'] ?></li>
                <?php } ?>
              </ul>

@@ -63,7 +63,7 @@ class megaaddons_Widget_Gallery extends Widget_Base {
       );
 
       $this->add_control(
-         'gallery',
+         'gallery_list',
          [
             'label' => __( 'Gallery', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
@@ -83,7 +83,7 @@ class megaaddons_Widget_Gallery extends Widget_Base {
 
       <div class="project-active">
 
-         <?php foreach ( $gallery as $index => $gallery_item ): ?>
+         <?php foreach ( $gallery_list as $index => $gallery_item ): ?>
             <div class="single-project text-center">
                <?php echo wp_get_attachment_image( $gallery_item['image']['id'],'full'); ?>
                <div class="project-overlay">
