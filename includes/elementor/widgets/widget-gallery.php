@@ -67,7 +67,7 @@ class megaaddons_Widget_Gallery extends Widget_Base {
          [
             'label' => __( 'Gallery', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
-            'fields' => $feature->get_controls(),
+            'fields' => $gallery->get_controls(),
             'title_field' => '{{{ title }}}',
          ]
       );
