@@ -83,7 +83,7 @@ class megaaddons_Widget_Gallery extends Widget_Base {
 
       <div class="project-active">
 
-         <?php foreach ( $gallery_list as $index => $gallery_item ): ?>
+         <?php foreach ( $settings['gallery_list'] as $gallery_item ): ?>
             <div class="single-project text-center">
                <?php echo wp_get_attachment_image( $gallery_item['image']['id'],'full'); ?>
                <div class="project-overlay">
