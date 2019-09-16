@@ -56,6 +56,7 @@ class megaaddons_ElementorCustomElement {
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-service.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-feature.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-features.php');
+         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-gallery.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-exclusivefeatures.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-newsletter.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-softwareintegration.php');
