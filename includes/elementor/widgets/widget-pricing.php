@@ -102,7 +102,8 @@ class megaaddons_Widget_Pricing extends Widget_Base {
          [
             'label' => __( 'Feature', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __( '10 Free Domain Names', 'megaaddons' )
+            'default' => __( '10 Free Domain Names', 'megaaddons' ),
+            'condition' => ['style' => 'style2']
          ]
       );
 
