@@ -48,7 +48,7 @@ class megaaddons_Widget_Features extends Widget_Base {
       $this->add_control(
          'feature_icon', [
             'label' => __( 'Feature Icon', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::MEDIA
+            'type' => \Elementor\Controls_Manager::ICONS
          ]
       );
       
@@ -101,7 +101,7 @@ class megaaddons_Widget_Features extends Widget_Base {
    }
 
    protected function render( $instance = [] ) {
-    
+
       $settings = $this->get_settings_for_display(); ?>
 
       <?php if ( $settings['style'] == 'style1' ){ ?>
