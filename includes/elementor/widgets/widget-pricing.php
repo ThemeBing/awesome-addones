@@ -33,6 +33,19 @@ class megaaddons_Widget_Pricing extends Widget_Base {
       );
 
       $this->add_control(
+         'style',
+         [
+            'label' => __( 'Style', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::SELECT,
+            'default' => 'style1',
+            'options' => [
+               'style1' => __( 'Style 1', 'megaaddons' ),
+               'style2' => __( 'Style 2', 'megaaddons' )
+            ],
+         ]
+      );
+
+      $this->add_control(
          'title',
          [
             'label' => __( 'title', 'megaaddons' ),
@@ -150,6 +163,8 @@ class megaaddons_Widget_Pricing extends Widget_Base {
       // get our input from the widget settings.
        
       $settings = $this->get_settings_for_display(); ?>
+      
+      <?php if ( $settings['style'] == 'style1' ){ ?>
 
       <div class="single-pricing <?php if ( 'on' == $settings['recommended'] ){ echo"active"; }?> text-center">
          <div class="pricing-head mb-30">
@@ -170,7 +185,30 @@ class megaaddons_Widget_Pricing extends Widget_Base {
             <a href="<?php echo esc_attr( $settings['btn_url'] ) ?>" class="btn"><?php echo esc_html( $settings['btn_text'] ) ?></a>
          </div>
       </div>
-      <?php
+
+      <?php } elseif( $settings['style'] == 'style2' ){ ?>
+
+      <div class="single-pricing s-single-pricing active text-center mb-30">
+         <div class="pricing-head mb-35">
+             <span>CORPORATE</span>
+             <p>Orem Ipsum simply dummy text the printing and types</p>
+             <h2 class="price-count">$29<span>/ Month</span></h2>
+         </div>
+         <div class="pricing-list mb-35">
+             <ul>
+                 <li>Sync with NetSuite Intacct and</li>
+                 <li>Quick Books Enterprise</li>
+                 <li>Multi-entity location</li>
+                 <li>Accounting files</li>
+                 <li>API access to Bill</li>
+             </ul>
+         </div>
+         <div class="s-pricing-btn">
+             <a href="#" class="btn">Purchase Now</a>
+         </div>
+      </div>
+
+      <?php endforeach;
    }
  
 }
