@@ -58,7 +58,8 @@ class megaaddons_Widget_Pricing extends Widget_Base {
          'desc',
          [
             'label' => __( 'Description', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXTAREA
+            'type' => \Elementor\Controls_Manager::TEXTAREA,
+            'condition' => ['style' => 'style2']
          ]
       );
 
@@ -102,8 +103,7 @@ class megaaddons_Widget_Pricing extends Widget_Base {
          [
             'label' => __( 'Feature', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __( '10 Free Domain Names', 'megaaddons' ),
-            'condition' => ['style' => 'style2']
+            'default' => __( '10 Free Domain Names', 'megaaddons' )
          ]
       );
 
@@ -200,7 +200,7 @@ class megaaddons_Widget_Pricing extends Widget_Base {
       <div class="single-pricing s-single-pricing active text-center mb-30">
          <div class="pricing-head mb-35">
              <span><?php echo esc_html( $settings['title'] ); ?></span>
-             <p><?php echo esc_html( $settings['title'] ); ?></p>
+             <p><?php echo esc_html( $settings['desc'] ); ?></p>
              <h2  class="price-count"><?php echo esc_html( $settings['price'] ); ?><span>$/<?php echo esc_html( $settings['package'] ); ?></span></h2>
          </div>
          <div class="pricing-list mb-35">
