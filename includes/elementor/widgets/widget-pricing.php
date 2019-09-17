@@ -55,6 +55,14 @@ class megaaddons_Widget_Pricing extends Widget_Base {
       );
 
       $this->add_control(
+         'desc',
+         [
+            'label' => __( 'Description', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::TEXTAREA
+         ]
+      );
+
+      $this->add_control(
          'icon',
          [
             'label' => __( 'icon', 'megaaddons' ),
@@ -190,21 +198,19 @@ class megaaddons_Widget_Pricing extends Widget_Base {
 
       <div class="single-pricing s-single-pricing active text-center mb-30">
          <div class="pricing-head mb-35">
-             <span>CORPORATE</span>
-             <p>Orem Ipsum simply dummy text the printing and types</p>
-             <h2 class="price-count">$29<span>/ Month</span></h2>
+             <span><?php echo esc_html( $settings['title'] ); ?></span>
+             <p><?php echo esc_html( $settings['title'] ); ?></p>
+             <h2  class="price-count"><?php echo esc_html( $settings['price'] ); ?><span>$/<?php echo esc_html( $settings['package'] ); ?></span></h2>
          </div>
          <div class="pricing-list mb-35">
-             <ul>
-                 <li>Sync with NetSuite Intacct and</li>
-                 <li>Quick Books Enterprise</li>
-                 <li>Multi-entity location</li>
-                 <li>Accounting files</li>
-                 <li>API access to Bill</li>
+            <ul>
+               <?php foreach( $settings['feature_list'] as $index => $feature ) { ?>
+                  <li><?php echo $feature['feature'] ?></li>
+               <?php } ?>
              </ul>
          </div>
          <div class="s-pricing-btn">
-             <a href="#" class="btn">Purchase Now</a>
+            <a href="<?php echo esc_attr( $settings['btn_url'] ) ?>" class="btn"><?php echo esc_html( $settings['btn_text'] ) ?></a>
          </div>
       </div>
 
