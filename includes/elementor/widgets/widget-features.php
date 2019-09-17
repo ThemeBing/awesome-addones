@@ -48,7 +48,7 @@ class megaaddons_Widget_Features extends Widget_Base {
       $this->add_control(
          'feature_icon', [
             'label' => __( 'Feature Icon', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::ICONS
+            'type' => \Elementor\Controls_Manager::TEXT
          ]
       );
       
@@ -101,7 +101,9 @@ class megaaddons_Widget_Features extends Widget_Base {
    }
 
    protected function render( $instance = [] ) {
-
+ 
+      // get our input from the widget settings.
+       
       $settings = $this->get_settings_for_display(); ?>
 
       <?php if ( $settings['style'] == 'style1' ){ ?>
@@ -111,9 +113,11 @@ class megaaddons_Widget_Features extends Widget_Base {
               <i class="<?php echo esc_attr($settings['feature_icon']) ?>"></i>
           </div>
           <div class="features-content">
-              <h3><?php echo esc_html($settings['feature_title']) ?></h3>
-              <p><?php echo esc_html($settings['feature_text']) ?></p>
-              <a href="<?php echo esc_url($settings['feature_btn_url']) ?>"><?php echo esc_html($settings['feature_btn_text']) ?></a>
+              <h3><?php echo esc_html( $settings['feature_title'] ) ?></h3>
+              <p><?php echo esc_html( $settings['feature_text'] ) ?></p>
+              <a href="<?php echo esc_url( $settings['feature_btn_url'] ) ?>">
+                <?php echo esc_html( $settings['feature_btn_text'] ) ?>
+              </a>
           </div>
       </div>
 
@@ -123,11 +127,11 @@ class megaaddons_Widget_Features extends Widget_Base {
 
       <div class="single-services">
           <div class="services-icon">
-              <i class="<?php echo esc_attr($settings['feature_icon']) ?>"></i>
+              <i class="<?php echo esc_attr( $settings['feature_icon'] ) ?>"></i>
           </div>
           <div class="services-content">
-              <h4><?php echo esc_html($settings['feature_title']) ?></h4>
-              <p><?php echo esc_html($settings['feature_text']) ?></p>
+              <h4><?php echo esc_html( $settings['feature_title'] ) ?></h4>
+              <p><?php echo esc_html( $settings['feature_text'] ) ?></p>
           </div>
       </div>
 

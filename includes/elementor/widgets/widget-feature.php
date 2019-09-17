@@ -77,6 +77,7 @@ class megaaddons_Widget_Feature extends Widget_Base {
       
       $this->end_controls_section();
    }
+   
    protected function render( $instance = [] ) {
  
       // get our input from the widget settings.
