@@ -48,10 +48,7 @@ class megaaddons_Widget_Features extends Widget_Base {
       $this->add_control(
          'feature_icon', [
             'label' => __( 'Feature Icon', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::ICON,
-            'default' => [
-              'url' => \Elementor\Utils::get_placeholder_image_src(),
-            ],
+            'type' => \Elementor\Controls_Manager::MEDIA
          ]
       );
       
@@ -104,9 +101,7 @@ class megaaddons_Widget_Features extends Widget_Base {
    }
 
    protected function render( $instance = [] ) {
- 
-      // get our input from the widget settings.
-       
+    
       $settings = $this->get_settings_for_display(); ?>
 
       <?php if ( $settings['style'] == 'style1' ){ ?>
