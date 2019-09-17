@@ -215,7 +215,7 @@ class megaaddons_Widget_Pricing extends Widget_Base {
          </div>
       </div>
 
-      <?php endforeach;
+   <?php }
    }
  
 }
