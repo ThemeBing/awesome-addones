@@ -57,10 +57,6 @@ class megaaddons_Widget_Testimonials extends Widget_Base {
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src()
-            ],
-            'condition' => [
-              ['style' => 'style2'],
-              ['style' => 'style3']
             ]
          ]
       );
