@@ -137,7 +137,7 @@ class megaaddons_Widget_Testimonials extends Widget_Base {
           <div class="col-xl-4">
               <div class="t-single-testimonial text-center">
                   <div class="t-testimonial-img mb-30">
-                      <img src="<?php echo get_template_directory_uri() ?>/images/testimonial_img01.png" alt="icon">
+                      <img src="<?php echo esc_url( $testimonial_single['image']['url'] ); ?>" alt="icon">
                   </div>
                   <div class="t-testimonial-content">
                       <h5><?php echo esc_html($testimonial_single['testimonial']); ?></h5>
@@ -164,7 +164,7 @@ class megaaddons_Widget_Testimonials extends Widget_Base {
                   "testimonial "</h5>
                   <div class="s-testi-avatar">
                       <div class="testi-avatar-img">
-                          <img src="img/images/testi_avatar_img01.png" alt="img">
+                          <img src="<?php echo esc_url( $testimonial_single['image']['url'] ); ?>" alt="img">
                       </div>
                       <div class="testi-avatar-info">
                           <h6><?php echo esc_html($testimonial_single['name']); ?> _ <span><?php echo esc_html($testimonial_single['designation']); ?></span></h6>
