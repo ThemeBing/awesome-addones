@@ -14,7 +14,7 @@ class megaaddons_Widget_Features extends Widget_Base {
       return esc_html__( 'Features', 'megaaddons' );
    }
  
-   public function get_icon() { 
+   public function get_icon() {
         return 'eicon-featured-image';
    }
  
