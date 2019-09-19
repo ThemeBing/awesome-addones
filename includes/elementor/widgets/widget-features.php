@@ -145,7 +145,7 @@ class megaaddons_Widget_Features extends Widget_Base {
           <div class="hr-services-content">
               <h4><?php echo esc_html( $settings['feature_title'] ) ?></h4>
               <p><?php echo esc_html( $settings['feature_text'] ) ?></p>
-              <a href="<?php echo esc_url( $settings['feature_btn_url'] ) ?>"><?php echo esc_html( $settings['feature_btn_text'] ) ?> <i class="fas fa-plus"></i></a>
+              <a href="<?php echo esc_url( $settings['feature_btn_url'] ) ?>"><?php echo esc_html( $settings['feature_btn_text'] ) ?> <i class="fa fa-plus"></i></a>
           </div>
       </div>
 
