@@ -135,6 +135,19 @@ class megaaddons_Widget_Features extends Widget_Base {
           </div>
       </div>
 
+    <?php } elseif( $settings['style'] == 'style3' ){ ?>
+
+      <div class="hr-single-services">
+          <div class="hr-services-icon mb-15">
+              <i class="flaticon-settings"></i>
+          </div>
+          <div class="hr-services-content">
+              <h4><?php echo esc_html( $settings['feature_title'] ) ?></h4>
+              <p><?php echo esc_html( $settings['feature_text'] ) ?></p>
+              <a href="<?php echo esc_url( $settings['feature_btn_url'] ) ?>"><?php echo esc_html( $settings['feature_btn_text'] ) ?> <i class="fas fa-plus"></i></a>
+          </div>
+      </div>
+
     <?php } ?>
 
       <?php
