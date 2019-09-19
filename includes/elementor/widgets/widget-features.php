@@ -43,6 +43,7 @@ class megaaddons_Widget_Features extends Widget_Base {
                'style2' => __( 'Style 2', 'megaaddons' ),
                'style3' => __( 'Style 3', 'megaaddons' ),
                'style4' => __( 'Style 4', 'megaaddons' ),
+               'style4' => __( 'Style 5', 'megaaddons' ),
             ],
          ]
       );
@@ -158,8 +159,21 @@ class megaaddons_Widget_Features extends Widget_Base {
         </div>
         <div class="features-content">
             <h4><?php echo esc_html( $settings['feature_title'] ) ?></h4>
-              <p><?php echo esc_html( $settings['feature_text'] ) ?></p>
-              <a href="<?php echo esc_url( $settings['feature_btn_url'] ) ?>"><?php echo esc_html( $settings['feature_btn_text'] ) ?></a>
+            <p><?php echo esc_html( $settings['feature_text'] ) ?></p>
+            <a href="<?php echo esc_url( $settings['feature_btn_url'] ) ?>"><?php echo esc_html( $settings['feature_btn_text'] ) ?></a>
+        </div>
+    </div>
+
+    <?php } elseif( $settings['style'] == 'style5' ){ ?>
+
+      <div class="digi-single-services">
+        <div class="digi-services-icon mb-25">
+            <i class="<?php echo esc_attr( $settings['feature_icon'] ) ?>"></i>
+        </div>
+        <div class="services-content">
+            <h4><?php echo esc_html( $settings['feature_title'] ) ?></h4>
+            <p><?php echo esc_html( $settings['feature_text'] ) ?></p>
+            <a href="<?php echo esc_url( $settings['feature_btn_url'] ) ?>"><?php echo esc_html( $settings['feature_btn_text'] ) ?></a>
         </div>
     </div>
 
