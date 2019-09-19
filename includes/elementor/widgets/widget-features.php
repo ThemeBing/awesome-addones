@@ -41,6 +41,7 @@ class megaaddons_Widget_Features extends Widget_Base {
             'options' => [
                'style1' => __( 'Style 1', 'megaaddons' ),
                'style2' => __( 'Style 2', 'megaaddons' ),
+               'style3' => __( 'Style 3', 'megaaddons' ),
             ],
          ]
       );
