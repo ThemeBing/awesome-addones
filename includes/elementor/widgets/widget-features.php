@@ -163,9 +163,8 @@ class megaaddons_Widget_Features extends Widget_Base {
         </div>
     </div>
 
-    <?php } ?>
-
-      <?php
+    <?php }
+    
    }
  
 }
