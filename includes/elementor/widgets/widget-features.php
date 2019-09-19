@@ -42,6 +42,7 @@ class megaaddons_Widget_Features extends Widget_Base {
                'style1' => __( 'Style 1', 'megaaddons' ),
                'style2' => __( 'Style 2', 'megaaddons' ),
                'style3' => __( 'Style 3', 'megaaddons' ),
+               'style4' => __( 'Style 4', 'megaaddons' ),
             ],
          ]
       );
@@ -140,7 +141,7 @@ class megaaddons_Widget_Features extends Widget_Base {
 
       <div class="hr-single-services">
           <div class="hr-services-icon mb-15">
-              <i class="flaticon-settings"></i>
+              <i class="<?php echo esc_attr( $settings['feature_icon'] ) ?>"></i>
           </div>
           <div class="hr-services-content">
               <h4><?php echo esc_html( $settings['feature_title'] ) ?></h4>
@@ -148,6 +149,19 @@ class megaaddons_Widget_Features extends Widget_Base {
               <a href="<?php echo esc_url( $settings['feature_btn_url'] ) ?>"><?php echo esc_html( $settings['feature_btn_text'] ) ?> <i class="fa fa-plus"></i></a>
           </div>
       </div>
+
+    <?php } elseif( $settings['style'] == 'style4' ){ ?>
+
+      <div class="single-features inner-single-features mb-30 text-center">
+        <div class="features-icon mb-25">
+            <i class="<?php echo esc_attr( $settings['feature_icon'] ) ?>"></i>
+        </div>
+        <div class="features-content">
+            <h4><?php echo esc_html( $settings['feature_title'] ) ?></h4>
+              <p><?php echo esc_html( $settings['feature_text'] ) ?></p>
+              <a href="<?php echo esc_url( $settings['feature_btn_url'] ) ?>"><?php echo esc_html( $settings['feature_btn_text'] ) ?></a>
+        </div>
+    </div>
 
     <?php } ?>
 
