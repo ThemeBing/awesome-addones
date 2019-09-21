@@ -43,7 +43,7 @@ class megaaddons_Widget_Features extends Widget_Base {
                'style2' => __( 'Style 2', 'megaaddons' ),
                'style3' => __( 'Style 3', 'megaaddons' ),
                'style4' => __( 'Style 4', 'megaaddons' ),
-               'style4' => __( 'Style 5', 'megaaddons' ),
+               'style5' => __( 'Style 5', 'megaaddons' ),
             ],
          ]
       );
