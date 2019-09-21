@@ -44,6 +44,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
                'hrmanagement' => __( 'HR Management', 'megaaddons' ),
                'digitalmarketing' => __( 'Digital Marketing', 'megaaddons' ),
                'accountsbilling' => __( 'Accounts Billing', 'megaaddons' ),
+               'how_we_work' => __( 'How we work', 'megaaddons' ),
             ],
          ]
       );
@@ -215,6 +216,23 @@ class megaaddons_Widget_Banner extends Widget_Base {
               </div>
           </section>
 
+      <?php } elseif( $settings['style'] == 'how_we_work' ){ ?>
+          <!-- how-we-wrok -->
+          <section class="how-we-work hww-bg" data-background="<?php echo esc_url( $settings['banner_image']['url'] ) ?>">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-12 text-center">
+                          <div class="hww-content">
+                              <h2><?php echo esc_html( $settings['title'] ) ?></h2>
+                          </div>
+                          <div class="hww-img">
+                              <img src="<?php echo get_template_directory_uri() ?>/images/how_we_work_img.png" alt="img">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          <!-- how-we-wrok-end -->
       <?php } ?>
 
       
