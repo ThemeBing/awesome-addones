@@ -80,7 +80,7 @@ class megaaddons_Widget_Counter extends Widget_Base {
        
       $settings = $this->get_settings_for_display(); ?>
 
-      <section class="counter-area inner-counter-bg pt-150 pb-100">
+      <section class="counter-area inner-counter-bg counter-bg pt-150 pb-100" data-background="<?php echo get_template_directory_uri() ?>/images/counter_bg.jpg">
          <div class="container">
            <div class="row">
             <?php foreach (  $settings['counter'] as $counter_single ): ?>
