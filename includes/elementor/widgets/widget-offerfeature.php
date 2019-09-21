@@ -118,54 +118,6 @@ class megaaddons_Widget_Offerfeature extends Widget_Base {
               </div>
           </div>
       </section>
-
-
-      <section class="features-area inner-features-area">
-          <div class="container">
-              <div class="inner-features-wrap">
-                  <div class="row">
-                      <div class="col-lg-4 col-md-6">
-                          <div class="single-features inner-single-features mb-30">
-                              <div class="features-icon mb-25">
-                                  <i class="flaticon-settings"></i>
-                              </div>
-                              <div class="features-content">
-                                  <h3>Pay and Process</h3>
-                                  <p>Orem Ipsum simply dummy text printing and typesettg industry been industry's</p>
-                                  <a href="#">More About</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                          <div class="single-features inner-single-features mb-30">
-                              <div class="features-icon mb-25">
-                                  <i class="flaticon-upload"></i>
-                              </div>
-                              <div class="features-content">
-                                  <h3>Managment Marketing</h3>
-                                  <p>Orem Ipsum simply dummy text printing and typesettg industry been industry's</p>
-                                  <a href="#">More About</a>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-lg-4 col-md-6">
-                          <div class="single-features inner-single-features mb-30">
-                              <div class="features-icon mb-25">
-                                  <i class="flaticon-chat"></i>
-                              </div>
-                              <div class="features-content">
-                                  <h3>Optimal &amp; Support</h3>
-                                  <p>Orem Ipsum simply dummy text printing and typesettg industry been industry's</p>
-                                  <a href="#">More About</a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-
    <?php }
  
 }
