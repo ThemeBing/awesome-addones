@@ -178,7 +178,7 @@ class megaaddons_Widget_Pricing extends Widget_Base {
       <div class="single-pricing <?php if ( 'on' == $settings['recommended'] ){ echo"active"; }?> text-center">
          <div class="pricing-head mb-30">
              <span><?php echo esc_html( $settings['title'] ); ?></span>
-             <h2><?php echo esc_html( $settings['price'] ); ?><span>$/<?php echo esc_html( $settings['package'] ); ?></span></h2>
+             <h2>$<?php echo esc_html( $settings['price'] ); ?><span>/<?php echo esc_html( $settings['package'] ); ?></span></h2>
          </div>
          <div class="pricing-icon mb-45">
              <img src="<?php echo esc_url( $settings['icon']['url'] ); ?>" alt="<?php echo esc_attr( $settings['title'] ); ?>">
