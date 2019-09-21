@@ -96,8 +96,8 @@ class megaaddons_Widget_Offerfeature extends Widget_Base {
                   <div class="col-12">
                       <div class="offer-features-wrap pt-75 pb-30">
                           <div class="section-title text-center mb-60">
-                              <span><?php echo esc_html( $settings['title'] ); ?></span>
-                              <h2><?php echo esc_html( $settings['subtitle'] ); ?></h2>
+                              <span><?php echo esc_html( $settings['subtitle'] ); ?></span>
+                              <h2><?php echo esc_html( $settings['title'] ); ?></h2>
                           </div>
                           <div class="row">
                            <?php foreach ( $settings['feature_list'] as $value ): ?>
