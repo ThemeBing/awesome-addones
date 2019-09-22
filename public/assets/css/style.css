@@ -42,3 +42,7 @@
     margin-bottom: 0;
     line-height: 1.4;
 }
+.sidebar .widget-recent-post,
+.footer-widget .rc-post {
+    display: none;
+}

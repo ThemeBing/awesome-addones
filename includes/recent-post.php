@@ -56,9 +56,10 @@ if( !class_exists('megaaddons_Recent_Post') ){
 				));
 
 				?>
+				
 
-                <ul class="widget-recent-post">
-               <?php while($posts->have_posts()) : $posts->the_post();  ?>
+				<ul class="widget-recent-post">
+                <?php while($posts->have_posts()) : $posts->the_post();  ?>
 	               	<li>
 	               		<div class="widget-recent-post-thumb">
 	               			<?php the_post_thumbnail( 'saascloud-77x64' ); ?>
@@ -69,8 +70,24 @@ if( !class_exists('megaaddons_Recent_Post') ){
                         </div>
 	                </li>
 				<?php endwhile; ?>
-                </ul><!-- end latest-tweet -->
+                </ul>
 
+				<div class="rc-post">
+				    <ul>
+				    <?php while($posts->have_posts()) : $posts->the_post();  ?>
+				        <li>
+				            <div class="rc-post-thumb">
+				                <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'saascloud-111x87' ); ?></a>
+				            </div>
+				            <div class="rc-post-content">
+				                <h6><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h6>
+				                <span><?php echo get_the_date() ?></span>
+				            </div>
+				        </li>
+				    <?php endwhile; ?>
+				    </ul>
+				</div>
+				
 
 			<?php echo $args['after_widget']; ?>
 			
