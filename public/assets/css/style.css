@@ -46,3 +46,6 @@
 .footer-widget .rc-post {
     display: none;
 }
+.sidebar-author-info ul li {
+    margin-bottom: 0!important;
+}
