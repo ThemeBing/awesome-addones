@@ -115,20 +115,20 @@ class megaaddons_Widget_Banner extends Widget_Base {
                     <div class="row">
                         <div class="col-xl-5 col-lg-6">
                             <div class="slider-content mt-15">
-                                <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo $settings['title'] ?></h2>
-                                <p class="wow slideInLeft" data-wow-delay="0.4s"><?php echo esc_html( $settings['description'] ) ?></p>
-                                <a href="#" class="btn wow slideInLeft" data-wow-delay="0.6s">Start now</a>
+                                <h2><?php echo $settings['title'] ?></h2>
+                                <p><?php echo esc_html( $settings['description'] ) ?></p>
+                                <a href="#">Start now</a>
                             </div>
                         </div>
                         <div class="col-xl-7 col-lg-6 d-none d-lg-block">
                             <div class="slider-img animate-slider-img position-relative ml-50">
                                 <img src="<?php echo get_template_directory_uri() ?>/images/slider_img01.png" alt="img" class="slider-main-img">
-                                <img src="<?php echo get_template_directory_uri() ?>/images/board_img.png" alt="img" class="wow slideInDown" data-wow-delay="0.6s">
-                                <img src="<?php echo get_template_directory_uri() ?>/images/man_img.png" alt="img" class="wow slideInLeftS" data-wow-delay="1s">
-                                <div class="<?php echo get_template_directory_uri() ?>/images-r wow slideInLeftS" data-wow-delay="1.4s"><img src="<?php echo get_template_directory_uri() ?>/images/cog_img1.png" alt="img" class="rotateme"></div>
-                                <div class="img-nth-five wow slideInRight" data-wow-delay="1.8s"><img src="<?php echo get_template_directory_uri() ?>/images/cog_img2.png" alt="img" class="rotateme"></div>
-                                <img src="<?php echo get_template_directory_uri() ?>/images/cog_img3.png" alt="img" class="wow slideInLeftS" data-wow-delay="2.2s">
-                                <img src="<?php echo get_template_directory_uri() ?>/images/cog_img4.png" alt="img" class="wow fadeInUp" data-wow-delay="2.6s">
+                                <img src="<?php echo get_template_directory_uri() ?>/images/board_img.png" alt="img">
+                                <img src="<?php echo get_template_directory_uri() ?>/images/man_img.png" alt="img">
+                                <div class="<?php echo get_template_directory_uri() ?>/images-r wow slideInLeftS"><img src="<?php echo get_template_directory_uri() ?>/images/cog_img1.png" alt="img" class="rotateme"></div>
+                                <div class="img-nth-five"><img src="<?php echo get_template_directory_uri() ?>/images/cog_img2.png" alt="img" class="rotateme"></div>
+                                <img src="<?php echo get_template_directory_uri() ?>/images/cog_img3.png" alt="img">
+                                <img src="<?php echo get_template_directory_uri() ?>/images/cog_img4.png" alt="img">
                             </div>
                         </div>
                     </div>
