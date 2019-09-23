@@ -116,12 +116,12 @@ class megaaddons_Widget_Gallery extends Widget_Base {
       $settings = $this->get_settings_for_display(); ?>
 
       <!-- project-area -->
-      <section class="project-area primary-bg pt-145 pb-150">
+      <section class="project-area primary-bg pt-115 pb-130">
           <div class="container">
               <div class="row justify-content-center">
                   <div class="col-xl-5">
                       <div class="section-title text-center mb-60">
-                          <span><?php echo esc_html($settings['sub-title']) ?>awesome portfolio</span>
+                          <span><?php echo esc_html($settings['sub-title']) ?></span>
                           <h2><?php echo esc_html($settings['title']) ?></h2>
                       </div>
                   </div>

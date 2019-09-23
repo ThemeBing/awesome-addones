@@ -117,7 +117,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
                             <div class="slider-content mt-15">
                                 <h2><?php echo $settings['title'] ?></h2>
                                 <p><?php echo esc_html( $settings['description'] ) ?></p>
-                                <a href="#">Start now</a>
+                                <a class="btn" href="#">Start now</a>
                             </div>
                         </div>
                         <div class="col-xl-7 col-lg-6 d-none d-lg-block">
