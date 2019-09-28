@@ -125,7 +125,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
                                 <img src="<?php echo get_template_directory_uri() ?>/images/slider_img01.png" alt="img" class="slider-main-img">
                                 <img src="<?php echo get_template_directory_uri() ?>/images/board_img.png" alt="img">
                                 <img src="<?php echo get_template_directory_uri() ?>/images/man_img.png" alt="img">
-                                <div class="img-nth-four wow slideInLeftS"><img src="<?php echo get_template_directory_uri() ?>/images/cog_img1.png" alt="img" class="rotateme"></div>
+                                <div class="img-nth-four"><img src="<?php echo get_template_directory_uri() ?>/images/cog_img1.png" alt="img" class="rotateme"></div>
                                 <div class="img-nth-five"><img src="<?php echo get_template_directory_uri() ?>/images/cog_img2.png" alt="img" class="rotateme"></div>
                                 <img src="<?php echo get_template_directory_uri() ?>/images/cog_img3.png" alt="img">
                                 <img src="<?php echo get_template_directory_uri() ?>/images/cog_img4.png" alt="img">
@@ -186,7 +186,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
                           <div class="slider-img digital-animate-slider-img position-relative">
                               <img src="<?php echo get_template_directory_uri() ?>/images/digital_slider_img.png" alt="img" class="digital-slider-main-img">
                               <img src="<?php echo get_template_directory_uri() ?>/images/digi_phone.png" alt="img" class="digital-slider-phone wow slideInDown" data-wow-delay="0.6s">
-                              <div class="wow slideInLeftDigi digital-slider-man" data-wow-delay="0.8s"><img src="<?php echo get_template_directory_uri() ?>/images/digi_man.png" alt="img" class="alltuchtopdown wow" data-wow-delay="1.2s"></div>
+                              <div class="digital-slider-man" data-wow-delay="0.8s"><img src="<?php echo get_template_directory_uri() ?>/images/digi_man.png" alt="img" class="alltuchtopdown wow" data-wow-delay="1.2s"></div>
                               <div class="wow slideInRightDigi digital-slider-cog" data-wow-delay="1s"><img src="<?php echo get_template_directory_uri() ?>/images/digi_cog.png" alt="img" class="rotateme"></div>
                           </div>
                       </div>
