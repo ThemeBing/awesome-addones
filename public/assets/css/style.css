@@ -1,7 +1,11 @@
 .widget-recent-post li {
     padding-left: 0;
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
     display: flex!important;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     overflow: hidden;
     padding-bottom: 20px;
     border-bottom: 1px dashed #464547;
