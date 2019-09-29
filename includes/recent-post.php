@@ -66,7 +66,7 @@ if( !class_exists('megaaddons_Recent_Post') ){
 	               		</div>
 	               		<div class="widget-recent-content">	               			
                             <span><i class="far fa-clock"></i><?php echo get_the_date() ?></span>
-                            <h6><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words( the_title(), 4, '.' ); ?></a></h6>
+                            <h6><a href="<?php the_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), 4, '.' ); ?></a></h6>
                         </div>
 	                </li>
 				<?php endwhile; ?>
