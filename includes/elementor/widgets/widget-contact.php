@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -48,7 +48,7 @@ class megaaddons_Widget_Contact extends Widget_Base {
          'text',
          [
             'label' => __( 'Text', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::WYSIWYG
+            'type' => \Elementor\Controls_Manager::TEXTAREA
          ]
       );
       
@@ -66,13 +66,15 @@ class megaaddons_Widget_Contact extends Widget_Base {
       $this->add_inline_editing_attributes( 'text', 'basic' );
       ?>
 
-      <div class="single-contact-box text-center">
-         <div class="contact-box-icon">
-             <img src="<?php echo esc_attr($settings['icon']['url']); ?>" alt="img">
-         </div>
-         <div class="contact-content">
-             <h5><?php echo esc_html($settings['title']); ?></h5>
-             <span><?php echo $settings['text'] ?></span>
+      <div class="single-contact-box">
+         <h5><?php echo esc_html($settings['title']); ?></h5>
+         <div class="single-contact">
+            <div class="contact-box-icon">
+                <img src="<?php echo esc_attr($settings['icon']['url']); ?>" alt="img">
+            </div>
+            <div class="contact-content">
+                <span><?php echo $settings['text'] ?></span>
+            </div>
          </div>
       </div>
 
