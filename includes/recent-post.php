@@ -77,7 +77,7 @@ if( !class_exists('megaaddons_Recent_Post') ){
 				    <?php while($posts->have_posts()) : $posts->the_post();  ?>
 				        <li>
 				            <div class="rc-post-thumb">
-				                <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'deimos-100x75' ); ?></a>
+				                <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'megaaddons-100x75' ); ?></a>
 				            </div>
 				            <div class="rc-post-content">
 				            	<span><?php echo get_the_date() ?></span>
