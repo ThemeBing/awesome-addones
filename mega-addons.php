@@ -42,8 +42,8 @@ class MegaAddons {
 	}
 
 	public function megaaddons_setup() {
-		add_image_size( 'saascloud-77x64', 77,64, true );
-		add_image_size( 'saascloud-111x87', 111,87, true );
+		add_image_size( 'megaaddons-77x64', 77,64, true );
+		add_image_size( 'megaaddons-100x75', 100,75, true );
 	}
 
 	public function load_plugin_textdomain() {

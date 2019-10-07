@@ -62,7 +62,7 @@ if( !class_exists('megaaddons_Recent_Post') ){
                 <?php while($posts->have_posts()) : $posts->the_post();  ?>
 	               	<li>
 	               		<div class="widget-recent-post-thumb">
-	               			<?php the_post_thumbnail( 'deimos-77x64' ); ?>
+	               			<?php the_post_thumbnail( 'megaaddons-77x64' ); ?>
 	               		</div>
 	               		<div class="widget-recent-content">	               			
                             <span><i class="far fa-clock"></i><?php echo get_the_date() ?></span>
