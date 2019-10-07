@@ -62,7 +62,7 @@ if( !class_exists('megaaddons_Recent_Post') ){
                 <?php while($posts->have_posts()) : $posts->the_post();  ?>
 	               	<li>
 	               		<div class="widget-recent-post-thumb">
-	               			<?php the_post_thumbnail( 'saascloud-77x64' ); ?>
+	               			<?php the_post_thumbnail( 'deimos-77x64' ); ?>
 	               		</div>
 	               		<div class="widget-recent-content">	               			
                             <span><i class="far fa-clock"></i><?php echo get_the_date() ?></span>
@@ -77,11 +77,11 @@ if( !class_exists('megaaddons_Recent_Post') ){
 				    <?php while($posts->have_posts()) : $posts->the_post();  ?>
 				        <li>
 				            <div class="rc-post-thumb">
-				                <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'saascloud-111x87' ); ?></a>
+				                <a href="<?php the_permalink() ?>"><?php the_post_thumbnail( 'deimos-100x75' ); ?></a>
 				            </div>
 				            <div class="rc-post-content">
+				            	<span><?php echo get_the_date() ?></span>
 				                <h6><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h6>
-				                <span><?php echo get_the_date() ?></span>
 				            </div>
 				        </li>
 				    <?php endwhile; ?>
