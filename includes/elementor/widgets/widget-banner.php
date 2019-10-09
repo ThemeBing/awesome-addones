@@ -83,8 +83,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
          'btn_text', [
             'label' => __( 'Text', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('DOWNLOAD','megaaddons'),
-            'condition' => ['style' => 'style1']
+            'default' => __('get started','megaaddons')
          ]
       );
 
@@ -92,8 +91,23 @@ class megaaddons_Widget_Banner extends Widget_Base {
          'btn_url', [
             'label' => __( 'URL', 'megaaddons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => '#',
-            'condition' => ['style' => 'style1']
+            'default' => '#'
+         ]
+      );
+
+      $this->add_control(
+         'btn_text2', [
+            'label' => __( 'Text', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'default' => __('contact us','megaaddons')
+         ]
+      );
+
+      $this->add_control(
+         'btn_url2', [
+            'label' => __( 'URL', 'megaaddons' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'default' => '#'
          ]
       );
 
@@ -144,7 +158,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
         <!-- slider-area-end -->
       <?php } elseif( $settings['style'] == 'hrmanagement' ){ ?>
         
-      <section class="slider-area s-slider-bg fix" data-background="<?php echo esc_url( $settings['banner_image']['url'] ) ?>">
+      <section class="slider-area s-slider-bg fix">
         <div class="container">
             <div class="s-slider-overflow">
                 <div class="row">
@@ -152,14 +166,13 @@ class megaaddons_Widget_Banner extends Widget_Base {
                         <div class="slider-content s-slider-content mt-60">
                             <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo esc_html( $settings['title'] ) ?></h2>
                             <p class="wow slideInLeft" data-wow-delay="0.4s"><?php echo esc_html( $settings['description'] ) ?></p>
-                            <a href="#" class="btn wow fadeInLeft" data-wow-delay="0.6s">get started</a>
-                            <a href="#" class="btn wow fadeInRight" data-wow-delay="0.6s">contact us</a>
+                            <a href="<?php echo esc_url( $settings['btn_url'] ) ?>" class="btn wow fadeInLeft" data-wow-delay="0.6s"><?php echo esc_html( $settings['btn_text'] ) ?></a>
+                            <a href="<?php echo esc_url( $settings['btn_url2'] ) ?>" class="btn wow fadeInRight" data-wow-delay="0.6s"><?php echo esc_html( $settings['btn_text2'] ) ?></a>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-6 d-none d-lg-block">
                         <div class="s-slider-img position-relative wow slideInRightS" data-wow-delay="0.6s">
-                            <img src="<?php echo get_template_directory_uri() ?>/images/s_slider_img01.png" alt="img">
-                            <img src="<?php echo get_template_directory_uri() ?>/images/s_slider_img02.png" alt="img" data-0="transform:rotate(0deg);left: -160px;" data-50="transform:rotate(0deg);left: -160px;" data-150="transform:rotate(14deg);left: -160px;" data-300="transform:rotate(28deg);left: -160px;" data-450="transform:rotate(28deg);left: -130px;" data-800="transform:rotate(28deg);left: -100px;">
+                            <img src="<?php echo esc_url( $settings['banner_image']['url'] ) ?>" alt="img">
                         </div>
                     </div>
                 </div>
@@ -197,18 +210,18 @@ class megaaddons_Widget_Banner extends Widget_Base {
 
       <?php } elseif( $settings['style'] == 'accountsbilling' ){ ?>
 
-      <section class="slider-area t-slider-bg fix" data-background="<?php echo esc_url( $settings['banner_image']['url'] ) ?>">
+      <section class="slider-area t-slider-bg fix">
               <div class="container">
                   <div class="s-slider-overflow t-slider-overflow">
                       <div class="row justify-content-center text-center">
                           <div class="col-lg-10">
                               <div class="slider-content s-slider-content">
                                  <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo esc_html( $settings['title'] ) ?></h2>
-                                  <a href="#" class="btn wow fadeInLeft" data-wow-delay="0.4s">get started</a>
-                                  <a href="#" class="btn wow fadeInRight" data-wow-delay="0.4s">contact us</a>
+                                  <a href="<?php echo esc_url( $settings['btn_url'] ) ?>" class="btn wow fadeInLeft" data-wow-delay="0.4s"><?php echo esc_html( $settings['btn_text'] ) ?></a>
+                                  <a href="<?php echo esc_url( $settings['btn_url2'] ) ?>" class="btn wow fadeInRight" data-wow-delay="0.4s"><?php echo esc_html( $settings['btn_text2'] ) ?></a>
                               </div>
                               <div class="t-slider-img wow fadeInUp" data-wow-delay="0.6s">
-                                  <img src="<?php echo get_template_directory_uri() ?>/images/slider_img03.png" class="alltuchtopdown" alt="img">
+                                  <img src="<?php echo esc_url( $settings['banner_image']['url'] ) ?>" class="alltuchtopdown" alt="img">
                               </div>
                           </div>
                       </div>
