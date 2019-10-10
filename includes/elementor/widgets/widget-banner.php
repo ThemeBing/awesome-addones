@@ -231,7 +231,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
 
       <?php } elseif( $settings['style'] == 'how_we_work' ){ ?>
           <!-- how-we-wrok -->
-          <section class="how-we-work hww-bg" data-background="<?php echo esc_url( $settings['banner_image']['url'] ) ?>">
+          <section class="how-we-work hww-bg">
               <div class="container">
                   <div class="row">
                       <div class="col-12 text-center">
@@ -239,7 +239,7 @@ class megaaddons_Widget_Banner extends Widget_Base {
                               <h2><?php echo esc_html( $settings['title'] ) ?></h2>
                           </div>
                           <div class="hww-img">
-                              <img src="<?php echo get_template_directory_uri() ?>/images/how_we_work_img.png" alt="img">
+                              <img src="<?php echo esc_url( $settings['banner_image']['url'] ) ?>" alt="img">
                           </div>
                       </div>
                   </div>
