@@ -68,7 +68,7 @@ class megaaddons_Widget_Blog extends Widget_Base {
               <div class="col-lg-4 col-md-6">
                 <div class="single-blog-post mb-30">
                     <div class="b-post-thumb">
-                      <a href="<?php the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'saascloud-404x302'); ?>" alt="<?php the_title() ?>"></a>
+                      <a href="<?php the_permalink() ?>"><img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'deimos-404x302'); ?>" alt="<?php the_title() ?>"></a>
                       <div class="category">
                         <?php 
                         $categories = get_the_category();
