@@ -164,14 +164,14 @@ class megaaddons_Widget_Banner extends Widget_Base {
                 <div class="row">
                     <div class="col-xl-7 col-lg-6">
                         <div class="slider-content s-slider-content mt-60">
-                            <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo esc_html( $settings['title'] ) ?></h2>
-                            <p class="wow slideInLeft" data-wow-delay="0.4s"><?php echo esc_html( $settings['description'] ) ?></p>
+                            <h2 class="wow fadeInUp" data-wow-delay="0.2s"><?php echo esc_html( $settings['title'] ) ?></h2>
+                            <p class="wow fadeInUp" data-wow-delay="0.4s"><?php echo esc_html( $settings['description'] ) ?></p>
                             <a href="<?php echo esc_url( $settings['btn_url'] ) ?>" class="btn wow fadeInLeft" data-wow-delay="0.6s"><?php echo esc_html( $settings['btn_text'] ) ?></a>
                             <a href="<?php echo esc_url( $settings['btn_url2'] ) ?>" class="btn wow fadeInRight" data-wow-delay="0.6s"><?php echo esc_html( $settings['btn_text2'] ) ?></a>
                         </div>
                     </div>
                     <div class="col-xl-5 col-lg-6 d-none d-lg-block">
-                        <div class="s-slider-img position-relative wow slideInRightS" data-wow-delay="0.6s">
+                        <div class="s-slider-img position-relative wow fadeInRight" data-wow-delay="0.6s">
                             <img src="<?php echo esc_url( $settings['banner_image']['url'] ) ?>" alt="img">
                         </div>
                     </div>
@@ -216,11 +216,11 @@ class megaaddons_Widget_Banner extends Widget_Base {
                       <div class="row justify-content-center text-center">
                           <div class="col-lg-10">
                               <div class="slider-content s-slider-content">
-                                 <h2 class="wow slideInLeft" data-wow-delay="0.2s"><?php echo esc_html( $settings['title'] ) ?></h2>
-                                  <a href="<?php echo esc_url( $settings['btn_url'] ) ?>" class="btn wow fadeInLeft" data-wow-delay="0.4s"><?php echo esc_html( $settings['btn_text'] ) ?></a>
-                                  <a href="<?php echo esc_url( $settings['btn_url2'] ) ?>" class="btn wow fadeInRight" data-wow-delay="0.4s"><?php echo esc_html( $settings['btn_text2'] ) ?></a>
+                                 <h2 class="wow fadeInUp" data-wow-delay="0.2s"><?php echo esc_html( $settings['title'] ) ?></h2>
+                                  <a href="<?php echo esc_url( $settings['btn_url'] ) ?>" class="btn wow fadeInLeft" data-wow-delay="0.6s"><?php echo esc_html( $settings['btn_text'] ) ?></a>
+                                  <a href="<?php echo esc_url( $settings['btn_url2'] ) ?>" class="btn wow fadeInRight" data-wow-delay="0.6s"><?php echo esc_html( $settings['btn_text2'] ) ?></a>
                               </div>
-                              <div class="t-slider-img wow fadeInUp" data-wow-delay="0.6s">
+                              <div class="t-slider-img wow fadeInUp" data-wow-delay="0.8s">
                                   <img src="<?php echo esc_url( $settings['banner_image']['url'] ) ?>" class="alltuchtopdown" alt="img">
                               </div>
                           </div>
