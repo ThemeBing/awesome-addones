@@ -75,8 +75,7 @@ class megaaddons_Widget_ExFeatures extends Widget_Base {
             'default' => __('Exclusive Features','megaaddons')
          ]
       );
-
-
+      
       $this->add_control(
          'sub_title',
          [
