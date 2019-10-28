@@ -1,75 +1,192 @@
 <?php
-
 /**
- * The plugin bootstrap file
- *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
- *
- * @link              https://codecorns.com
- * @since             1.0.0
- * @package           Mega_Addons_For_Elementor
- *
- * @wordpress-plugin
- * Plugin Name:       Mega Addons For Elementor
- * Plugin URI:        https://codecorns.com/mega-addons-for-elementor
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
- * Author:            CodeCorns
- * Author URI:        https://codecorns.com
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       megaaddons
- * Domain Path:       /languages
+ * Plugin Name: info boxes for elementor
+ * Description: This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin URI:  https://example.com/
+ * Version:     1.0.0
+ * Author:      wpafroz
+ * Version:     1.0.0
+ * License:     GPL-2.0+
+ * Domain Path: /languages
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ * Author URI:  https://example.com/
+ * Text Domain: info-boxes-for-elementor
  */
 
-// If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
+/**
+ * Main Info Boxes For Elementor Class
+ *
+ * The init class that runs the Hello World plugin.
+ * Intended To make sure that the plugin's minimum requirements are met.
+ *
+ * You should only modify the constants to match your plugin's needs.
+ *
+ * Any custom code should go inside Plugin Class in the plugin.php file.
+ * @since 1.0.0
+ */
+final class Info_Boxes_For_Elementor {
+
+	/**
+	 * Plugin Version
+	 *
+	 * @since 1.0.0
+	 * @var string The plugin version.
+	 */
+	const VERSION = '1.0.0';
+
+	/**
+	 * Minimum Elementor Version
+	 *
+	 * @since 1.0.0
+	 * @var string Minimum Elementor version required to run the plugin.
+	 */
+	const MINIMUM_ELEMENTOR_VERSION = '2.0.0';
+
+	/**
+	 * Minimum PHP Version
+	 *
+	 * @since 1.0.0
+	 * @var string Minimum PHP version required to run the plugin.
+	 */
+	const MINIMUM_PHP_VERSION = '6.0';
+
+	/**
+	 * Constructor
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 */
+	public function __construct() {
+
+		// Load translation
+		add_action( 'init', array( $this, 'i18n' ) );
+
+		// Init Plugin
+		add_action( 'plugins_loaded', array( $this, 'init' ) );
+	}
+
+	/**
+	 * Load Textdomain
+	 *
+	 * Load plugin localization files.
+	 * Fired by `init` action hook.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 */
+	public function i18n() {
+		load_plugin_textdomain( 'info-boxes-for-elementor' );
+	}
+
+	/**
+	 * Initialize the plugin
+	 *
+	 * Validates that Elementor is already loaded.
+	 * Checks for basic plugin requirements, if one check fail don't continue,
+	 * if all check have passed include the plugin class.
+	 *
+	 * Fired by `plugins_loaded` action hook.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 */
+	public function init() {
+
+		// Check if Elementor installed and activated
+		if ( ! did_action( 'elementor/loaded' ) ) {
+			add_action( 'admin_notices', array( $this, 'admin_notice_missing_main_plugin' ) );
+			return;
+		}
+
+		// Check for required Elementor version
+		if ( ! version_compare( ELEMENTOR_VERSION, self::MINIMUM_ELEMENTOR_VERSION, '>=' ) ) {
+			add_action( 'admin_notices', array( $this, 'admin_notice_minimum_elementor_version' ) );
+			return;
+		}
+
+		// Check for required PHP version
+		if ( version_compare( PHP_VERSION, self::MINIMUM_PHP_VERSION, '<' ) ) {
+			add_action( 'admin_notices', array( $this, 'admin_notice_minimum_php_version' ) );
+			return;
+		}
+
+		// Once we get here, We have passed all validation checks so we can safely include our plugin
+		require_once( 'plugin.php' );
+	}
+
+	/**
+	 * Admin notice
+	 *
+	 * Warning when the site doesn't have Elementor installed or activated.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 */
+	public function admin_notice_missing_main_plugin() {
+		if ( isset( $_GET['activate'] ) ) {
+			unset( $_GET['activate'] );
+		}
+
+		$message = sprintf(
+			/* translators: 1: Plugin name 2: Elementor */
+			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'info-boxes-for-elementor' ),
+			'<strong>' . esc_html__( 'Info Boxes For Elementor', 'info-boxes-for-elementor' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'info-boxes-for-elementor' ) . '</strong>'
+		);
+
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+	}
+
+	/**
+	 * Admin notice
+	 *
+	 * Warning when the site doesn't have a minimum required Elementor version.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 */
+	public function admin_notice_minimum_elementor_version() {
+		if ( isset( $_GET['activate'] ) ) {
+			unset( $_GET['activate'] );
+		}
+
+		$message = sprintf(
+			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'info-boxes-for-elementor' ),
+			'<strong>' . esc_html__( 'Info Boxes For Elementor', 'info-boxes-for-elementor' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'info-boxes-for-elementor' ) . '</strong>',
+			self::MINIMUM_ELEMENTOR_VERSION
+		);
+
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+	}
+
+	/**
+	 * Admin notice
+	 *
+	 * Warning when the site doesn't have a minimum required PHP version.
+	 *
+	 * @since 1.0.0
+	 * @access public
+	 */
+	public function admin_notice_minimum_php_version() {
+		if ( isset( $_GET['activate'] ) ) {
+			unset( $_GET['activate'] );
+		}
+
+		$message = sprintf(
+			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'info-boxes-for-elementor' ),
+			'<strong>' . esc_html__( 'Info Boxes For Elementor', 'info-boxes-for-elementor' ) . '</strong>',
+			'<strong>' . esc_html__( 'PHP', 'info-boxes-for-elementor' ) . '</strong>',
+			self::MINIMUM_PHP_VERSION
+		);
+
+		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
+	}
 }
 
-class MegaAddons {
-
-	function __construct() {
-		$this->load_plugin_textdomain();
-		$this->load_dependencies();
-		$this->megaaddons_setup();
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
-
-	}
-
-	public function megaaddons_setup() {
-		add_image_size( 'megaaddons-77x64', 77,64, true );
-		add_image_size( 'megaaddons-100x75', 100,75, true );
-	}
-
-	public function load_plugin_textdomain() {
-		load_plugin_textdomain( 'mega-addons', false, dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/' );
-	}
-
-	public function enqueue_scripts() {
-		wp_register_style( 'megaaddons-style', plugin_dir_url( __FILE__ ) . 'public/assets/css/style.css' );
-		wp_register_script( 'megaaddons-main-js', plugin_dir_url( __FILE__ ) . 'public/assets/js/main.js' );
-
-		wp_enqueue_style( 'megaaddons-style' );
-		wp_enqueue_script( 'megaaddons-main-js' );
-	}
-
-	public function admin_scripts() {
-	    wp_enqueue_media();
-	    wp_enqueue_script('megaaddons-admin-main-js', plugin_dir_url( __FILE__ ) . 'admin/assets/js/main.js', array('jquery'), wp_get_theme()->get( 'Version' ), true );
-	}
-
-	private function load_dependencies() {
-		require_once plugin_dir_path( __FILE__ ) . 'includes/custom-posts.php';
-		require_once plugin_dir_path( __FILE__ ) . 'includes/elementor/elementor.php';
-		require_once plugin_dir_path( __FILE__ ) . 'includes/recent-post.php';
-		require_once plugin_dir_path( __FILE__ ) . 'includes/author-widget.php';
-		require_once plugin_dir_path( __FILE__ ) . 'includes/social-share.php';
-	}
-
-}
-new MegaAddons();
+// Instantiate Info_Boxes_For_Elementor.
+new Info_Boxes_For_Elementor();
