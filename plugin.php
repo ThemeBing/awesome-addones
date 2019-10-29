@@ -1,5 +1,5 @@
 <?php
-namespace Info_Boxes_For_Elementor;
+namespace Mega_Addons_For_Elementor;
 
 /**
  * Class Plugin

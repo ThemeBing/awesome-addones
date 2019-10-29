@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name: info boxes for elementor
+ * Plugin Name: Mega Addons for Elementor
  * Description: This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Plugin URI:  https://example.com/
+ * Plugin URI:  https://codecorns.com/wp/plugins/mega-addons
  * Version:     1.0.0
- * Author:      wpafroz
+ * Author:      CodeCorns
  * Version:     1.0.0
  * License:     GPL-2.0+
  * Domain Path: /languages
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- * Author URI:  https://example.com/
- * Text Domain: info-boxes-for-elementor
+ * Author URI:  https://codecorns.com/
+ * Text Domain: mega-addons-for-elementor
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * Any custom code should go inside Plugin Class in the plugin.php file.
  * @since 1.0.0
  */
-final class Info_Boxes_For_Elementor {
+final class Mega_Addons_For_Elementor {
 
 	/**
 	 * Plugin Version
@@ -77,7 +77,7 @@ final class Info_Boxes_For_Elementor {
 	 * @access public
 	 */
 	public function i18n() {
-		load_plugin_textdomain( 'info-boxes-for-elementor' );
+		load_plugin_textdomain( 'mega-addons-for-elementor' );
 	}
 
 	/**
@@ -131,9 +131,9 @@ final class Info_Boxes_For_Elementor {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
-			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'info-boxes-for-elementor' ),
-			'<strong>' . esc_html__( 'Info Boxes For Elementor', 'info-boxes-for-elementor' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'info-boxes-for-elementor' ) . '</strong>'
+			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'mega-addons-for-elementor' ),
+			'<strong>' . esc_html__( 'Info Boxes For Elementor', 'mega-addons-for-elementor' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'mega-addons-for-elementor' ) . '</strong>'
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -154,9 +154,9 @@ final class Info_Boxes_For_Elementor {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'info-boxes-for-elementor' ),
-			'<strong>' . esc_html__( 'Info Boxes For Elementor', 'info-boxes-for-elementor' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'info-boxes-for-elementor' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'mega-addons-for-elementor' ),
+			'<strong>' . esc_html__( 'Info Boxes For Elementor', 'mega-addons-for-elementor' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'mega-addons-for-elementor' ) . '</strong>',
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
 
@@ -178,9 +178,9 @@ final class Info_Boxes_For_Elementor {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'info-boxes-for-elementor' ),
-			'<strong>' . esc_html__( 'Info Boxes For Elementor', 'info-boxes-for-elementor' ) . '</strong>',
-			'<strong>' . esc_html__( 'PHP', 'info-boxes-for-elementor' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'mega-addons-for-elementor' ),
+			'<strong>' . esc_html__( 'Info Boxes For Elementor', 'mega-addons-for-elementor' ) . '</strong>',
+			'<strong>' . esc_html__( 'PHP', 'mega-addons-for-elementor' ) . '</strong>',
 			self::MINIMUM_PHP_VERSION
 		);
 
@@ -188,5 +188,5 @@ final class Info_Boxes_For_Elementor {
 	}
 }
 
-// Instantiate Info_Boxes_For_Elementor.
-new Info_Boxes_For_Elementor();
+// Instantiate Mega_Addons_For_Elementor.
+new Mega_Addons_For_Elementor();
