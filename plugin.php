@@ -86,13 +86,13 @@ class Plugin {
 		require_once( __DIR__ . '/widgets/widget-button.php' );
 		require_once( __DIR__ . '/widgets/widget-contact.php' );
 		require_once( __DIR__ . '/widgets/widget-counter.php' );
+		require_once( __DIR__ . '/widgets/widget-gallery.php' );
 		require_once( __DIR__ . '/widgets/widget-infobox.php' );
 		require_once( __DIR__ . '/widgets/widget-newsletter.php' );
 		require_once( __DIR__ . '/widgets/widget-partner.php' );
 		require_once( __DIR__ . '/widgets/widget-portfolio.php' );
 		require_once( __DIR__ . '/widgets/widget-pricing.php' );
 		require_once( __DIR__ . '/widgets/widget-team.php' );
-		require_once( __DIR__ . '/widgets/widget-service.php' );
 		require_once( __DIR__ . '/widgets/widget-testimonials.php' );
 		require_once( __DIR__ . '/widgets/widget-title.php' );
 		require_once( __DIR__ . '/widgets/widget-video.php' );
@@ -124,6 +124,9 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Portfolio() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Pricing() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Team() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Testimonials() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Title() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_video() );
 	}
 
 	/**

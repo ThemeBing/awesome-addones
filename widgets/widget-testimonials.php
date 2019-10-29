@@ -183,5 +183,3 @@ class Mega_Addons_Widget_Testimonials extends Widget_Base {
    <?php } 
  
 }
-
-Plugin::instance()->widgets_manager->register_widget_type( new Mega_Addons_Widget_Testimonials );

@@ -78,7 +78,4 @@ class Mega_Addons_Widget_video extends Widget_Base {
       </section>
    
       <?php }
- 
 }
-
-Plugin::instance()->widgets_manager->register_widget_type( new Mega_Addons_Widget_video );
