@@ -22,22 +22,8 @@
 .infobox.style1 .infobox-icon i {
     font-size: 40px;
     margin-left: 8px;
-    position: relative;
 }
 
-.infobox.style1 .infobox-icon i::after {
-    content: "";
-    position: absolute;
-    left: -15px;
-    top: -24px;
-    background-image: url(../images/polygon.png);
-    width: 90px;
-    height: 80px;
-    background-repeat: no-repeat;
-}
-.infobox.style1.right .infobox-icon i::after {
-	left: -33px;
-}
 .infobox.style1 .infobox-content h4 {
     font-size: 20px;
     margin-bottom: 20px;
