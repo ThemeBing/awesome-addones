@@ -1,10 +1,13 @@
 <?php 
-namespace Elementor;
- 
+namespace Mega_Addons_For_Elementor\Widgets;
+
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Accordion
-class megaaddons_Widget_Accordion extends Widget_Base {
+class Mega_Addons_Widget_Accordion extends Widget_Base {
  
    public function get_name() {
       return 'accordion';
@@ -19,7 +22,7 @@ class megaaddons_Widget_Accordion extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'megaaddons-elements' ];
+      return [ 'mega_addons' ];
    }
 
    protected function _register_controls() {
@@ -119,7 +122,4 @@ class megaaddons_Widget_Accordion extends Widget_Base {
       <!-- faq-area-end -->
       <?php
    }
-
 }
-
-Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Accordion );

@@ -3,7 +3,7 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // contact item
-class megaaddons_Widget_Contact extends Widget_Base {
+class Mega_Addons_Widget_Contact extends Widget_Base {
  
    public function get_name() {
       return 'Contact item';
@@ -18,7 +18,7 @@ class megaaddons_Widget_Contact extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'megaaddons-elements' ];
+      return [ 'mega_addons' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
@@ -82,4 +82,4 @@ class megaaddons_Widget_Contact extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Contact );
+Plugin::instance()->widgets_manager->register_widget_type( new Mega_Addons_Widget_Contact );

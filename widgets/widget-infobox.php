@@ -5,8 +5,9 @@ use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 // Infobox
-class IBFE_Widget_Infobox extends Widget_Base {
+class Mega_Addons_Widget_Infobox extends Widget_Base {
  
    public function get_name() {
       return 'infobox';
@@ -21,7 +22,7 @@ class IBFE_Widget_Infobox extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'info-boxes' ];
+      return [ 'mega_addons' ];
    }
    protected function _register_controls() {
 

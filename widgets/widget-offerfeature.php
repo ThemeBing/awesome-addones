@@ -4,7 +4,7 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Offerfeature
-class megaaddons_Widget_Offerfeature extends Widget_Base {
+class Mega_Addons_Widget_Offerfeature extends Widget_Base {
  
    public function get_name() {
       return 'offerfeature';
@@ -19,7 +19,7 @@ class megaaddons_Widget_Offerfeature extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'megaaddons-elements' ];
+      return [ 'mega_addons' ];
    }
 
    protected function _register_controls() {
@@ -88,7 +88,6 @@ class megaaddons_Widget_Offerfeature extends Widget_Base {
        
       $settings = $this->get_settings_for_display(); ?>
 
-
       <!-- offer-features -->
       <section class="offer-features of-mt">
           <div class="container">
@@ -119,7 +118,6 @@ class megaaddons_Widget_Offerfeature extends Widget_Base {
           </div>
       </section>
    <?php }
- 
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Offerfeature );
+Plugin::instance()->widgets_manager->register_widget_type( new Mega_Addons_Widget_Offerfeature );

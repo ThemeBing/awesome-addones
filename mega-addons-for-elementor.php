@@ -16,7 +16,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
- * Main Info Boxes For Elementor Class
+ * Main Mega Addons For Elementor Class
  *
  * The init class that runs the Hello World plugin.
  * Intended To make sure that the plugin's minimum requirements are met.
@@ -132,7 +132,7 @@ final class Mega_Addons_For_Elementor {
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
 			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'mega-addons-for-elementor' ),
-			'<strong>' . esc_html__( 'Info Boxes For Elementor', 'mega-addons-for-elementor' ) . '</strong>',
+			'<strong>' . esc_html__( 'Mega Addons For Elementor', 'mega-addons-for-elementor' ) . '</strong>',
 			'<strong>' . esc_html__( 'Elementor', 'mega-addons-for-elementor' ) . '</strong>'
 		);
 
@@ -155,7 +155,7 @@ final class Mega_Addons_For_Elementor {
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
 			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'mega-addons-for-elementor' ),
-			'<strong>' . esc_html__( 'Info Boxes For Elementor', 'mega-addons-for-elementor' ) . '</strong>',
+			'<strong>' . esc_html__( 'Mega Addons For Elementor', 'mega-addons-for-elementor' ) . '</strong>',
 			'<strong>' . esc_html__( 'Elementor', 'mega-addons-for-elementor' ) . '</strong>',
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
@@ -179,7 +179,7 @@ final class Mega_Addons_For_Elementor {
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
 			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'mega-addons-for-elementor' ),
-			'<strong>' . esc_html__( 'Info Boxes For Elementor', 'mega-addons-for-elementor' ) . '</strong>',
+			'<strong>' . esc_html__( 'Mega Addons For Elementor', 'mega-addons-for-elementor' ) . '</strong>',
 			'<strong>' . esc_html__( 'PHP', 'mega-addons-for-elementor' ) . '</strong>',
 			self::MINIMUM_PHP_VERSION
 		);

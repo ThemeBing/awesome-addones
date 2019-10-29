@@ -4,7 +4,7 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Features
-class megaaddons_Widget_Features extends Widget_Base {
+class Mega_Addons_Widget_Features extends Widget_Base {
  
    public function get_name() {
       return 'features';
@@ -19,7 +19,7 @@ class megaaddons_Widget_Features extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'megaaddons-elements' ];
+      return [ 'mega_addons' ];
    }
 
    protected function _register_controls() {
@@ -183,4 +183,4 @@ class megaaddons_Widget_Features extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new megaaddons_Widget_Features );
+Plugin::instance()->widgets_manager->register_widget_type( new Mega_Addons_Widget_Features );

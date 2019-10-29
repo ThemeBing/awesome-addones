@@ -48,9 +48,9 @@ class Plugin {
 	public function widget_categories( $elements_manager ) {
 
 		$elements_manager->add_category(
-			'info-boxes',
+			'mega_addons',
 			[
-				'title' => esc_html__( 'Info boxes for elemntor', 'megaaddons' ),
+				'title' => esc_html__( 'Mega Addons', 'megaaddons' ),
 				'icon' => 'fa fa-plug',
 			]
 		);
@@ -67,8 +67,8 @@ class Plugin {
 	 * @access public
 	 */
 	public function widget_scripts() {
-		wp_enqueue_style( 'info-boxes', plugins_url( '/assets/css/infobox.css', __FILE__ ) );
-		wp_enqueue_script( 'info-boxes', plugins_url( '/assets/js/infobox.js', __FILE__ ), [ 'jquery' ], false, true );
+		wp_enqueue_style( 'mega_addons', plugins_url( '/assets/css/infobox.css', __FILE__ ) );
+		wp_enqueue_script( 'mega_addons', plugins_url( '/assets/js/infobox.js', __FILE__ ), [ 'jquery' ], false, true );
 	}
 
 	/**
@@ -80,6 +80,19 @@ class Plugin {
 	 * @access private
 	 */
 	private function include_widgets_files() {
+		require_once( __DIR__ . '/widgets/widget-accordion.php' );
+		require_once( __DIR__ . '/widgets/widget-banner.php' );
+		require_once( __DIR__ . '/widgets/widget-blog.php' );
+		require_once( __DIR__ . '/widgets/widget-button.php' );
+		require_once( __DIR__ . '/widgets/widget-contact.php' );
+		require_once( __DIR__ . '/widgets/widget-accordion.php' );
+		require_once( __DIR__ . '/widgets/widget-accordion.php' );
+		require_once( __DIR__ . '/widgets/widget-accordion.php' );
+		require_once( __DIR__ . '/widgets/widget-accordion.php' );
+		require_once( __DIR__ . '/widgets/widget-accordion.php' );
+		require_once( __DIR__ . '/widgets/widget-accordion.php' );
+		require_once( __DIR__ . '/widgets/widget-accordion.php' );
+		require_once( __DIR__ . '/widgets/widget-accordion.php' );
 		require_once( __DIR__ . '/widgets/widget-infobox.php' );
 	}
 
@@ -96,7 +109,8 @@ class Plugin {
 		$this->include_widgets_files();
 
 		// Register Widgets
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\IBFE_Widget_Infobox() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Accordion() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Infobox() );
 	}
 
 	/**
