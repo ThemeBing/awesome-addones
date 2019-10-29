@@ -1,10 +1,13 @@
 <?php 
-namespace Elementor;
+namespace Mega_Addons_For_Elementor\Widgets;
+
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Features
-class Mega_Addons_Widget_Features extends Widget_Base {
+class Mega_Addons_Widget_Team extends Widget_Base {
  
    public function get_name() {
       return 'features';
@@ -180,7 +183,4 @@ class Mega_Addons_Widget_Features extends Widget_Base {
     <?php }
     
    }
- 
 }
-
-Plugin::instance()->widgets_manager->register_widget_type( new Mega_Addons_Widget_Features );

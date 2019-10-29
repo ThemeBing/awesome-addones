@@ -1,6 +1,9 @@
 <?php 
-namespace Elementor;
- 
+namespace Mega_Addons_For_Elementor\Widgets;
+
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // blog
 class Mega_Addons_Widget_Blog extends Widget_Base {
@@ -100,4 +103,3 @@ class Mega_Addons_Widget_Blog extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new Mega_Addons_Widget_Blog );

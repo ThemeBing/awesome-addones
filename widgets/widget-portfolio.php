@@ -1,5 +1,8 @@
 <?php 
-namespace Elementor;
+namespace Mega_Addons_For_Elementor\Widgets;
+
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // service item
@@ -82,6 +85,4 @@ class Mega_Addons_Widget_Portfolio extends Widget_Base {
 
       <?php
    }
- 
 }
-Plugin::instance()->widgets_manager->register_widget_type( new Mega_Addons_Widget_Portfolio );

@@ -85,15 +85,17 @@ class Plugin {
 		require_once( __DIR__ . '/widgets/widget-blog.php' );
 		require_once( __DIR__ . '/widgets/widget-button.php' );
 		require_once( __DIR__ . '/widgets/widget-contact.php' );
-		require_once( __DIR__ . '/widgets/widget-accordion.php' );
-		require_once( __DIR__ . '/widgets/widget-accordion.php' );
-		require_once( __DIR__ . '/widgets/widget-accordion.php' );
-		require_once( __DIR__ . '/widgets/widget-accordion.php' );
-		require_once( __DIR__ . '/widgets/widget-accordion.php' );
-		require_once( __DIR__ . '/widgets/widget-accordion.php' );
-		require_once( __DIR__ . '/widgets/widget-accordion.php' );
-		require_once( __DIR__ . '/widgets/widget-accordion.php' );
+		require_once( __DIR__ . '/widgets/widget-counter.php' );
 		require_once( __DIR__ . '/widgets/widget-infobox.php' );
+		require_once( __DIR__ . '/widgets/widget-newsletter.php' );
+		require_once( __DIR__ . '/widgets/widget-partner.php' );
+		require_once( __DIR__ . '/widgets/widget-portfolio.php' );
+		require_once( __DIR__ . '/widgets/widget-pricing.php' );
+		require_once( __DIR__ . '/widgets/widget-team.php' );
+		require_once( __DIR__ . '/widgets/widget-service.php' );
+		require_once( __DIR__ . '/widgets/widget-testimonials.php' );
+		require_once( __DIR__ . '/widgets/widget-title.php' );
+		require_once( __DIR__ . '/widgets/widget-video.php' );
 	}
 
 	/**
@@ -110,7 +112,18 @@ class Plugin {
 
 		// Register Widgets
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Accordion() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Banner() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Blog() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Button() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Contact() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Counter() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Gallery() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Infobox() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_newsletter() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Partner() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Portfolio() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Pricing() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Team() );
 	}
 
 	/**

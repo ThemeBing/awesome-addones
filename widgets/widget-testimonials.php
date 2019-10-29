@@ -1,6 +1,9 @@
 <?php 
-namespace Elementor;
- 
+namespace Mega_Addons_For_Elementor\Widgets;
+
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
