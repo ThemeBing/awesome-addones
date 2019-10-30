@@ -1,76 +1,98 @@
-.infobox {}
+
+/*--------------------------------------------------------------
+# Accordion
+--------------------------------------------------------------*/
+.gazi-accordion {}
+
 /*Style 1*/
-.infobox.style1 {
-    padding: 50px 30px;
+
+.gazi-accordion-item:not(last-child) {
+    margin-bottom: 15px;
+}
+
+.gazi-accordion-item {
     border-radius: 5px;
-    -webkit-transition: .3s linear;
-    -o-transition: .3s linear;
-    transition: .3s linear;
+    overflow: hidden;
+    box-shadow: 0px 7px 37px 0px rgba(0, 0, 0, 0.05);
 }
 
-.infobox.style1:hover,
-.infobox.style1.active {
-    background: #fff;
-    -webkit-box-shadow: 0px 0px 43px 0px rgba(89, 75, 128, 0.11);
-    box-shadow: 0px 0px 43px 0px rgba(89, 75, 128, 0.11);
+.gazi-accordion-item.active h5 {
+    border-bottom: 1px solid #dadde1;
 }
 
-.infobox.style1 .infobox-icon {
-    margin-bottom: 20px;
+.gazi-accordion-item h5 {
+    padding: 20px 30px;
+    cursor: pointer;
+    margin-bottom: 0 !important;
 }
 
-.infobox.style1 .infobox-icon i {
-    font-size: 40px;
-    margin-left: 8px;
+.gazi-accordion.style-1 .gazi-accordion-item h5 span {
+    float: right;
+    padding: 5px;
 }
 
-.infobox.style1 .infobox-content h4 {
-    font-size: 20px;
-    margin-bottom: 20px;
+.gazi-accordion-item.active h5 span:nth-child(1) {
+    display: none;
 }
 
-.infobox.style1 .infobox-content a {
-    font-size: 14px;
-    font-weight: 700;
+.gazi-accordion-item h5 span:nth-child(2) {
+    display: none;
+}
+
+.gazi-accordion-item.active h5 span:nth-child(2) {
+    display: block;
+}
+
+.gazi-accordion-item .collapsing,
+.gazi-accordion-item .collapse {
+    padding: 15px 30px;
 }
 
 /*Style 2*/
-.infobox.style2 {
-    -webkit-box-shadow: 0px 17px 53.94px 4.06px rgba(1, 51, 184, 0.03);
-    box-shadow: 0px 17px 53.94px 4.06px rgba(1, 51, 184, 0.03);
-    background: #fff;
-    border-radius: 10px;
-    -webkit-transition: .3s linear;
-    -o-transition: .3s linear;
-    transition: .3s linear;
-    padding: 30px;
+
+.gazi-accordion.style-2 .gazi-accordion-item h5 span {
+    float: left;
+    padding: 3px 15px 0px 0;
 }
 
-.infobox.style2 .infobox-icon {
-    margin-bottom: 20px;
+.gazi-accordion.style-2 .gazi-accordion-item {
+    border-radius: 0;
 }
 
-.infobox.style2 .infobox-icon i {
-    font-size: 40px;
-    margin-left: 8px;
-    position: relative;
+/*Style 3*/
+
+.gazi-accordion.style-3 .gazi-accordion-item {
+    box-shadow: none;
+    border: 1px solid #dadde1;
+    border-radius: 0;
 }
 
-.infobox.style2 .infobox-content a {
-    font-size: 14px;
-    font-weight: 700;
+.gazi-accordion.style-3 .gazi-accordion-item.active h5 {
+    color: #fff;
 }
 
-.infobox.style2 .infobox-content a i {
-    height: 35px;
-    width: 35px;
-    display: inline-block;
-    text-align: center;
-    border-radius: 50%;
-    border: 1px solid #ddd;
-    line-height: 33px;
-    margin-left: 15px;
-    -webkit-transition: .3s;
-    -o-transition: .3s;
-    transition: .3s;
+/*--------------------------------------------------------------
+# Banner
+--------------------------------------------------------------*/
+
+.gazi-banner {
+    padding: 250px 0 200px;
+    color: #fff;
+}
+
+.gazi-banner h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.gazi-banner p {
+    font-size: 26px;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.gazi-banner .gazi-btn {
+    border-radius: 30px;
 }

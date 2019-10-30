@@ -30,45 +30,85 @@ class Mega_Addons_Widget_Accordion extends Widget_Base {
       $this->start_controls_section(
          'accordion_section',
          [
-            'label' => esc_html__( 'Accordion', 'megaaddons' ),
+            'label' => esc_html__( 'Accordion', 'gazi' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
 
+      $this->add_control(
+         'accordion_style',
+         [
+            'label' => __( 'Accordion Style', 'gazi' ),
+            'type' => \Elementor\Controls_Manager::SELECT,
+            'default' => 'style-1',
+            'options' => [
+               'style-1'  => __( 'Style 1', 'gazi' ),
+               'style-2' => __( 'Style 2', 'gazi' ),
+               'style-3' => __( 'Style 3', 'gazi' ),
+               'none' => __( 'None', 'gazi' ),
+            ],
+         ]
+      );
+
+      $this->add_control(
+         'collapsed_icon',
+         [
+            'label' => __( 'Collapsed Icon', 'gazi' ),
+            'type' => \Elementor\Controls_Manager::ICON,
+            'default' => 'fa fa-plus',
+            'condition' => [
+               'accordion_style' => ['style-1','style-2']
+            ]
+         ]
+      );
+
+      $this->add_control(
+         'expanded_icon',
+         [
+            'label' => __( 'Expanded Icon', 'gazi' ),
+            'type' => \Elementor\Controls_Manager::ICON,
+            'default' => 'fa fa-minus',
+            'condition' => [
+               'accordion_style' => ['style-1','style-2']
+            ]
+         ]
+      );
 
       $accordion = new \Elementor\Repeater();
 
       $accordion->add_control(
          'title', [
-            'label' => __( 'Title', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXT
+            'label' => __( 'Title', 'gazi' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'label_block' => true,
          ]
       );
       $accordion->add_control(
          'text', [
-            'label' => __( 'Text', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXTAREA
+            'label' => __( 'Text', 'gazi' ),
+            'type' => \Elementor\Controls_Manager::WYSIWYG,
+            'label_block' => true,
          ]
       );
 
       $this->add_control(
          'accordion_list',
          [
-            'label' => __( 'Accordion list', 'megaaddons' ),
+            'label' => __( 'Accordion list', 'gazi' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $accordion->get_controls(),
             'default' => [
                [
-                  'title' => __( 'Lorem ipsum dummy text used here?', 'megaaddons' ),
-                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'megaaddons' )
+                  'title' => __( 'How can i get help by gazi?', 'gazi' ),
+                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'gazi' )
                ],
                [
-                  'title' => __( 'Why i should buy this Theme?', 'megaaddons' ),
-                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'megaaddons' )
+                  'title' => __( 'What about loan programs & after bank loan advantage?', 'gazi' ),
+                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'gazi' )
                ],
                [
-                  'title' => __( 'Can i change any elements easilly?', 'megaaddons' ),
-                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'megaaddons' )
+                  'title' => __( 'How can i opent new account?', 'gazi' ),
+                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'gazi' )
                ]
             ],
             'title_field' => '{{{ title }}}',
@@ -86,40 +126,24 @@ class Mega_Addons_Widget_Accordion extends Widget_Base {
       $randID = wp_rand();
 
       $settings = $this->get_settings_for_display(); ?>
+      <div id="accordion<?php echo $randID ?>" class="gazi-accordion <?php echo esc_attr( $settings['accordion_style'] ) ?>">
+        <?php if ( $settings['accordion_list'] ) { 
+          foreach (  $settings['accordion_list'] as $key => $accordion ) { ?>
+          <div class="gazi-accordion-item">
+            <h5 data-toggle="collapse" data-target="#collapse-<?php echo $key.$randID ?>" aria-expanded="false" aria-controls="collapse-<?php echo $key.$randID ?>">
+                <?php echo esc_html( $accordion['title'] ); ?>
+                <span class="<?php echo esc_attr( $settings['collapsed_icon'] ) ?>"></span>
+                <span class="<?php echo esc_attr( $settings['expanded_icon'] ) ?>"></span>
+            </h5>
 
-
-      <div class="row">
-        <div class="col-12">
-          <div class="faq-wrapper-padding">
-              <div class="faq-wrapper">
-                  <div class="accordion" id="accordionExample<?php echo $randID ?>">
-                    <?php if ( $settings['accordion_list'] ) {
-                    foreach (  $settings['accordion_list'] as $key => $accordion ) { ?>
-
-                      <div class="card">
-                          <div class="card-header" id="heading<?php echo $key.$randID ?>">
-                              <h5 class="mb-0">
-                                  <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapse<?php echo $key.$randID ?>"
-                                      aria-expanded="false" aria-controls="collapse<?php echo $key.$randID ?>">
-                                      <?php echo esc_html( $accordion['title'] ); ?>
-                                  </a>
-                              </h5>
-                          </div>
-                          <div id="collapse<?php echo $key.$randID ?>" class="collapse" aria-labelledby="heading<?php echo $key.$randID ?>" data-parent="#accordionExample<?php echo $randID ?>">
-                              <div class="card-body">
-                                  <p><?php echo esc_html( $accordion['text'] ); ?></p>
-                              </div>
-                          </div>
-                      </div>
-
-                      <?php } 
-                    } ?>
-                  </div>
-              </div>
+            <div id="collapse-<?php echo $key.$randID ?>" class="collapse" data-parent="#accordion<?php echo $randID ?>">
+              <?php echo esc_html( $accordion['text'] ); ?>
+            </div>
           </div>
-        </div>
+          <?php } 
+      } ?>
       </div>
-      <!-- faq-area-end -->
+      
       <?php
    }
 }
