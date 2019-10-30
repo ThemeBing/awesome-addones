@@ -68,9 +68,14 @@ class Plugin {
 	 */
 	public function widget_scripts() {
 		wp_enqueue_style( 'bootstrap', plugins_url( '/assets/css/bootstrap.min.css', __FILE__ ) );
+		wp_enqueue_style( 'mega_addons_color', plugins_url( '/assets/css/color.css', __FILE__ ) );
 		wp_enqueue_style( 'mega_addons', plugins_url( '/assets/css/infobox.css', __FILE__ ) );
 
 		wp_enqueue_script( 'bootstrap', plugins_url( '/assets/js/bootstrap.min.js', __FILE__ ) , [ 'jquery' ], false, true );
+		wp_enqueue_script( 'counterup', plugins_url( '/assets/js/jquery.counterup.min.js', __FILE__ ) , [ 'jquery' ], false, true );
+		wp_enqueue_script( 'waypoints', plugins_url( '/assets/js/jquery.waypoints.min.js', __FILE__ ) , [ 'jquery' ], false, true );
+		wp_enqueue_script( 'isotope', plugins_url( '/assets/js/isotope.pkgd.min.js', __FILE__ ) , [ 'jquery' ], false, true );
+		wp_enqueue_script( 'slick', plugins_url( '/assets/js/slick.min.js', __FILE__ ) , [ 'jquery' ], false, true );
 		wp_enqueue_script( 'mega_addons', plugins_url( '/assets/js/infobox.js', __FILE__ ), [ 'jquery' ], false, true );
 	}
 
@@ -86,13 +91,9 @@ class Plugin {
 		require_once( __DIR__ . '/widgets/widget-accordion.php' );
 		require_once( __DIR__ . '/widgets/widget-blog.php' );
 		require_once( __DIR__ . '/widgets/widget-button.php' );
-		require_once( __DIR__ . '/widgets/widget-contact.php' );
 		require_once( __DIR__ . '/widgets/widget-counter.php' );
-		require_once( __DIR__ . '/widgets/widget-gallery.php' );
 		require_once( __DIR__ . '/widgets/widget-infobox.php' );
-		require_once( __DIR__ . '/widgets/widget-newsletter.php' );
 		require_once( __DIR__ . '/widgets/widget-partner.php' );
-		require_once( __DIR__ . '/widgets/widget-portfolio.php' );
 		require_once( __DIR__ . '/widgets/widget-pricing.php' );
 		require_once( __DIR__ . '/widgets/widget-team.php' );
 		require_once( __DIR__ . '/widgets/widget-testimonials.php' );
@@ -116,13 +117,9 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Accordion() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Blog() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Button() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Contact() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Counter() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Gallery() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Infobox() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_newsletter() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Partner() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Portfolio() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Pricing() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Team() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Testimonials() );

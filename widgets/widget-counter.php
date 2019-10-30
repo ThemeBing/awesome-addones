@@ -30,45 +30,45 @@ class Mega_Addons_Widget_Counter extends Widget_Base {
       $this->start_controls_section(
          'counter_section',
          [
-            'label' => esc_html__( 'Counter', 'megaaddons' ),
+            'label' => esc_html__( 'Counter', 'mega-addons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
 
-      $counter = new \Elementor\Repeater();
-
-      $counter->add_control(
-         'icon',
-         [
-            'label' => __( 'Icon', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::MEDIA
-         ]
-      );
-
-      $counter->add_control(
-         'count',
-         [
-            'label' => __( 'Count', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXT
-         ]
-      );
-
-      $counter->add_control(
+      $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXT
+            'label' => __( 'Title', 'mega-addons' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'default' => __( 'Download', 'mega-addons' ),
+         ]
+      );   
+
+      $this->add_control(
+         'count',
+         [
+            'label' => __( 'Counter Value', 'mega-addons' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'default' => '9652',
+         ]
+      );
+      
+      $this->add_control(
+         'icon',
+         [
+            'label' => __( 'Icon', 'mega-addons' ),
+            'type' => \Elementor\Controls_Manager::ICON,
+            'label_block' => true,
+            'default' => 'fa fa-cloud-download',
          ]
       );
 
       $this->add_control(
-         'counter',
+         'icon_color',
          [
-            'label' => __( 'Counter', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::REPEATER,
-            'fields' => $counter->get_controls(),
-            'title_field' => '{{title}}',
-
+            'label' => __( 'Background Color', 'mega-addons' ),
+            'type' => \Elementor\Controls_Manager::COLOR,
+            'default' => '#00b9e8',
          ]
       );
 
@@ -81,28 +81,22 @@ class Mega_Addons_Widget_Counter extends Widget_Base {
  
       // get our input from the widget settings.
        
-      $settings = $this->get_settings_for_display(); ?>
+      $settings = $this->get_settings_for_display();
+      
+      //Inline Editing
+      $this->add_inline_editing_attributes( 'title', 'basic' );
+      $this->add_inline_editing_attributes( 'count', 'basic' );
+      $this->add_inline_editing_attributes( 'icon', 'basic' );
+      $this->add_inline_editing_attributes( 'icon_color', 'basic' );
+      ?>
 
-      <section class="counter-area inner-counter-bg counter-bg pt-150 pb-100" data-background="<?php echo get_template_directory_uri() ?>/images/counter_bg.jpg">
-         <div class="container">
-           <div class="row">
-            <?php foreach (  $settings['counter'] as $counter_single ): ?>
-               <div class="col-lg-3 col-sm-6">
-                   <div class="single-counter text-center mb-50">
-                       <div class="counter-icon">
-                           <img src="<?php echo $counter_single['icon']['url'] ?>" alt="img">
-                       </div>
-                       <div class="counter-content">
-                           <h2 class="count"><?php echo $counter_single['count'] ?></h2>
-                           <span><?php echo $counter_single['title'] ?></span>
-                       </div>
-                   </div>
-               </div>
-            <?php endforeach; ?>
-           </div>
+      <div class="mega-addons-counter">
+         <div class="mega-addons-counter-icon" style="background: <?php echo esc_attr($settings['icon_color']) ?>;">
+            <i class="<?php echo esc_attr($settings['icon']) ?> fa-fw" aria-hidden="true"></i>
          </div>
-      </section>
-
+         <h5 <?php echo $this->get_render_attribute_string( 'title' ); ?>><?php echo esc_html($settings['title']); ?></h5>
+         <p class="mega-addons-count" <?php echo $this->get_render_attribute_string( 'count' ); ?>><?php echo esc_html($settings['count']); ?></p>
+      </div>
       <?php
    }
  

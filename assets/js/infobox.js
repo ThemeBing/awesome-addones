@@ -37,10 +37,10 @@
 
 
     // Counter
-    // $('.mega-addons-count').counterUp({
-    //     delay: 10,
-    //     time: 1000
-    // });
+    $('.mega-addons-count').counterUp({
+        delay: 10,
+        time: 1000
+    });
 
     // Gallery Carousel
     

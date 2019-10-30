@@ -30,52 +30,54 @@ class Mega_Addons_Widget_video extends Widget_Base {
       $this->start_controls_section(
          'video_section',
          [
-            'label' => esc_html__( 'Video', 'megaaddons' ),
+            'label' => esc_html__( 'Video Image', 'mega-addons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
-         'background', [
-            'label' => __( 'Background', 'megaaddons' ),
+         'image',
+         [
+            'label' => __( 'Choose Photo', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
-              'url' => \Elementor\Utils::get_placeholder_image_src(),
+               'url' => \Elementor\Utils::get_placeholder_image_src(),
             ],
          ]
       );
 
       $this->add_control(
-         'url',
+         'overlay',
          [
-            'label' => __( 'URL', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
+            'label' => __( 'Overlay', 'mega-addons' ),
+            'type' => \Elementor\Controls_Manager::COLOR,
             'default' => '#',
          ]
       );
 
+      $this->add_control(
+         'play_button',
+         [
+            'label' => __( 'Play Button URL', 'mega-addons' ),
+            'type' => \Elementor\Controls_Manager::TEXT
+         ]
+      );
+
       $this->end_controls_section();
-
    }
-
    protected function render( $instance = [] ) {
  
       // get our input from the widget settings.
        
       $settings = $this->get_settings_for_display(); ?>
 
-      <section class="video-area">
-          <div class="container">
-              <div class="row justify-content-center">
-                  <div class="col-lg-10">
-                      <div class="video-wrap p-relative">
-                          <img src="<?php echo esc_url($settings['background']['url']); ?>" alt="img">
-                          <a href="<?php echo esc_url($settings['url']); ?>" class="popup-video"><i class="fas fa-play"></i></a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-   
-      <?php }
+      <div class="mega-addons-video-popup" style="background-image: url( <?php echo esc_url( $settings['image']['url'] ); ?> );">
+         <div class="mega-addons-video-popup-overlay" style="background: <?php echo esc_attr( $settings['overlay'] ); ?>;">
+            <a class="mega-addons-popup-video" href="<?php echo esc_url($settings['play_button']); ?>">
+               <span class="mega-addons-popup-icon"><i class="fa fa-play"></i></span>
+            </a>
+         </div>
+      </div>
+      <?php
+   }
 }
