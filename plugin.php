@@ -81,7 +81,6 @@ class Plugin {
 	 */
 	private function include_widgets_files() {
 		require_once( __DIR__ . '/widgets/widget-accordion.php' );
-		require_once( __DIR__ . '/widgets/widget-banner.php' );
 		require_once( __DIR__ . '/widgets/widget-blog.php' );
 		require_once( __DIR__ . '/widgets/widget-button.php' );
 		require_once( __DIR__ . '/widgets/widget-contact.php' );
