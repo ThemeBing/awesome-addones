@@ -14,7 +14,7 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Infobox', 'mega-addons-for-elementor' );
+      return esc_html__( 'Infobox', 'mega-addons' );
    }
  
    public function get_icon() { 
@@ -29,7 +29,7 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
       $this->start_controls_section(
          'infobox_section',
          [
-            'label' => esc_html__( 'Infobox', 'mega-addons-for-elementor' ),
+            'label' => esc_html__( 'Infobox', 'mega-addons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -37,15 +37,15 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
       $this->add_control(
          'style',
          [
-            'label' => __( 'Style', 'mega-addons-for-elementor' ),
+            'label' => __( 'Style', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'style1',
             'options' => [
-               'style1' => __( 'Style 1', 'mega-addons-for-elementor' ),
-               'style2' => __( 'Style 2', 'mega-addons-for-elementor' ),
-               'style3' => __( 'Style 3', 'mega-addons-for-elementor' ),
-               'style4' => __( 'Style 4', 'mega-addons-for-elementor' ),
-               'style5' => __( 'Style 5', 'mega-addons-for-elementor' ),
+               'style1' => __( 'Style 1', 'mega-addons' ),
+               'style2' => __( 'Style 2', 'mega-addons' ),
+               'style3' => __( 'Style 3', 'mega-addons' ),
+               'style4' => __( 'Style 4', 'mega-addons' ),
+               'style5' => __( 'Style 5', 'mega-addons' ),
             ],
          ]
       );
@@ -53,19 +53,19 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
       $this->add_control(
         'text_align',
         [
-          'label' => __( 'Alignment', 'mega-addons-for-elementor' ),
+          'label' => __( 'Alignment', 'mega-addons' ),
           'type' => \Elementor\Controls_Manager::CHOOSE,
           'options' => [
             'left' => [
-              'title' => __( 'Left', 'mega-addons-for-elementor' ),
+              'title' => __( 'Left', 'mega-addons' ),
               'icon' => 'fa fa-align-left',
             ],
             'center' => [
-              'title' => __( 'Center', 'mega-addons-for-elementor' ),
+              'title' => __( 'Center', 'mega-addons' ),
               'icon' => 'fa fa-align-center',
             ],
             'right' => [
-              'title' => __( 'Right', 'mega-addons-for-elementor' ),
+              'title' => __( 'Right', 'mega-addons' ),
               'icon' => 'fa fa-align-right',
             ],
           ],
@@ -77,15 +77,15 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
       $this->add_control(
         'icon_style',
         [
-          'label' => __( 'Icon style', 'mega-addons-for-elementor' ),
+          'label' => __( 'Icon style', 'mega-addons' ),
           'type' => \Elementor\Controls_Manager::CHOOSE,
           'options' => [
             'fonticon' => [
-              'title' => __( 'Font icon', 'mega-addons-for-elementor' ),
+              'title' => __( 'Font icon', 'mega-addons' ),
               'icon' => 'fa fa-icons',
             ],
             'imageicon' => [
-              'title' => __( 'Image icon', 'mega-addons-for-elementor' ),
+              'title' => __( 'Image icon', 'mega-addons' ),
               'icon' => 'fa fa-images',
             ]
           ],
@@ -97,7 +97,7 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
       $this->add_control(
          'icon',
          [
-            'label' => __( 'Icon', 'mega-addons-for-elementor' ),
+            'label' => __( 'Icon', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -109,7 +109,7 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
       $this->add_control(
          'font_icon',
          [
-            'label' => __( 'Font Icon', 'mega-addons-for-elementor' ),
+            'label' => __( 'Font Icon', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -122,7 +122,7 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
       $this->add_control(
         'font_color',
         [
-          'label' => __( 'Font Color', 'mega-addons-for-elementor' ),
+          'label' => __( 'Font Color', 'mega-addons' ),
           'type' => \Elementor\Controls_Manager::COLOR,
           'scheme' => [
             'type' => \Elementor\Scheme_Color::get_type(),
@@ -139,16 +139,16 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'mega-addons-for-elementor' ),
+            'label' => __( 'Title', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Awesome Design','mega-addons-for-elementor'),
+            'default' => __('Awesome Design','mega-addons'),
          ]
       );
 
       $this->add_control(
         'title_color',
         [
-          'label' => __( 'Title Color', 'mega-addons-for-elementor' ),
+          'label' => __( 'Title Color', 'mega-addons' ),
           'type' => \Elementor\Controls_Manager::COLOR,
           'scheme' => [
             'type' => \Elementor\Scheme_Color::get_type(),
@@ -164,9 +164,9 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
       $this->add_control(
          'text',
          [
-            'label' => __( 'Text', 'mega-addons-for-elementor' ),
+            'label' => __( 'Text', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __('Lorem ipsum dummy text are used here so replace your app data, ipsum dummy text are used here so','mega-addons-for-elementor'),
+            'default' => __('Lorem ipsum dummy text are used here so replace your app data, ipsum dummy text are used here so','mega-addons'),
          ]
       );
 
@@ -174,7 +174,7 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
       $this->add_control(
         'text_color',
         [
-          'label' => __( 'Text Color', 'mega-addons-for-elementor' ),
+          'label' => __( 'Text Color', 'mega-addons' ),
           'type' => \Elementor\Controls_Manager::COLOR,
           'scheme' => [
             'type' => \Elementor\Scheme_Color::get_type(),
@@ -190,16 +190,16 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
       $this->add_control(
         'button',
         [
-           'label' => __( 'Button', 'mega-addons-for-elementor' ),
+           'label' => __( 'Button', 'mega-addons' ),
            'type' => \Elementor\Controls_Manager::TEXT,
-           'default' => __('Readmore','mega-addons-for-elementor'),
+           'default' => __('Readmore','mega-addons'),
         ]
       );
 
       $this->add_control(
         'button_color',
         [
-          'label' => __( 'Button Color', 'mega-addons-for-elementor' ),
+          'label' => __( 'Button Color', 'mega-addons' ),
           'type' => \Elementor\Controls_Manager::COLOR,
           'scheme' => [
             'type' => \Elementor\Scheme_Color::get_type(),
@@ -215,9 +215,9 @@ class Mega_Addons_Widget_Infobox extends Widget_Base {
       $this->add_control(
         'website_link',
         [
-          'label' => __( 'Link', 'mega-addons-for-elementor' ),
+          'label' => __( 'Link', 'mega-addons' ),
           'type' => \Elementor\Controls_Manager::URL,
-          'placeholder' => __( 'https://your-link.com', 'mega-addons-for-elementor' ),
+          'placeholder' => __( 'https://your-link.com', 'mega-addons' ),
           'show_external' => true,
           'default' => [
             'url' => '',

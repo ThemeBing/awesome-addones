@@ -1,4 +1,4 @@
-=== Mega Addons for Elementor ===
+=== Mega Addons ===
 Contributors: CodeCorns
 Donate link: https://codecorns.com/donate
 Tags: comments, spam
@@ -8,7 +8,7 @@ Stable tag: 4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Mega addons for elementor page builder
+Mega Addons for page builder
 
 == Description ==
 
@@ -16,7 +16,7 @@ This is mega addons package plugin for elementor page builder. here you are free
 
 == Installation ==
 
-1. Upload `mega-addons-for-elementor.zip` to the `/wp-content/plugins/` directory and extact
+1. Upload `mega-addons.zip` to the `/wp-content/plugins/` directory and extact
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
