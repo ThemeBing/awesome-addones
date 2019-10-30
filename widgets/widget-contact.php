@@ -1,5 +1,5 @@
 <?php
-namespace Mega_Addons_For_Elementor\Widgets;
+namespace Mega_Addons\Widgets;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;

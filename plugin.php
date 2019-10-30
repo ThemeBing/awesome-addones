@@ -1,5 +1,5 @@
 <?php
-namespace Mega_Addons_For_Elementor;
+namespace Mega_Addons;
 
 /**
  * Class Plugin
@@ -112,7 +112,6 @@ class Plugin {
 
 		// Register Widgets
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Accordion() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Banner() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Blog() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Button() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Contact() );
