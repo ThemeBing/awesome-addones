@@ -67,7 +67,10 @@ class Plugin {
 	 * @access public
 	 */
 	public function widget_scripts() {
+		wp_enqueue_style( 'bootstrap', plugins_url( '/assets/css/bootstrap.min.css', __FILE__ ) );
 		wp_enqueue_style( 'mega_addons', plugins_url( '/assets/css/infobox.css', __FILE__ ) );
+
+		wp_enqueue_script( 'bootstrap', plugins_url( '/assets/js/bootstrap.min.js', __FILE__ ) , [ 'jquery' ], false, true );
 		wp_enqueue_script( 'mega_addons', plugins_url( '/assets/js/infobox.js', __FILE__ ), [ 'jquery' ], false, true );
 	}
 

@@ -2,72 +2,72 @@
 /*--------------------------------------------------------------
 # Accordion
 --------------------------------------------------------------*/
-.gazi-accordion {}
+.mega-addons-accordion {}
 
 /*Style 1*/
 
-.gazi-accordion-item:not(last-child) {
+.mega-addons-accordion-item:not(last-child) {
     margin-bottom: 15px;
 }
 
-.gazi-accordion-item {
+.mega-addons-accordion-item {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 7px 37px 0px rgba(0, 0, 0, 0.05);
 }
 
-.gazi-accordion-item.active h5 {
+.mega-addons-accordion-item.active h5 {
     border-bottom: 1px solid #dadde1;
 }
 
-.gazi-accordion-item h5 {
-    padding: 20px 30px;
+.mega-addons-accordion-item h5 {
+    padding: 20px 30px!important;
     cursor: pointer;
-    margin-bottom: 0 !important;
+    margin-bottom: 0!important;
 }
 
-.gazi-accordion.style-1 .gazi-accordion-item h5 span {
+.mega-addons-accordion.style-1 .mega-addons-accordion-item h5 span {
     float: right;
     padding: 5px;
 }
 
-.gazi-accordion-item.active h5 span:nth-child(1) {
+.mega-addons-accordion-item.active h5 span:nth-child(1) {
     display: none;
 }
 
-.gazi-accordion-item h5 span:nth-child(2) {
+.mega-addons-accordion-item h5 span:nth-child(2) {
     display: none;
 }
 
-.gazi-accordion-item.active h5 span:nth-child(2) {
+.mega-addons-accordion-item.active h5 span:nth-child(2) {
     display: block;
 }
 
-.gazi-accordion-item .collapsing,
-.gazi-accordion-item .collapse {
+.mega-addons-accordion-item .collapsing,
+.mega-addons-accordion-item .collapse {
     padding: 15px 30px;
 }
 
 /*Style 2*/
 
-.gazi-accordion.style-2 .gazi-accordion-item h5 span {
+.mega-addons-accordion.style-2 .mega-addons-accordion-item h5 span {
     float: left;
     padding: 3px 15px 0px 0;
 }
 
-.gazi-accordion.style-2 .gazi-accordion-item {
+.mega-addons-accordion.style-2 .mega-addons-accordion-item {
     border-radius: 0;
 }
 
 /*Style 3*/
 
-.gazi-accordion.style-3 .gazi-accordion-item {
+.mega-addons-accordion.style-3 .mega-addons-accordion-item {
     box-shadow: none;
     border: 1px solid #dadde1;
     border-radius: 0;
 }
 
-.gazi-accordion.style-3 .gazi-accordion-item.active h5 {
+.mega-addons-accordion.style-3 .mega-addons-accordion-item.active h5 {
     color: #fff;
 }
 
@@ -75,24 +75,24 @@
 # Banner
 --------------------------------------------------------------*/
 
-.gazi-banner {
+.mega-addons-banner {
     padding: 250px 0 200px;
     color: #fff;
 }
 
-.gazi-banner h1 {
+.mega-addons-banner h1 {
     font-size: 60px;
     font-weight: bold;
     color: #fff;
 }
 
-.gazi-banner p {
+.mega-addons-banner p {
     font-size: 26px;
     line-height: 40px;
     font-weight: 300;
     margin-bottom: 50px;
 }
 
-.gazi-banner .gazi-btn {
+.mega-addons-banner .mega-addons-btn {
     border-radius: 30px;
 }

@@ -30,7 +30,7 @@ class Mega_Addons_Widget_Accordion extends Widget_Base {
       $this->start_controls_section(
          'accordion_section',
          [
-            'label' => esc_html__( 'Accordion', 'gazi' ),
+            'label' => esc_html__( 'Accordion', 'mega-addons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -38,14 +38,14 @@ class Mega_Addons_Widget_Accordion extends Widget_Base {
       $this->add_control(
          'accordion_style',
          [
-            'label' => __( 'Accordion Style', 'gazi' ),
+            'label' => __( 'Accordion Style', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'style-1',
             'options' => [
-               'style-1'  => __( 'Style 1', 'gazi' ),
-               'style-2' => __( 'Style 2', 'gazi' ),
-               'style-3' => __( 'Style 3', 'gazi' ),
-               'none' => __( 'None', 'gazi' ),
+               'style-1'  => __( 'Style 1', 'mega-addons' ),
+               'style-2' => __( 'Style 2', 'mega-addons' ),
+               'style-3' => __( 'Style 3', 'mega-addons' ),
+               'none' => __( 'None', 'mega-addons' ),
             ],
          ]
       );
@@ -53,7 +53,7 @@ class Mega_Addons_Widget_Accordion extends Widget_Base {
       $this->add_control(
          'collapsed_icon',
          [
-            'label' => __( 'Collapsed Icon', 'gazi' ),
+            'label' => __( 'Collapsed Icon', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'default' => 'fa fa-plus',
             'condition' => [
@@ -65,7 +65,7 @@ class Mega_Addons_Widget_Accordion extends Widget_Base {
       $this->add_control(
          'expanded_icon',
          [
-            'label' => __( 'Expanded Icon', 'gazi' ),
+            'label' => __( 'Expanded Icon', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'default' => 'fa fa-minus',
             'condition' => [
@@ -78,14 +78,14 @@ class Mega_Addons_Widget_Accordion extends Widget_Base {
 
       $accordion->add_control(
          'title', [
-            'label' => __( 'Title', 'gazi' ),
+            'label' => __( 'Title', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'label_block' => true,
          ]
       );
       $accordion->add_control(
          'text', [
-            'label' => __( 'Text', 'gazi' ),
+            'label' => __( 'Text', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::WYSIWYG,
             'label_block' => true,
          ]
@@ -94,21 +94,21 @@ class Mega_Addons_Widget_Accordion extends Widget_Base {
       $this->add_control(
          'accordion_list',
          [
-            'label' => __( 'Accordion list', 'gazi' ),
+            'label' => __( 'Accordion list', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $accordion->get_controls(),
             'default' => [
                [
-                  'title' => __( 'How can i get help by gazi?', 'gazi' ),
-                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'gazi' )
+                  'title' => __( 'How can i get help by mega-addons?', 'mega-addons' ),
+                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'mega-addons' )
                ],
                [
-                  'title' => __( 'What about loan programs & after bank loan advantage?', 'gazi' ),
-                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'gazi' )
+                  'title' => __( 'What about loan programs & after bank loan advantage?', 'mega-addons' ),
+                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'mega-addons' )
                ],
                [
-                  'title' => __( 'How can i opent new account?', 'gazi' ),
-                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'gazi' )
+                  'title' => __( 'How can i opent new account?', 'mega-addons' ),
+                  'text' => __( 'Lorem ipsum dolor sit amet, vix an natum labitur eleifd, mel am laoreet menandri. Ei justo complectitur duo. Ei mundi solet utos soletu possit quo. Sea cu justo laudem.', 'mega-addons' )
                ]
             ],
             'title_field' => '{{{ title }}}',
@@ -126,10 +126,10 @@ class Mega_Addons_Widget_Accordion extends Widget_Base {
       $randID = wp_rand();
 
       $settings = $this->get_settings_for_display(); ?>
-      <div id="accordion<?php echo $randID ?>" class="gazi-accordion <?php echo esc_attr( $settings['accordion_style'] ) ?>">
+      <div id="accordion<?php echo $randID ?>" class="mega-addons-accordion <?php echo esc_attr( $settings['accordion_style'] ) ?>">
         <?php if ( $settings['accordion_list'] ) { 
           foreach (  $settings['accordion_list'] as $key => $accordion ) { ?>
-          <div class="gazi-accordion-item">
+          <div class="mega-addons-accordion-item">
             <h5 data-toggle="collapse" data-target="#collapse-<?php echo $key.$randID ?>" aria-expanded="false" aria-controls="collapse-<?php echo $key.$randID ?>">
                 <?php echo esc_html( $accordion['title'] ); ?>
                 <span class="<?php echo esc_attr( $settings['collapsed_icon'] ) ?>"></span>
