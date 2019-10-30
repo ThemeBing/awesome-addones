@@ -28,75 +28,61 @@ class Mega_Addons_Widget_Testimonials extends Widget_Base {
    protected function _register_controls() {
 
       $this->start_controls_section(
-         'testimonial_section',
+         'testimonials_section',
          [
-            'label' => esc_html__( 'Testimonials', 'megaaddons' ),
+            'label' => esc_html__( 'Testimonials', 'mega-addons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
 
+      $testimonial = new \Elementor\Repeater();
 
-      $this->add_control(
-         'style',
+      $testimonial->add_control(
+         'image',
          [
-            'label' => __( 'Style', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::SELECT,
-            'default' => 'style1',
-            'options' => [
-               'style1' => __( 'Style 1', 'megaaddons' ),
-               'style2' => __( 'Style 2', 'megaaddons' ),
-               'style3' => __( 'Style 3', 'megaaddons' ),
+            'label' => __( 'Choose Photo', 'mega-addons' ),
+            'type' => \Elementor\Controls_Manager::MEDIA,
+            'default' => [
+               'url' => \Elementor\Utils::get_placeholder_image_src(),
             ],
          ]
       );
-
-
-      $repeater = new \Elementor\Repeater();
-
-      $repeater->add_control(
-         'image',
-         [
-            'label' => __( 'Choose Photo', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::MEDIA,
-            'default' => [
-               'url' => \Elementor\Utils::get_placeholder_image_src()
-            ]
-         ]
-      );
       
-      $repeater->add_control(
+      $testimonial->add_control(
          'name',
          [
-            'label' => __( 'Name', 'megaaddons' ),
+            'label' => __( 'Name', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            
+            'default' => __( 'John Doe', 'mega-addons' ),
          ]
       );
 
-      $repeater->add_control(
+      $testimonial->add_control(
          'designation',
          [
-            'label' => __( 'Designation', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXT
+            'label' => __( 'Designation', 'mega-addons' ),
+            'type' => \Elementor\Controls_Manager::TEXT,
+            'default' => __( 'CEO of Uber', 'mega-addons' ),
          ]
       );
 
-      $repeater->add_control(
+
+      $testimonial->add_control(
          'testimonial',
          [
-            'label' => __( 'Testimonial', 'megaaddons' ),
-            'type' => \Elementor\Controls_Manager::TEXTAREA
+            'label' => __( 'Testimonial', 'mega-addons' ),
+            'type' => \Elementor\Controls_Manager::TEXTAREA,
+            'default' => __( 'The drivers are always super sweet and smiling. Plus I get bonuses each time I use this company’s services which is so cool…', 'mega-addons' ),
          ]
       );
 
       $this->add_control(
          'testimonial_list',
          [
-            'label' => __( 'Testimonial List', 'megaaddons' ),
+            'label' => __( 'Testimonial List', 'mega-addons' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
-            'fields' => $repeater->get_controls(),
-            'title_field' => '{{name}}',
-
+            'fields' => $testimonial->get_controls(),
+            'title_field' => '{{ name }}',
          ]
       );
       
@@ -110,76 +96,30 @@ class Mega_Addons_Widget_Testimonials extends Widget_Base {
        
       $settings = $this->get_settings_for_display(); ?>
 
-      <?php if ( $settings['style'] == 'style1' ){ ?>
-
-      <div class="row justify-content-center">
-        <div class="col-xl-8 col-lg-10">
-          <div class="testimonial-active">
-            <?php foreach (  $settings['testimonial_list'] as $testimonial_single ): ?>
-              <div class="single-testimonial text-center">
-                  <div class="testimonial-icon mb-25">
-                      <img src="<?php echo get_template_directory_uri() ?>/images/quote.png" alt="quote">
-                  </div>
-                  <div class="testimonial-content">
-                      <h5><?php echo esc_html($testimonial_single['testimonial']); ?></h5>
-                      <div class="testi-avatar">
-                          <h6><?php echo esc_html($testimonial_single['name']); ?></h6>
-                          <span><?php echo esc_html($testimonial_single['designation']); ?></span>
-                      </div>
-                  </div>
-              </div>
-            <?php endforeach; ?>
-          </div>
-        </div>
-      </div>
-      
-      <?php } elseif( $settings['style'] == 'style2' ){ ?>
-        
-      <div class="row t-testimonial-active">
-        <?php foreach (  $settings['testimonial_list'] as $testimonial_single ): ?>
-          <div class="col-xl-4">
-              <div class="t-single-testimonial text-center">
-                  <div class="t-testimonial-img mb-30">
-                      <img src="<?php echo esc_url( $testimonial_single['image']['url'] ); ?>" alt="icon">
-                  </div>
-                  <div class="t-testimonial-content">
-                      <h5><?php echo esc_html($testimonial_single['testimonial']); ?></h5>
-                      <div class="testi-avatar">
-                          <h6><?php echo esc_html($testimonial_single['name']); ?></h6>
-                          <span><?php echo esc_html($testimonial_single['designation']); ?></span>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        <?php endforeach; ?>
+      <div class="container">
+         <div class="mega-addons-testimonials">
+         <?php foreach ( $settings['testimonial_list'] as $index => $testimonial ):
+         $testimonialText = $this->get_repeater_setting_key( 'testimonial','testimonial_list',$index);
+         $name = $this->get_repeater_setting_key( 'name','testimonial_list',$index);         
+         $designation = $this->get_repeater_setting_key( 'designation','testimonial_list',$index);
+         $this->add_inline_editing_attributes( $testimonialText, 'basic' );
+         $this->add_inline_editing_attributes( $name, 'basic' );         
+         $this->add_inline_editing_attributes( $designation, 'basic' );
+         ?>
+            <div class="mega-addons-testimonial">
+               <div class="mega-addons-testimonial-content">
+                  <?php echo wp_get_attachment_image( $testimonial['image']['id'], 'mega-addons-100x100' ); ?>
+                  <i class="fa fa-quote-left fa-3x"></i>
+                  <p <?php echo $this->get_render_attribute_string( $testimonialText ); ?>><?php echo esc_html($testimonial['testimonial']); ?></p>                          
+                  <h5 <?php echo $this->get_render_attribute_string( $name ); ?>><?php echo esc_html($testimonial['name']); ?></h5>
+                  <span <?php echo $this->get_render_attribute_string( $designation ); ?>>- <?php echo esc_html($testimonial['designation']); ?></span>
+               </div>      
+            </div>
+            
+         <?php endforeach ?>
+         </div>
       </div>
 
-      <?php } elseif( $settings['style'] == 'style3' ){ ?>
-
-      <div class="s-testimonial-active">
-          <?php foreach (  $settings['testimonial_list'] as $testimonial_single ): ?>
-          <div class="single-testimonial s-single-testimonial text-center">
-              <div class="testimonial-icon mb-25">
-                  <img src="<?php echo get_template_directory_uri() ?>/images/quote02.png" alt="icon">
-              </div>
-              <div class="testimonial-content">
-                  <h5>“In promotion and of advertising, a testimonial or show consists person's written or spoken statement extoll product
-                  "testimonial "</h5>
-                  <div class="s-testi-avatar">
-                      <div class="testi-avatar-img">
-                          <img src="<?php echo esc_url( $testimonial_single['image']['url'] ); ?>" alt="img">
-                      </div>
-                      <div class="testi-avatar-info">
-                          <h6><?php echo esc_html($testimonial_single['name']); ?> _ <span><?php echo esc_html($testimonial_single['designation']); ?></span></h6>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <?php endforeach; ?>
-      </div>
-
-      <?php } ?>
-
-   <?php } 
- 
+      <?php
+   }
 }

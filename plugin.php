@@ -68,15 +68,17 @@ class Plugin {
 	 */
 	public function widget_scripts() {
 		wp_enqueue_style( 'bootstrap', plugins_url( '/assets/css/bootstrap.min.css', __FILE__ ) );
-		wp_enqueue_style( 'mega_addons_color', plugins_url( '/assets/css/color.css', __FILE__ ) );
-		wp_enqueue_style( 'mega_addons', plugins_url( '/assets/css/infobox.css', __FILE__ ) );
+		wp_enqueue_style( 'mega-addons-color', plugins_url( '/assets/css/color.css', __FILE__ ) );
+		wp_enqueue_style( 'magnific-popup', plugins_url( '/assets/css/magnific-popup.css', __FILE__ ) );
+		wp_enqueue_style( 'mega-addons', plugins_url( '/assets/css/infobox.css', __FILE__ ) );
 
 		wp_enqueue_script( 'bootstrap', plugins_url( '/assets/js/bootstrap.min.js', __FILE__ ) , [ 'jquery' ], false, true );
+		wp_enqueue_script( 'magnific-popup', plugins_url( '/assets/js/jquery.magnific-popup.min.js', __FILE__ ) , [ 'jquery' ], false, true );
 		wp_enqueue_script( 'counterup', plugins_url( '/assets/js/jquery.counterup.min.js', __FILE__ ) , [ 'jquery' ], false, true );
 		wp_enqueue_script( 'waypoints', plugins_url( '/assets/js/jquery.waypoints.min.js', __FILE__ ) , [ 'jquery' ], false, true );
 		wp_enqueue_script( 'isotope', plugins_url( '/assets/js/isotope.pkgd.min.js', __FILE__ ) , [ 'jquery' ], false, true );
 		wp_enqueue_script( 'slick', plugins_url( '/assets/js/slick.min.js', __FILE__ ) , [ 'jquery' ], false, true );
-		wp_enqueue_script( 'mega_addons', plugins_url( '/assets/js/infobox.js', __FILE__ ), [ 'jquery' ], false, true );
+		wp_enqueue_script( 'mega-addons', plugins_url( '/assets/js/infobox.js', __FILE__ ), [ 'jquery' ], false, true );
 	}
 
 	/**
@@ -97,7 +99,6 @@ class Plugin {
 		require_once( __DIR__ . '/widgets/widget-pricing.php' );
 		require_once( __DIR__ . '/widgets/widget-team.php' );
 		require_once( __DIR__ . '/widgets/widget-testimonials.php' );
-		require_once( __DIR__ . '/widgets/widget-title.php' );
 		require_once( __DIR__ . '/widgets/widget-video.php' );
 	}
 
@@ -123,7 +124,6 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Pricing() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Team() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Testimonials() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Title() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_video() );
 	}
 
