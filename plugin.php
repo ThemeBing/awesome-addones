@@ -50,7 +50,7 @@ class Plugin {
 		$elements_manager->add_category(
 			'mega_addons',
 			[
-				'title' => esc_html__( 'Mega Addons', 'megaaddons' ),
+				'title' => esc_html__( 'Mega Addons', 'mega-addons' ),
 				'icon' => 'fa fa-plug',
 			]
 		);

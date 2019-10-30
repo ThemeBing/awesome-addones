@@ -14,7 +14,7 @@ class Mega_Addons_Widget_video extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Video', 'megaaddons' );
+      return esc_html__( 'Video', 'mega-addons' );
    }
  
    public function get_icon() { 

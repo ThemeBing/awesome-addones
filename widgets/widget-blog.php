@@ -13,7 +13,7 @@ class Mega_Addons_Widget_Blog extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Latest Blog', 'megaaddons' );
+      return esc_html__( 'Latest Blog', 'mega-addons' );
    }
  
    public function get_icon() { 

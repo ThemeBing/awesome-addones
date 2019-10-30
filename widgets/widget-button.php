@@ -14,7 +14,7 @@ class Mega_Addons_Widget_Button extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Button', 'megaaddons' );
+      return esc_html__( 'Button', 'mega-addons' );
    }
  
    public function get_icon() { 
