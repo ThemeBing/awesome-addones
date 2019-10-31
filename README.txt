@@ -1,7 +1,7 @@
-=== Mega Addons ===
+=== Mega Addons for Elementor Page Builder ===
 Contributors: CodeCorns
 Donate link: https://codecorns.com/donate
-Tags: comments, spam
+Tags: elementor page builder, mega addons, elementor addons,team addons,blog addons,pricing table,elementor extension,all in one plugin,ultimate addons for elementor
 Requires at least: 4.6
 Tested up to: 5.2.4
 Stable tag: 4.3
@@ -9,7 +9,7 @@ Requires PHP: 6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Mega Addons for elementor page builder
+Mega Addons for Elementor Page Builder
 
 == Description ==
 
@@ -22,38 +22,11 @@ This is mega addons package plugin for elementor page builder. here you are free
 
 == Frequently Asked Questions ==
 
-= Do i need any plugin to work with this addons plugin =
+= Do i need any plugin to work with this addons? =
 
 Yes elementor plugin is required to work with it
 
-=== Scripts ===
-
-- Bootstrap v4.3.1 (http://getbootstrap.com)
-    -- Copyright 2011-2016 Twitter, Inc.
-    -- Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-
-- Slick js
-    -- https://github.com/kenwheeler/slick/
-    -- Licensed https://github.com/kenwheeler/slick/blob/master/LICENSE
-
-- Isotope PACKAGED v3.0.6
- 	-- Licensed GPLv3 for open source use or Isotope Commercial License for commercial use
- 	-- https://isotope.metafizzy.co
- 	-- Copyright 2010-2018 Metafizzy
-
-- Counterup.js 1.0
-	-- Copyright 2013, Benjamin Intal http://gambit.ph @bfintal
-	-- Released under the GPL v2 License
-
-- Magnific Popup - v1.1.0 - 2016-02-20
-	-- http://dimsemenov.com/plugins/magnific-popup/
-	-- Copyright (c) 2016 Dmitry Semenov;
-
-- Waypoints - v2.0.4
-	-- Copyright (c) 2011-2014 Caleb Troughton
-	-- Dual licensed under the MIT license and GPL license.
-	-- https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
-
+<p><strong>If you like this plugin, please give us <a href="https://wordpress.org/support/plugin/mega-addons/reviews/#new-post" rel="nofollow">5 star</a> to encourage for future improvement.</strong></p>
 
 == Screenshots ==
 
