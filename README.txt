@@ -15,6 +15,8 @@ Mega Addons for Elementor Page Builder
 
 This is mega addons package plugin for elementor page builder. here you are free to use tons of addons. and you can change as you want. this is ultimate addons plugin for elementor page builder. this no issue whatever theme you are using this plugin compatible with any kind of wordpress theme.
 
+<p><strong>If you like this plugin, please give us <a href="https://wordpress.org/support/plugin/mega-addons/reviews/#new-post" rel="nofollow">5 star</a> to encourage for future improvement.</strong></p>
+
 == Installation ==
 
 1. Upload `mega-addons.zip` to the `/wp-content/plugins/` directory and extact
@@ -25,8 +27,6 @@ This is mega addons package plugin for elementor page builder. here you are free
 = Do i need any plugin to work with this addons? =
 
 Yes elementor plugin is required to work with it
-
-<p><strong>If you like this plugin, please give us <a href="https://wordpress.org/support/plugin/mega-addons/reviews/#new-post" rel="nofollow">5 star</a> to encourage for future improvement.</strong></p>
 
 == Screenshots ==
 
