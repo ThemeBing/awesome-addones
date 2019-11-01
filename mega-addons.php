@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Mega Addons
  * Mega Addons for Elementor page builder. which is allows you to install lot of different style elements block to your website.
- * Plugin URI:  https://codecorns.com/wp/plugins/mega-addons
+ * Plugin URI:  https://wordpress.org/plugins/mega-addons/
  * Version:     1.0.0
  * Author:      CodeCorns
  * Version:     1.0.0
