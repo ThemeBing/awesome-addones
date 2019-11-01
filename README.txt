@@ -9,7 +9,7 @@ Requires PHP: 6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Mega Addons for Elementor Page Builder
+Mega Addons for Elementor page builder. which is allows you to install lot of different style elements block to your website.
 
 == Description ==
 
