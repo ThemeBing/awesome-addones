@@ -31,7 +31,7 @@ Yes elementor plugin is required to work with it
 == Screenshots ==
 
 1. Overview of few widgets
-2. Elements control panel
+2. Elements control panel 
 3. Elements preview
 
 == Upgrade Notice ==
