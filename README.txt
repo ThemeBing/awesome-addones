@@ -30,9 +30,13 @@ Yes elementor plugin is required to work with it
 
 == Screenshots ==
 
-1. Overview of few widgets
-2. Elements control panel 
-3. Elements preview
+1. Team widget
+2. Blog widget
+3. Counter widget
+4. Button widget
+5. Accordion widget
+6. IconBox widget
+7. Pricing table widget
 
 == Upgrade Notice ==
 
