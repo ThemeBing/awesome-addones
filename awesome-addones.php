@@ -1,22 +1,22 @@
 <?php
 /**
- * Plugin Name: Mega Addons
- * Mega Addons for Elementor page builder. which is allows you to install lot of different style elements block to your website.
- * Plugin URI:  https://wordpress.org/plugins/mega-addons/
+ * Plugin Name: Awesome Addons
+ * Description: Awesome Addons for Elementor page builder. which is allows you to install lot of different style elements block to your website.
+ * Plugin URI:  https://wordpress.org/plugins/awesome-addones/
  * Version:     1.0.0
- * Author:      CodeCorns
+ * Author:      ThemeBing
  * Version:     1.0.0
  * License:     GPL-2.0+
  * Domain Path: /languages
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- * Author URI:  https://codecorns.com/
- * Text Domain: mega-addons
+ * Author URI:  https://themebing.com/
+ * Text Domain: awesome-addones
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
- * Main Mega Addons Class
+ * Main Awesome Addons Class
  *
  * The init class that runs the Hello World plugin.
  * Intended To make sure that the plugin's minimum requirements are met.
@@ -50,7 +50,7 @@ final class Mega_Addons {
 	 * @since 1.0.0
 	 * @var string Minimum PHP version required to run the plugin.
 	 */
-	const MINIMUM_PHP_VERSION = '6.0';
+	const MINIMUM_PHP_VERSION = '5.2.4';
 
 	/**
 	 * Constructor
@@ -77,7 +77,7 @@ final class Mega_Addons {
 	 * @access public
 	 */
 	public function i18n() {
-		load_plugin_textdomain( 'mega-addons' );
+		load_plugin_textdomain( 'awesome-addones' );
 	}
 
 	/**
@@ -131,9 +131,9 @@ final class Mega_Addons {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
-			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'mega-addons' ),
-			'<strong>' . esc_html__( 'Mega Addons', 'mega-addons' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'mega-addons' ) . '</strong>'
+			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'awesome-addones' ),
+			'<strong>' . esc_html__( 'Awesome Addons', 'awesome-addones' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'awesome-addones' ) . '</strong>'
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -154,9 +154,9 @@ final class Mega_Addons {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'mega-addons' ),
-			'<strong>' . esc_html__( 'Mega Addons', 'mega-addons' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'mega-addons' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'awesome-addones' ),
+			'<strong>' . esc_html__( 'Awesome Addons', 'awesome-addones' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'awesome-addones' ) . '</strong>',
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
 
@@ -178,9 +178,9 @@ final class Mega_Addons {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'mega-addons' ),
-			'<strong>' . esc_html__( 'Mega Addons', 'mega-addons' ) . '</strong>',
-			'<strong>' . esc_html__( 'PHP', 'mega-addons' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'awesome-addones' ),
+			'<strong>' . esc_html__( 'Awesome Addons', 'awesome-addones' ) . '</strong>',
+			'<strong>' . esc_html__( 'PHP', 'awesome-addones' ) . '</strong>',
 			self::MINIMUM_PHP_VERSION
 		);
 

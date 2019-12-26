@@ -13,7 +13,7 @@ class Mega_Addons_Widget_Blog extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Latest Blog', 'mega-addons' );
+      return esc_html__( 'Latest Blog', 'awesome-addones' );
    }
  
    public function get_icon() { 
@@ -28,7 +28,7 @@ class Mega_Addons_Widget_Blog extends Widget_Base {
       $this->start_controls_section(
          'post_section',
          [
-            'label' => esc_html__( 'Post', 'mega-addons' ),
+            'label' => esc_html__( 'Post', 'awesome-addones' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -36,14 +36,14 @@ class Mega_Addons_Widget_Blog extends Widget_Base {
         $this->add_control(
          'style',
          [
-            'label' => __( 'Style', 'mega-addons' ),
+            'label' => __( 'Style', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'style_1',
             'options' => [
-               'style_1'  => __( 'Style 1', 'mega-addons' ),
-               'style_2' => __( 'Style 2', 'mega-addons' ),
-               'style_3' => __( 'Style 3', 'mega-addons' ),
-               'none' => __( 'None', 'mega-addons' )
+               'style_1'  => __( 'Style 1', 'awesome-addones' ),
+               'style_2' => __( 'Style 2', 'awesome-addones' ),
+               'style_3' => __( 'Style 3', 'awesome-addones' ),
+               'none' => __( 'None', 'awesome-addones' )
             ],
          ]
       );
@@ -51,7 +51,7 @@ class Mega_Addons_Widget_Blog extends Widget_Base {
       $this->add_control(
          'posts_per_page',
          [
-            'label' => __( 'Posts per page', 'mega-addons' ),
+            'label' => __( 'Posts per page', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::NUMBER,
             'min' => 1,
             'max' => 100,
@@ -63,12 +63,12 @@ class Mega_Addons_Widget_Blog extends Widget_Base {
       $this->add_control(
          'order',
          [
-            'label' => __( 'Order', 'mega-addons' ),
+            'label' => __( 'Order', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'DESC',
             'options' => [
-               'ASC'  => __( 'Ascending', 'mega-addons' ),
-               'DESC' => __( 'Descending', 'mega-addons' )
+               'ASC'  => __( 'Ascending', 'awesome-addones' ),
+               'DESC' => __( 'Descending', 'awesome-addones' )
             ],
          ]
       );
@@ -98,16 +98,16 @@ class Mega_Addons_Widget_Blog extends Widget_Base {
                <!-- Post -->
                <?php if ( 'style_1' == $settings['style'] ): ?>
                <div class="col-lg-4 col-sm-6">
-                  <div class="mega-addons-post">
-                     <div class="mega-addons-post-img">
+                  <div class="awesome-addones-post">
+                     <div class="awesome-addones-post-img">
                         <?php if (has_post_thumbnail()) { ?>
                            <a href="<?php the_permalink() ?>">
-                              <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'mega-addons-360-200'); ?>" alt="<?php the_title() ?>">
+                              <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'awesome-addones-360-200'); ?>" alt="<?php the_title() ?>">
                            </a>
                         <?php } ?>
                      </div>
                      
-                     <div class="mega-addons-post-content">
+                     <div class="awesome-addones-post-content">
                         <span>
                            <?php the_time( 'F j, Y' ) ?>
                         </span>

@@ -2,48 +2,49 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Mega Addons\n"
-"POT-Creation-Date: 2019-10-30 12:45+0600\n"
-"PO-Revision-Date: 2019-10-30 12:45+0600\n"
+"Project-Id-Version: Awesome Addons\n"
+"POT-Creation-Date: 2019-12-25 22:21+0600\n"
+"PO-Revision-Date: 2019-12-25 22:21+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.1.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: mega-addons.php\n"
+"X-Poedit-WPHeader: awesome-addones.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #. translators: 1: Plugin name 2: Elementor
-#: mega-addons.php:134
+#: awesome-addones.php:134
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: mega-addons.php:135 mega-addons.php:158 mega-addons.php:182 plugin.php:53
-msgid "Mega Addons"
+#: awesome-addones.php:135 awesome-addones.php:158 awesome-addones.php:182
+#: plugin.php:53
+msgid "Awesome Addons"
 msgstr ""
 
-#: mega-addons.php:136 mega-addons.php:159
+#: awesome-addones.php:136 awesome-addones.php:159
 msgid "Elementor"
 msgstr ""
 
 #. translators: 1: Plugin name 2: Elementor 3: Required Elementor version
 #. translators: 1: Plugin name 2: PHP 3: Required PHP version
-#: mega-addons.php:157 mega-addons.php:181
+#: awesome-addones.php:157 awesome-addones.php:181
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 msgstr ""
 
-#: mega-addons.php:183
+#: awesome-addones.php:183
 msgid "PHP"
 msgstr ""
 
@@ -98,7 +99,7 @@ msgid "Accordion list"
 msgstr ""
 
 #: widgets/widget-accordion.php:102
-msgid "How can i get help by mega-addons?"
+msgid "How can i get help by awesome-addones?"
 msgstr ""
 
 #: widgets/widget-accordion.php:103 widgets/widget-accordion.php:107
@@ -505,19 +506,13 @@ msgid "Play Button URL"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://codecorns.com/wp/plugins/mega-addons"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"This is a short description of what the plugin does. It's displayed in the "
-"WordPress admin area."
+msgid "https://wordpress.org/plugins/awesome-addones/"
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "CodeCorns"
+msgid "ThemeBing"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://codecorns.com/"
+msgid "https://themebing.com/"
 msgstr ""

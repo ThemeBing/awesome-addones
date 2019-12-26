@@ -14,7 +14,7 @@ class Mega_Addons_Widget_video extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Video', 'mega-addons' );
+      return esc_html__( 'Video', 'awesome-addones' );
    }
  
    public function get_icon() { 
@@ -30,7 +30,7 @@ class Mega_Addons_Widget_video extends Widget_Base {
       $this->start_controls_section(
          'video_section',
          [
-            'label' => esc_html__( 'Video Image', 'mega-addons' ),
+            'label' => esc_html__( 'Video Image', 'awesome-addones' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -38,7 +38,7 @@ class Mega_Addons_Widget_video extends Widget_Base {
       $this->add_control(
          'image',
          [
-            'label' => __( 'Choose Photo', 'mega-addons' ),
+            'label' => __( 'Choose Photo', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -49,7 +49,7 @@ class Mega_Addons_Widget_video extends Widget_Base {
       $this->add_control(
          'overlay',
          [
-            'label' => __( 'Overlay', 'mega-addons' ),
+            'label' => __( 'Overlay', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::COLOR,
             'default' => '#',
          ]
@@ -58,7 +58,7 @@ class Mega_Addons_Widget_video extends Widget_Base {
       $this->add_control(
          'play_button',
          [
-            'label' => __( 'Play Button URL', 'mega-addons' ),
+            'label' => __( 'Play Button URL', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::TEXT
          ]
       );
@@ -71,10 +71,10 @@ class Mega_Addons_Widget_video extends Widget_Base {
        
       $settings = $this->get_settings_for_display(); ?>
 
-      <div class="mega-addons-video-popup" style="background-image: url( <?php echo esc_url( $settings['image']['url'] ); ?> );">
-         <div class="mega-addons-video-popup-overlay" style="background: <?php echo esc_attr( $settings['overlay'] ); ?>;">
-            <a class="mega-addons-popup-video" href="<?php echo esc_url($settings['play_button']); ?>">
-               <span class="mega-addons-popup-icon"><i class="fa fa-play"></i></span>
+      <div class="awesome-addones-video-popup" style="background-image: url( <?php echo esc_url( $settings['image']['url'] ); ?> );">
+         <div class="awesome-addones-video-popup-overlay" style="background: <?php echo esc_attr( $settings['overlay'] ); ?>;">
+            <a class="awesome-addones-popup-video" href="<?php echo esc_url($settings['play_button']); ?>">
+               <span class="awesome-addones-popup-icon"><i class="fa fa-play"></i></span>
             </a>
          </div>
       </div>

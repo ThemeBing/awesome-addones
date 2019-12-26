@@ -14,7 +14,7 @@ class Mega_Addons_Widget_Button extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Button', 'mega-addons' );
+      return esc_html__( 'Button', 'awesome-addones' );
    }
  
    public function get_icon() { 
@@ -30,7 +30,7 @@ class Mega_Addons_Widget_Button extends Widget_Base {
       $this->start_controls_section(
          'button_section',
          [
-            'label' => esc_html__( 'Button', 'mega-addons' ),
+            'label' => esc_html__( 'Button', 'awesome-addones' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -38,32 +38,32 @@ class Mega_Addons_Widget_Button extends Widget_Base {
       $this->add_control(
          'button_style',
          [
-            'label' => __( 'Button Style', 'mega-addons' ),
+            'label' => __( 'Button Style', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'style_1',
             'options' => [
-               'style_1'  => __( 'Style 1', 'mega-addons' ),
-               'style_2' => __( 'Style 2', 'mega-addons' ),
-               'none' => __( 'None', 'mega-addons' ),
+               'style_1'  => __( 'Style 1', 'awesome-addones' ),
+               'style_2' => __( 'Style 2', 'awesome-addones' ),
+               'none' => __( 'None', 'awesome-addones' ),
             ],
          ]
       );
 
       $this->add_control(
          'button_text', [
-            'label' => __( 'Button Text', 'mega-addons' ),
+            'label' => __( 'Button Text', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( 'Raed More', 'mega-addons' )
+            'default' => __( 'Raed More', 'awesome-addones' )
          ]
       );
 
       $this->add_control(
          'button_icon',
          [
-            'label' => __( 'Icon', 'mega-addons' ),
+            'label' => __( 'Icon', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Yes', 'mega-addons' ),
-            'label_off' => __( 'No', 'mega-addons' ),
+            'label_on' => __( 'Yes', 'awesome-addones' ),
+            'label_off' => __( 'No', 'awesome-addones' ),
             'return_value' => 'yes',
             'default' => 'no',
             'condition'  => [ 'button_style' => 'style_1' ]
@@ -73,7 +73,7 @@ class Mega_Addons_Widget_Button extends Widget_Base {
       $this->add_control(
          'icon',
          [
-            'label' => __( 'Choose Icon', 'mega-addons' ),
+            'label' => __( 'Choose Icon', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'default' => 'fa fa-play',
             'condition' => ['button_icon' => 'yes']
@@ -83,10 +83,10 @@ class Mega_Addons_Widget_Button extends Widget_Base {
       $this->add_control(
          'button_icon_text',
          [
-            'label' => __( 'Icon Text', 'mega-addons' ),
+            'label' => __( 'Icon Text', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Show', 'mega-addons' ),
-            'label_off' => __( 'Hide', 'mega-addons' ),
+            'label_on' => __( 'Show', 'awesome-addones' ),
+            'label_off' => __( 'Hide', 'awesome-addones' ),
             'return_value' => 'yes',
             'default' => 'no',
             'condition'  => [ 'button_style' => 'style_2' ]
@@ -95,7 +95,7 @@ class Mega_Addons_Widget_Button extends Widget_Base {
 
       $this->add_control(
          'button_url', [
-            'label' => __( 'Button URL', 'mega-addons' ),
+            'label' => __( 'Button URL', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '#',
          ]
@@ -104,10 +104,10 @@ class Mega_Addons_Widget_Button extends Widget_Base {
       $this->add_control(
          'popup',
          [
-            'label' => __( 'Popup Video', 'mega-addons' ),
+            'label' => __( 'Popup Video', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Yes', 'mega-addons' ),
-            'label_off' => __( 'No', 'mega-addons' ),
+            'label_on' => __( 'Yes', 'awesome-addones' ),
+            'label_off' => __( 'No', 'awesome-addones' ),
             'return_value' => 'yes',
             'default' => 'no'
          ]
@@ -116,19 +116,19 @@ class Mega_Addons_Widget_Button extends Widget_Base {
       $this->add_control(
          'align',
          [
-            'label' => __( 'Alignment', 'mega-addons' ),
+            'label' => __( 'Alignment', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::CHOOSE,
             'options' => [
                'left' => [
-                  'title' => __( 'Left', 'mega-addons' ),
+                  'title' => __( 'Left', 'awesome-addones' ),
                   'icon' => 'fa fa-align-left',
                ],
                'center' => [
-                  'title' => __( 'Center', 'mega-addons' ),
+                  'title' => __( 'Center', 'awesome-addones' ),
                   'icon' => 'fa fa-align-center',
                ],
                'right' => [
-                  'title' => __( 'Right', 'mega-addons' ),
+                  'title' => __( 'Right', 'awesome-addones' ),
                   'icon' => 'fa fa-align-right',
                ],
             ],
@@ -140,10 +140,10 @@ class Mega_Addons_Widget_Button extends Widget_Base {
        $this->add_control(
          'drop_shadow',
          [
-            'label' => __( 'Drop Shadow', 'mega-addons' ),
+            'label' => __( 'Drop Shadow', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Show', 'mega-addons' ),
-            'label_off' => __( 'Hide', 'mega-addons' ),
+            'label_on' => __( 'Show', 'awesome-addones' ),
+            'label_off' => __( 'Hide', 'awesome-addones' ),
             'return_value' => 'yes',
             'default' => 'yes',
             'condition'  => [ 'button_style' => 'style_1' ]
@@ -153,10 +153,10 @@ class Mega_Addons_Widget_Button extends Widget_Base {
       $this->add_control(
          'bordered',
          [
-            'label' => __( 'Bordered', 'mega-addons' ),
+            'label' => __( 'Bordered', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Yes', 'mega-addons' ),
-            'label_off' => __( 'No', 'mega-addons' ),
+            'label_on' => __( 'Yes', 'awesome-addones' ),
+            'label_off' => __( 'No', 'awesome-addones' ),
             'return_value' => 'yes',
             'default' => 'no',
             'condition'  => [ 'button_style' => 'style_1' ]
@@ -166,7 +166,7 @@ class Mega_Addons_Widget_Button extends Widget_Base {
       $this->add_control(
          'button_radius',
          [
-            'label' => __( 'Button Radius', 'mega-addons' ),
+            'label' => __( 'Button Radius', 'awesome-addones' ),
             'type' => Controls_Manager::SLIDER,
             'size_units' => [ 'px', '%' ],
             'range' => [
@@ -201,16 +201,16 @@ class Mega_Addons_Widget_Button extends Widget_Base {
       <div style="text-align: <?php echo esc_attr($settings['align']) ?>">
          <?php if ('style_1' == $settings['button_style']): ?>
 
-         <a class="mega-addons-btn <?php if( 'yes' == $settings['bordered'] ){ echo'bordered'; } ?> elementor-inline-editing <?php if('yes' == $settings['drop_shadow']){ echo'shadow'; } ?> <?php if( 'yes' == $settings['popup'] ){ echo'mega-addons-popup-url'; } ?>" style="border-radius: <?php echo esc_attr($settings['button_radius']['size']) ?>px;" <?php echo $this->get_render_attribute_string( 'button_text' ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { echo '<i class="'.$settings['icon'].'"></i>'; } ?><?php echo esc_html( $settings['button_text'] ); ?></a>
+         <a class="awesome-addones-btn <?php if( 'yes' == $settings['bordered'] ){ echo'bordered'; } ?> elementor-inline-editing <?php if('yes' == $settings['drop_shadow']){ echo'shadow'; } ?> <?php if( 'yes' == $settings['popup'] ){ echo'awesome-addones-popup-url'; } ?>" style="border-radius: <?php echo esc_attr($settings['button_radius']['size']) ?>px;" <?php echo $this->get_render_attribute_string( 'button_text' ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { echo '<i class="'.$settings['icon'].'"></i>'; } ?><?php echo esc_html( $settings['button_text'] ); ?></a>
 
          <?php elseif('style_2' == $settings['button_style']): ?>
          
-         <a href="<?php echo esc_url( $settings['button_url'] ); ?>" class="mega-addons-play-btn <?php if( 'yes' == $settings['popup'] ){ echo'mega-addons-popup-url'; } ?>">
+         <a href="<?php echo esc_url( $settings['button_url'] ); ?>" class="awesome-addones-play-btn <?php if( 'yes' == $settings['popup'] ){ echo'awesome-addones-popup-url'; } ?>">
             <span>
                <?php if ( 'yes' == $settings['button_icon_text'] ): ?>
-                  <span class="mega-addons-play-btn-txt elementor-inline-editing" <?php echo $this->get_render_attribute_string( 'button_text' ); ?>><?php echo esc_html( $settings['button_text'] ); ?></span>
+                  <span class="awesome-addones-play-btn-txt elementor-inline-editing" <?php echo $this->get_render_attribute_string( 'button_text' ); ?>><?php echo esc_html( $settings['button_text'] ); ?></span>
                <?php endif ?>               
-               <span class="mega-addons-play-btn-icon"><i class="fa fa-play"></i></span>
+               <span class="awesome-addones-play-btn-icon"><i class="fa fa-play"></i></span>
             </span>
          </a>
             

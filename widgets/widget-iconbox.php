@@ -14,7 +14,7 @@ class Mega_Addons_Widget_Iconbox extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Iconbox', 'mega-addons' );
+      return esc_html__( 'Iconbox', 'awesome-addones' );
    }
  
    public function get_icon() { 
@@ -29,7 +29,7 @@ class Mega_Addons_Widget_Iconbox extends Widget_Base {
       $this->start_controls_section(
          'iconbox_section',
          [
-            'label' => esc_html__( 'Icon Box', 'mega-addons' ),
+            'label' => esc_html__( 'Icon Box', 'awesome-addones' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -37,12 +37,12 @@ class Mega_Addons_Widget_Iconbox extends Widget_Base {
       $this->add_control(
          'style',
          [
-            'label' => __( 'Iconbox Style', 'mega-addons' ),
+            'label' => __( 'Iconbox Style', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'style_1',
             'options' => [
-               'style_1'  => __( 'Font Icon', 'mega-addons' ),
-               'style_2' => __( 'Image Icon', 'mega-addons' )
+               'style_1'  => __( 'Font Icon', 'awesome-addones' ),
+               'style_2' => __( 'Image Icon', 'awesome-addones' )
             ],
          ]
       );
@@ -50,7 +50,7 @@ class Mega_Addons_Widget_Iconbox extends Widget_Base {
       $this->add_control(
          'icon',
          [
-            'label' => __( 'Icon', 'mega-addons' ),
+            'label' => __( 'Icon', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'default' => 'fa fa-user',
             'condition' => ['style' => 'style_1']
@@ -60,7 +60,7 @@ class Mega_Addons_Widget_Iconbox extends Widget_Base {
       $this->add_control(
          'image',
          [
-            'label' => __( 'Choose photo', 'mega-addons' ),
+            'label' => __( 'Choose photo', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -72,18 +72,18 @@ class Mega_Addons_Widget_Iconbox extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'mega-addons' ),
+            'label' => __( 'Title', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( 'Lorem Ipsum', 'mega-addons' ),
+            'default' => __( 'Lorem Ipsum', 'awesome-addones' ),
          ]
       );
 
       $this->add_control(
          'text',
          [
-            'label' => __( 'Text', 'mega-addons' ),
+            'label' => __( 'Text', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'mega-addons' ),
+            'default' => __( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'awesome-addones' ),
          ]
       );
 
@@ -104,11 +104,11 @@ class Mega_Addons_Widget_Iconbox extends Widget_Base {
       ?>
       <?php if ($settings['style'] == 'style_1'){ ?>
 
-         <div class="mega-addons-item-iconbox <?php echo esc_attr($settings['style']); ?>">
-            <div class="mega-addons-item-iconbox-icon">
+         <div class="awesome-addones-item-iconbox <?php echo esc_attr($settings['style']); ?>">
+            <div class="awesome-addones-item-iconbox-icon">
                <i class="<?php echo esc_attr($settings['icon']) ?> fa-fw" aria-hidden="true"></i>
             </div>
-            <div class="mega-addons-item-iconbox-content">
+            <div class="awesome-addones-item-iconbox-content">
                <h5 <?php echo $this->get_render_attribute_string( 'title' ); ?>><?php echo esc_html($settings['title']); ?></h5>
                <p <?php echo $this->get_render_attribute_string( 'text' ); ?>><?php echo esc_html($settings['text']); ?></p>            
             </div>
@@ -116,11 +116,11 @@ class Mega_Addons_Widget_Iconbox extends Widget_Base {
 
       <?php } elseif ($settings['style'] == 'style_2'){ ?>
 
-         <div class="mega-addons-item-iconbox <?php echo esc_attr($settings['style']); ?>">
-            <div class="mega-addons-item-iconbox-icon">
+         <div class="awesome-addones-item-iconbox <?php echo esc_attr($settings['style']); ?>">
+            <div class="awesome-addones-item-iconbox-icon">
                <?php echo wp_get_attachment_image( $settings['image']['id'], 'full' ); ?>
             </div>
-            <div class="mega-addons-item-iconbox-content">
+            <div class="awesome-addones-item-iconbox-content">
                <h5 <?php echo $this->get_render_attribute_string( 'title' ); ?>><?php echo esc_html($settings['title']); ?></h5>
                <p <?php echo $this->get_render_attribute_string( 'text' ); ?>><?php echo esc_html($settings['text']); ?></p>     
             </div>

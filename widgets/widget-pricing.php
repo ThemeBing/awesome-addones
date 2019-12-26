@@ -14,7 +14,7 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Pricing', 'mega-addons' );
+      return esc_html__( 'Pricing', 'awesome-addones' );
    }
  
    public function get_icon() { 
@@ -30,7 +30,7 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
       $this->start_controls_section(
          'pricing_section',
          [
-            'label' => esc_html__( 'Pricing', 'mega-addons' ),
+            'label' => esc_html__( 'Pricing', 'awesome-addones' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -38,13 +38,13 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'style',
          [
-            'label' => __( 'Icon Box Style', 'mega-addons' ),
+            'label' => __( 'Icon Box Style', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'style_1',
             'options' => [
-               'style_1'  => __( 'Card', 'mega-addons' ),
-               'style_2' => __( 'Tabs', 'mega-addons' ),
-               'none' => __( 'None', 'mega-addons' )
+               'style_1'  => __( 'Card', 'awesome-addones' ),
+               'style_2' => __( 'Tabs', 'awesome-addones' ),
+               'none' => __( 'None', 'awesome-addones' )
             ],
          ]
       );
@@ -52,7 +52,7 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'title', 'mega-addons' ),
+            'label' => __( 'title', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Standard Plan',
             'condition' => ['style' => 'style_1']
@@ -62,7 +62,7 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'icon',
          [
-            'label' => __( 'icon', 'mega-addons' ),
+            'label' => __( 'icon', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'label_block' => true,
             'default' => 'fa fa-shield',
@@ -73,7 +73,7 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'price',
          [
-            'label' => __( 'Price', 'mega-addons' ),
+            'label' => __( 'Price', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '70',
             'condition' => ['style' => 'style_1']
@@ -83,7 +83,7 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'currency',
          [
-            'label' => __( 'Currency', 'mega-addons' ),
+            'label' => __( 'Currency', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'default' => 'fa fa-dollar',
             'include' => [
@@ -118,15 +118,15 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'package',
          [
-            'label' => __( 'Package', 'mega-addons' ),
+            'label' => __( 'Package', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'Yealry',
             'options' => [
-               'Daily'  => __( 'Daily', 'mega-addons' ),
-               'Weekly'  => __( 'Weekly', 'mega-addons' ),
-               'Monthly' => __( 'Monthly', 'mega-addons' ),
-               'Yealry' => __( 'Yealry', 'mega-addons' ),
-               'none' => __( 'None', 'mega-addons' )
+               'Daily'  => __( 'Daily', 'awesome-addones' ),
+               'Weekly'  => __( 'Weekly', 'awesome-addones' ),
+               'Monthly' => __( 'Monthly', 'awesome-addones' ),
+               'Yealry' => __( 'Yealry', 'awesome-addones' ),
+               'none' => __( 'None', 'awesome-addones' )
             ],
          ]
       );
@@ -136,33 +136,33 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
       $feature->add_control(
          'feature',
          [
-            'label' => __( 'Feature', 'mega-addons' ),
+            'label' => __( 'Feature', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __( '10 Free Domain Names', 'mega-addons' )
+            'default' => __( '10 Free Domain Names', 'awesome-addones' )
          ]
       );
 
       $this->add_control(
          'feature_list',
          [
-            'label' => __( 'Feature List', 'mega-addons' ),
+            'label' => __( 'Feature List', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $feature->get_controls(),
             'default' => [
                [
-                  'feature' => __( '5GB Storage Space', 'mega-addons' )
+                  'feature' => __( '5GB Storage Space', 'awesome-addones' )
                ],
                [
-                  'feature' => __( '20GB Monthly Bandwidth', 'mega-addons' )
+                  'feature' => __( '20GB Monthly Bandwidth', 'awesome-addones' )
                ],
                [
-                  'feature' => __( 'My SQL Databases', 'mega-addons' )
+                  'feature' => __( 'My SQL Databases', 'awesome-addones' )
                ],
                [
-                  'feature' => __( '100 Email Account', 'mega-addons' )
+                  'feature' => __( '100 Email Account', 'awesome-addones' )
                ],
                [
-                  'feature' => __( '10 Free Domain Names', 'mega-addons' )
+                  'feature' => __( '10 Free Domain Names', 'awesome-addones' )
                ]
             ],
             'title_field' => '{{{ feature }}}',
@@ -173,7 +173,7 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'btn_text',
          [
-            'label' => __( 'button text', 'mega-addons' ),
+            'label' => __( 'button text', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Select Plan',
             'condition' => ['style' => 'style_1']
@@ -183,9 +183,9 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'btn_url',
          [
-            'label' => __( 'button URL', 'mega-addons' ),
+            'label' => __( 'button URL', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::URL,
-            'placeholder' => __( 'https://example.com', 'mega-addons' ),
+            'placeholder' => __( 'https://example.com', 'awesome-addones' ),
             'show_external' => true,
             'default' => [
                'url' => '#',
@@ -201,8 +201,8 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
          [
             'label' => __( 'Recommended', 'plugin-domain' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'mega-addons' ),
-            'label_off' => __( 'Off', 'mega-addons' ),
+            'label_on' => __( 'On', 'awesome-addones' ),
+            'label_off' => __( 'Off', 'awesome-addones' ),
             'return_value' => 'on',
             'default' => 'off',
          ]
@@ -228,10 +228,10 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
 
       ?>
 
-      <div class="mega-addons-pricing-table <?php if ( 'on' == $settings['recommended'] ){ echo"recommended"; }?>">
+      <div class="awesome-addones-pricing-table <?php if ( 'on' == $settings['recommended'] ){ echo"recommended"; }?>">
          <h6 class="type elementor-inline-editing" <?php echo $this->get_render_attribute_string( 'title' ); ?>><?php echo esc_html( $settings['title'] ); ?></h6>
-         <h1 class="mega-addons-price elementor-inline-editing" <?php echo $this->get_render_attribute_string( 'price' ); ?>>
-            <span class="mega-addons-currency <?php echo esc_attr($settings['currency']) ?>"></span>
+         <h1 class="awesome-addones-price elementor-inline-editing" <?php echo $this->get_render_attribute_string( 'price' ); ?>>
+            <span class="awesome-addones-currency <?php echo esc_attr($settings['currency']) ?>"></span>
             <?php echo esc_html( $settings['price'] ); ?>
          </h1>
          <span><?php echo esc_html( $settings['package'] ); ?></span>
@@ -245,7 +245,7 @@ class Mega_Addons_Widget_Pricing extends Widget_Base {
             <?php 
             } ?>
          </ul>
-         <a class="elementor-inline-editing mega-addons-buy-button" href="<?php echo esc_attr( $settings['btn_url'] ) ?>" <?php echo $this->get_render_attribute_string( 'btn_text' ); ?><?php echo esc_attr( $target ) . esc_attr( $nofollow ) ?>><?php echo esc_html( $settings['btn_text'] ) ?></a>
+         <a class="elementor-inline-editing awesome-addones-buy-button" href="<?php echo esc_attr( $settings['btn_url'] ) ?>" <?php echo $this->get_render_attribute_string( 'btn_text' ); ?><?php echo esc_attr( $target ) . esc_attr( $nofollow ) ?>><?php echo esc_html( $settings['btn_text'] ) ?></a>
       </div>
 
       <?php

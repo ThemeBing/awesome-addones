@@ -2,8 +2,8 @@
 	"use strict";
 
     //Accordion
-    $('.mega-addons-accordion-item:first-child').addClass('active');
-    $('.mega-addons-accordion-item:first-child .collapse').addClass('show');
+    $('.awesome-addones-accordion-item:first-child').addClass('active');
+    $('.awesome-addones-accordion-item:first-child .collapse').addClass('show');
     $('.collapse').on('shown.bs.collapse', function() {
         $(this).parent().addClass('active');
     });
@@ -13,7 +13,7 @@
     });
 
     // Popup Video
-    $('.mega-addons-popup-video,.mega-addons-popup-url').magnificPopup({
+    $('.awesome-addones-popup-video,.awesome-addones-popup-url').magnificPopup({
         disableOn: 700,
         type: 'iframe',
         mainClass: 'mfp-fade',
@@ -23,7 +23,7 @@
     });
 
     // testimonials slide
-    $('.mega-addons-testimonials').slick({
+    $('.awesome-addones-testimonials').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
@@ -31,7 +31,7 @@
     });
 
     // Counter
-    $('.mega-addons-count').counterUp({
+    $('.awesome-addones-count').counterUp({
         delay: 10,
         time: 1000
     });

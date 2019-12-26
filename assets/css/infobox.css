@@ -2,72 +2,72 @@
 /*--------------------------------------------------------------
 # Accordion
 --------------------------------------------------------------*/
-.mega-addons-accordion {}
+.awesome-addones-accordion {}
 
 /*Style 1*/
 
-.mega-addons-accordion-item:not(last-child) {
+.awesome-addones-accordion-item:not(last-child) {
     margin-bottom: 15px;
 }
 
-.mega-addons-accordion-item {
+.awesome-addones-accordion-item {
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 7px 37px 0px rgba(0, 0, 0, 0.05);
 }
 
-.mega-addons-accordion-item.active h5 {
+.awesome-addones-accordion-item.active h5 {
     border-bottom: 1px solid #dadde1;
 }
 
-.mega-addons-accordion-item h5 {
+.awesome-addones-accordion-item h5 {
     padding: 20px 30px!important;
     cursor: pointer;
     margin-bottom: 0!important;
 }
 
-.mega-addons-accordion.style-1 .mega-addons-accordion-item h5 span {
+.awesome-addones-accordion.style-1 .awesome-addones-accordion-item h5 span {
     float: right;
     padding: 5px;
 }
 
-.mega-addons-accordion-item.active h5 span:nth-child(1) {
+.awesome-addones-accordion-item.active h5 span:nth-child(1) {
     display: none;
 }
 
-.mega-addons-accordion-item h5 span:nth-child(2) {
+.awesome-addones-accordion-item h5 span:nth-child(2) {
     display: none;
 }
 
-.mega-addons-accordion-item.active h5 span:nth-child(2) {
+.awesome-addones-accordion-item.active h5 span:nth-child(2) {
     display: block;
 }
 
-.mega-addons-accordion-item .collapsing,
-.mega-addons-accordion-item .collapse {
+.awesome-addones-accordion-item .collapsing,
+.awesome-addones-accordion-item .collapse {
     padding: 15px 30px;
 }
 
 /*Style 2*/
 
-.mega-addons-accordion.style-2 .mega-addons-accordion-item h5 span {
+.awesome-addones-accordion.style-2 .awesome-addones-accordion-item h5 span {
     float: left;
     padding: 3px 15px 0px 0;
 }
 
-.mega-addons-accordion.style-2 .mega-addons-accordion-item {
+.awesome-addones-accordion.style-2 .awesome-addones-accordion-item {
     border-radius: 0;
 }
 
 /*Style 3*/
 
-.mega-addons-accordion.style-3 .mega-addons-accordion-item {
+.awesome-addones-accordion.style-3 .awesome-addones-accordion-item {
     box-shadow: none;
     border: 1px solid #dadde1;
     border-radius: 0;
 }
 
-.mega-addons-accordion.style-3 .mega-addons-accordion-item.active h5 {
+.awesome-addones-accordion.style-3 .awesome-addones-accordion-item.active h5 {
     color: #fff;
 }
 
@@ -75,25 +75,25 @@
 # Banner
 --------------------------------------------------------------*/
 
-.mega-addons-banner {
+.awesome-addones-banner {
     padding: 250px 0 200px;
     color: #fff;
 }
 
-.mega-addons-banner h1 {
+.awesome-addones-banner h1 {
     font-size: 60px;
     font-weight: bold;
     color: #fff;
 }
 
-.mega-addons-banner p {
+.awesome-addones-banner p {
     font-size: 26px;
     line-height: 40px;
     font-weight: 300;
     margin-bottom: 50px;
 }
 
-.mega-addons-banner .mega-addons-btn {
+.awesome-addones-banner .awesome-addones-btn {
     border-radius: 30px;
 }
 
@@ -101,7 +101,7 @@
 /*--------------------------------------------------------------
 # Button
 --------------------------------------------------------------*/
-.mega-addons-btn {
+.awesome-addones-btn {
     color: #fff;
     display: inline-block;
     padding: 15px 50px;
@@ -110,15 +110,15 @@
     transition: all .3s ease;
 }
 
-.mega-addons-btn:hover {
+.awesome-addones-btn:hover {
     color: #fff;
 }
 
-.mega-addons-btn i {
+.awesome-addones-btn i {
     margin-right: 20px;
 }
 
-.mega-addons-btn.shadow {
+.awesome-addones-btn.shadow {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -126,7 +126,7 @@
     box-shadow: 0 7px 10px 6px rgba(0, 0, 0, 0.08);
 }
 
-.mega-addons-play-btn>span {
+.awesome-addones-play-btn>span {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -141,12 +141,12 @@
     align-items: center;
 }
 
-.mega-addons-play-btn-txt {
+.awesome-addones-play-btn-txt {
     font-weight: 700;
     color: #000;
 }
 
-.mega-addons-play-btn-icon {
+.awesome-addones-play-btn-icon {
     border-radius: 50%;
     margin-top: -5%;
     margin-bottom: -5%;
@@ -164,12 +164,12 @@
     color: #fff;
 }
 
-.mega-addons-btn.bordered {
+.awesome-addones-btn.bordered {
     background: #fff;
     border: 2px solid;
 }
 
-.mega-addons-btn.bordered:hover {
+.awesome-addones-btn.bordered:hover {
     color: #fff;
 }
 
@@ -177,12 +177,12 @@
 # Counter
 --------------------------------------------------------------*/
 
-.mega-addons-counter {
+.awesome-addones-counter {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.mega-addons-counter-icon {
+.awesome-addones-counter-icon {
     width: 85px;
     height: 85px;
     margin: 0 auto 20px;
@@ -190,17 +190,17 @@
     border-radius: 50%;
 }
 
-.mega-addons-counter-icon i {
+.awesome-addones-counter-icon i {
     font-size: 28px;
     margin: 0 auto;
     padding-top: 30px;
 }
 
-.mega-addons-counter h5 {
+.awesome-addones-counter h5 {
     margin-bottom: 30px
 }
 
-.mega-addons-counter p {
+.awesome-addones-counter p {
     font-size: 52px;
     font-weight: lighter;
 }
@@ -209,16 +209,16 @@
 # Post
 --------------------------------------------------------------*/
 
-.mega-addons-post {
+.awesome-addones-post {
     box-shadow: 5.994px 14.835px 30px 0px rgba(229, 234, 239, 0.5);
     overflow: hidden;
 }
 
-.mega-addons-post-content {
+.awesome-addones-post-content {
     padding: 30px 20px;
 }
 
-.mega-addons-post-content h5 {
+.awesome-addones-post-content h5 {
     line-height: 30px;
     font-weight: 600;
     margin-top: 10px;
@@ -226,21 +226,21 @@
     border-bottom: 1px solid #eceef2;
 }
 
-.mega-addons-post-content p {
+.awesome-addones-post-content p {
     font-size: 16px
 }
 
-.mega-addons-post-content ul {
+.awesome-addones-post-content ul {
     margin-top: 20px;
     margin-bottom: 0;
 }
 
-.mega-addons-post-content ul li i {
+.awesome-addones-post-content ul li i {
     margin-right: 10px;
     font-size: 14px;
 }
 
-.mega-addons-post-content .avatar {
+.awesome-addones-post-content .avatar {
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -248,7 +248,7 @@
 /*--------------------------------------------------------------
 # Video
 --------------------------------------------------------------*/
-.mega-addons-video-popup {
+.awesome-addones-video-popup {
     width: 100%;
     height: 500px;
     background-repeat: no-repeat;
@@ -258,12 +258,12 @@
     text-align: center;
 }
 
-.mega-addons-video-popup-overlay {
+.awesome-addones-video-popup-overlay {
     display: table-cell;
     vertical-align: middle;
 }
 
-.mega-addons-popup-video {
+.awesome-addones-popup-video {
     position: relative;
     margin: auto;
     width: 66px;
@@ -277,12 +277,12 @@
     text-decoration: none;
 }
 
-.mega-addons-popup-video span {
+.awesome-addones-popup-video span {
     margin: auto;
     padding-left: 3px;
 }
 
-.mega-addons-popup-video:after {
+.awesome-addones-popup-video:after {
     content: '';
     position: absolute;
     top: 0;
@@ -295,7 +295,7 @@
     transition: 0.35s;
 }
 
-.mega-addons-popup-video:hover:after {
+.awesome-addones-popup-video:hover:after {
     box-shadow: 0 0 0 4px rgba(239, 35, 60, 0.3), 0 0 0 8px rgba(239, 35, 60, 0.2);
 }
 
@@ -328,12 +328,12 @@
 # Icon Box
 --------------------------------------------------------------*/
 /*Style 1*/
-.mega-addons-item-iconbox.style_1 {
+.awesome-addones-item-iconbox.style_1 {
     text-align: center;
     padding: 0 30px;
 }
 
-.mega-addons-item-iconbox.style_1 .mega-addons-item-iconbox-icon {
+.awesome-addones-item-iconbox.style_1 .awesome-addones-item-iconbox-icon {
     font-size: 42px;
     border: 1px solid;
     border-radius: 50%;
@@ -345,16 +345,16 @@
     position: relative;
 }
 
-.mega-addons-item-iconbox.style_1 .mega-addons-item-iconbox-content h5 {
+.awesome-addones-item-iconbox.style_1 .awesome-addones-item-iconbox-content h5 {
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-.mega-addons-item-iconbox.style_1 .mega-addons-item-iconbox-content p {
+.awesome-addones-item-iconbox.style_1 .awesome-addones-item-iconbox-content p {
     margin-bottom: 0;
 }
 
-.mega-addons-item-iconbox.style_1:hover .mega-addons-item-iconbox-icon:before {
+.awesome-addones-item-iconbox.style_1:hover .awesome-addones-item-iconbox-icon:before {
     content: '';
     position: absolute;
     display: block;
@@ -394,35 +394,35 @@
 }
 
 /*Style 2*/
-.mega-addons-item-iconbox.style_2 {
+.awesome-addones-item-iconbox.style_2 {
     text-align: center;
     padding: 0 30px;
 }
 
-.mega-addons-item-iconbox.style_2 .mega-addons-item-iconbox-icon {
+.awesome-addones-item-iconbox.style_2 .awesome-addones-item-iconbox-icon {
     width: 80px;
     height: auto;
     margin: 0 auto 25px;
 }
 
-.mega-addons-item-iconbox.style_2 .mega-addons-item-iconbox-content h5 {
+.awesome-addones-item-iconbox.style_2 .awesome-addones-item-iconbox-content h5 {
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-.mega-addons-item-iconbox.style_2 .mega-addons-item-iconbox-content p {
+.awesome-addones-item-iconbox.style_2 .awesome-addones-item-iconbox-content p {
     margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
 # List
 --------------------------------------------------------------*/
-.mega-addons-list {
+.awesome-addones-list {
     list-style: none;
     padding-left: 0;
 }
 
-.mega-addons-list i {
+.awesome-addones-list i {
     border-radius: 50%;
     padding-top: 6px;
     font-size: 10px;
@@ -432,12 +432,12 @@
     margin-right: 10px;
 }
 
-.mega-addons-list li {
+.awesome-addones-list li {
     line-height: 26px;
     overflow: hidden;
 }
 
-.mega-addons-list.style2 li {
+.awesome-addones-list.style2 li {
     width: 50%;
     float: left;
 }
@@ -447,22 +447,22 @@
 # Pricing
 --------------------------------------------------------------*/
 
-.mega-addons-pricing-table {
+.awesome-addones-pricing-table {
     background: #fff;
     text-align: center;
     padding: 50px 30px;
     box-shadow: 0px 10px 40px 0px rgba(60, 67, 113, 0.05);
 }
 
-.mega-addons-pricing-table h6 {
+.awesome-addones-pricing-table h6 {
     text-transform: uppercase;
 }
 
-.mega-addons-pricing-table.recommended {
+.awesome-addones-pricing-table.recommended {
     position: relative;
 }
 
-.mega-addons-pricing-table.recommended:after {
+.awesome-addones-pricing-table.recommended:after {
     position: absolute;
     content: 'Recommended';
     left: 27%;
@@ -471,32 +471,32 @@
     padding: 3px 15px;
 }
 
-.mega-addons-pricing-table .mega-addons-currency {
+.awesome-addones-pricing-table .awesome-addones-currency {
     font-size: 16px;
 }
 
-.mega-addons-pricing-table .mega-addons-price {
+.awesome-addones-pricing-table .awesome-addones-price {
     font-size: 42px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.mega-addons-pricing-table>span {
+.awesome-addones-pricing-table>span {
     color: #000;
 }
 
-.mega-addons-pricing-table ul {
+.awesome-addones-pricing-table ul {
     list-style: none;
     padding: 0;
     margin-top: 30px;
     margin-bottom: 30px;
 }
 
-.mega-addons-pricing-table ul li {
+.awesome-addones-pricing-table ul li {
     line-height: 40px;
 }
 
-.mega-addons-pricing-table .mega-addons-buy-button {
+.awesome-addones-pricing-table .awesome-addones-buy-button {
     color: #fff;
     padding: 12px 40px;
     display: inline-block;
@@ -507,32 +507,32 @@
 # Team
 --------------------------------------------------------------*/
 
-.mega-addons-team {
+.awesome-addones-team {
     text-align: center;
     overflow: hidden;
     background: #fff;
     box-shadow: 5.994px 14.835px 30px 0px rgba(229, 234, 239, 0.5);
 }
 
-.mega-addons-team img {
+.awesome-addones-team img {
     margin-bottom: 40px;
 }
 
-.mega-addons-team h4 {
+.awesome-addones-team h4 {
     margin-bottom: 10px !important;
     font-weight: 600;
 }
 
-.mega-addons-team ul {
+.awesome-addones-team ul {
     margin-top: 30px;
     margin-bottom: 40px;
 }
 
-.mega-addons-team ul .list-inline-item:not(:last-child) {
+.awesome-addones-team ul .list-inline-item:not(:last-child) {
     margin-right: 15px;
 }
 
-.mega-addons-team ul li a {
+.awesome-addones-team ul li a {
     color: #9e9e9e;
     border: 1px solid #9e9e9e;
     border-radius: 50%;
@@ -540,7 +540,7 @@
     display: block;
 }
 
-.mega-addons-team ul li a:hover {
+.awesome-addones-team ul li a:hover {
     color: #fff;
     border-color: #fff;
 }
@@ -550,11 +550,11 @@
 # Testimonials
 --------------------------------------------------------------*/
 
-.mega-addons-testimonials {
+.awesome-addones-testimonials {
     text-align: center;
 }
 
-.mega-addons-testimonial-content img {
+.awesome-addones-testimonial-content img {
     margin: 0 auto;
     border-radius: 50% !important;
     width: 100px;
@@ -562,6 +562,6 @@
     margin-bottom: 20px;
 }
 
-.mega-addons-testimonial-content i {
+.awesome-addones-testimonial-content i {
     color: #ddd
 }

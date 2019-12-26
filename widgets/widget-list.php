@@ -14,7 +14,7 @@ class Mega_Addons_Widget_List extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'List', 'mega-addons' );
+      return esc_html__( 'List', 'awesome-addones' );
    }
  
    public function get_icon() { 
@@ -30,7 +30,7 @@ class Mega_Addons_Widget_List extends Widget_Base {
       $this->start_controls_section(
          'section',
          [
-            'label' => esc_html__( 'List', 'mega-addons' ),
+            'label' => esc_html__( 'List', 'awesome-addones' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -38,21 +38,21 @@ class Mega_Addons_Widget_List extends Widget_Base {
       $this->add_control(
          'list_style',
          [
-            'label' => __( 'List Style', 'mega-addons' ),
+            'label' => __( 'List Style', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'style1',
             'options' => [
-               'style1'  => __( 'Style 1', 'mega-addons' ),
-               'style2' => __( 'Style 2', 'mega-addons' ),
-               'style3' => __( 'Style 3', 'mega-addons' ),
-               'none' => __( 'None', 'mega-addons' ),
+               'style1'  => __( 'Style 1', 'awesome-addones' ),
+               'style2' => __( 'Style 2', 'awesome-addones' ),
+               'style3' => __( 'Style 3', 'awesome-addones' ),
+               'none' => __( 'None', 'awesome-addones' ),
             ],
          ]
       );
 
       $this->add_control(
          'list_icon', [
-            'label' => __( 'List Icon', 'mega-addons' ),
+            'label' => __( 'List Icon', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'label_block' => true,
             'default' => 'fa fa-facebook',
@@ -63,7 +63,7 @@ class Mega_Addons_Widget_List extends Widget_Base {
       $this->add_control(
          'list_icon_bg_color',
          [
-            'label' => __( 'Icon Bckground Color', 'mega-addons' ),
+            'label' => __( 'Icon Bckground Color', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::COLOR,
             'default' => '#f3f3fe'
          ]
@@ -72,7 +72,7 @@ class Mega_Addons_Widget_List extends Widget_Base {
       $this->add_control(
          'list_icon_color',
          [
-            'label' => __( 'Icon Color', 'mega-addons' ),
+            'label' => __( 'Icon Color', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::COLOR,
             'default' => '#696bf3'
          ]
@@ -81,10 +81,10 @@ class Mega_Addons_Widget_List extends Widget_Base {
       $this->add_control(
          'linkable_list',
          [
-            'label' => __( 'Linkable List', 'mega-addons' ),
+            'label' => __( 'Linkable List', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Enable', 'mega-addons' ),
-            'label_off' => __( 'Desable', 'mega-addons' ),
+            'label_on' => __( 'Enable', 'awesome-addones' ),
+            'label_off' => __( 'Desable', 'awesome-addones' ),
             'return_value' => 'yes',
             'default' => 'no',
          ]
@@ -95,7 +95,7 @@ class Mega_Addons_Widget_List extends Widget_Base {
 
       $repeater->add_control(
          'list_text', [
-            'label' => __( 'List Text', 'mega-addons' ),
+            'label' => __( 'List Text', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Create your won list',
          ]
@@ -103,7 +103,7 @@ class Mega_Addons_Widget_List extends Widget_Base {
 
       $repeater->add_control(
          'list_url', [
-            'label' => __( 'List URL', 'mega-addons' ),
+            'label' => __( 'List URL', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '#'
          ]
@@ -111,7 +111,7 @@ class Mega_Addons_Widget_List extends Widget_Base {
       $this->add_control(
          'lists',
          [
-            'label' => __( 'List', 'mega-addons' ),
+            'label' => __( 'List', 'awesome-addones' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $repeater->get_controls(),
             'title_field' => 'list Item',
@@ -140,7 +140,7 @@ class Mega_Addons_Widget_List extends Widget_Base {
       $this->add_control(
          'line_height',
          [
-            'label' => __( 'Line Height', 'mega-addons' ),
+            'label' => __( 'Line Height', 'awesome-addones' ),
             'type' => Controls_Manager::SLIDER,
             'size_units' => [ 'px' ],
             'range' => [
@@ -166,7 +166,7 @@ class Mega_Addons_Widget_List extends Widget_Base {
        
       $settings = $this->get_settings_for_display(); ?>
       
-      <ul class="mega-addons-list <?php echo esc_attr( $settings['list_style'] ); ?>">
+      <ul class="awesome-addones-list <?php echo esc_attr( $settings['list_style'] ); ?>">
          <?php 
          foreach (  $settings['lists'] as $index => $single_list ) { 
 

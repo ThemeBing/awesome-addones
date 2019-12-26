@@ -50,7 +50,7 @@ class Plugin {
 		$elements_manager->add_category(
 			'mega_addons',
 			[
-				'title' => esc_html__( 'Mega Addons', 'mega-addons' ),
+				'title' => esc_html__( 'Awesome Addons', 'awesome-addones' ),
 				'icon' => 'fa fa-plug',
 			]
 		);
@@ -68,9 +68,9 @@ class Plugin {
 	 */
 	public function widget_scripts() {
 		wp_enqueue_style( 'bootstrap', plugins_url( '/assets/css/bootstrap.min.css', __FILE__ ) );
-		wp_enqueue_style( 'mega-addons-color', plugins_url( '/assets/css/color.css', __FILE__ ) );
+		wp_enqueue_style( 'awesome-addones-color', plugins_url( '/assets/css/color.css', __FILE__ ) );
 		wp_enqueue_style( 'magnific-popup', plugins_url( '/assets/css/magnific-popup.css', __FILE__ ) );
-		wp_enqueue_style( 'mega-addons', plugins_url( '/assets/css/infobox.css', __FILE__ ) );
+		wp_enqueue_style( 'awesome-addones', plugins_url( '/assets/css/infobox.css', __FILE__ ) );
 
 		wp_enqueue_script( 'bootstrap', plugins_url( '/assets/js/bootstrap.min.js', __FILE__ ) , [ 'jquery' ], false, true );
 		wp_enqueue_script( 'magnific-popup', plugins_url( '/assets/js/jquery.magnific-popup.min.js', __FILE__ ) , [ 'jquery' ], false, true );
@@ -78,7 +78,7 @@ class Plugin {
 		wp_enqueue_script( 'waypoints', plugins_url( '/assets/js/jquery.waypoints.min.js', __FILE__ ) , [ 'jquery' ], false, true );
 		wp_enqueue_script( 'isotope', plugins_url( '/assets/js/isotope.pkgd.min.js', __FILE__ ) , [ 'jquery' ], false, true );
 		wp_enqueue_script( 'slick', plugins_url( '/assets/js/slick.min.js', __FILE__ ) , [ 'jquery' ], false, true );
-		wp_enqueue_script( 'mega-addons', plugins_url( '/assets/js/infobox.js', __FILE__ ), [ 'jquery' ], false, true );
+		wp_enqueue_script( 'awesome-addones', plugins_url( '/assets/js/infobox.js', __FILE__ ), [ 'jquery' ], false, true );
 	}
 
 	/**
