@@ -1,12 +1,12 @@
 <?php 
-namespace Mega_Addons\Widgets;
+namespace Awesome_Addons\Widgets;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // blog
-class Mega_Addons_Widget_Blog extends Widget_Base {
+class Awesome_Addons_Widget_Blog extends Widget_Base {
  
    public function get_name() {
       return 'blog';
@@ -21,7 +21,7 @@ class Mega_Addons_Widget_Blog extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'mega_addons' ];
+      return [ 'Awesome_Addons' ];
    }
    protected function _register_controls() {
       

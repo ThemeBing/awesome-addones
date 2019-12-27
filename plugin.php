@@ -1,5 +1,5 @@
 <?php
-namespace Mega_Addons;
+namespace Awesome_Addons;
 
 /**
  * Class Plugin
@@ -48,7 +48,7 @@ class Plugin {
 	public function widget_categories( $elements_manager ) {
 
 		$elements_manager->add_category(
-			'mega_addons',
+			'Awesome_Addons',
 			[
 				'title' => esc_html__( 'Awesome Addons', 'awesome-addones' ),
 				'icon' => 'fa fa-plug',
@@ -115,16 +115,16 @@ class Plugin {
 		$this->include_widgets_files();
 
 		// Register Widgets
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Accordion() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Blog() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Button() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Counter() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Iconbox() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_List() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Pricing() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Team() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_Testimonials() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Mega_Addons_Widget_video() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Awesome_Addons_Widget_Accordion() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Awesome_Addons_Widget_Blog() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Awesome_Addons_Widget_Button() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Awesome_Addons_Widget_Counter() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Awesome_Addons_Widget_Iconbox() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Awesome_Addons_Widget_List() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Awesome_Addons_Widget_Pricing() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Awesome_Addons_Widget_Team() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Awesome_Addons_Widget_Testimonials() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\ Awesome_Addons_Widget_video() );
 	}
 
 	/**

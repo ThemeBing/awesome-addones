@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * Any custom code should go inside Plugin Class in the plugin.php file.
  * @since 1.0.0
  */
-final class Mega_Addons {
+final class Awesome_Addons {
 
 	/**
 	 * Plugin Version
@@ -188,5 +188,5 @@ final class Mega_Addons {
 	}
 }
 
-// Instantiate Mega_Addons.
-new Mega_Addons();
+// Instantiate Awesome_Addons.
+new Awesome_Addons();
