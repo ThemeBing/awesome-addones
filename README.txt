@@ -1,9 +1,9 @@
 === Awesome Addons for Elementor Page Builder ===
 Contributors: ThemeBing
-Donate link: https://ThemeBing.com/donate
+Donate link: https://ThemeBing.com
 Tags: elementor page builder, Awesome Addons, elementor addons,team addons,blog addons,pricing table,elementor extension,all in one plugin,ultimate addons for elementor
 Requires at least: 4.4
-Tested up to: 5.2.4
+Tested up to: 5.6
 Stable tag: 4.3
 Requires PHP: 5.2.4
 License: GPLv2 or later

@@ -3,7 +3,7 @@
  * Plugin Name: Awesome Addons
  * Description: Awesome Addons for Elementor page builder. which is allows you to install lot of different style elements block to your website.
  * Plugin URI:  https://wordpress.org/plugins/awesome-addones/
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      ThemeBing
  * Version:     1.0.0
  * License:     GPL-2.0+
